@@ -1,0 +1,249 @@
+{
+  "sessionId": "mon55kbx-592003",
+  "input": {
+    "audience": "An aspiring wildlife photographer from Kenya, seeking Canadian permanent residency through Express Entry, is eager to showcase their artistic talents while building a new life in Canada. With a passion for documenting nature and wildlife conservation, they aim to blend their career aspirations with their love for the Canadian wilderness. Excited about the opportunities that come with living and working in a country known for its stunning landscapes and diverse ecosystems, they are determined to enhance their English proficiency through CELPIP preparation.",
+    "concept": "A close-up shot of a young immigrant standing at the airport arrivals gate, nervously clutching their CELPIP preparation materials; as the crowd parts, a smiling friend rushes forward, embracing them with joy, symbolizing the powerful opportunities that await with the right language skills.",
+    "country": "Australia",
+    "tone": "Practical"
+  },
+  "copy": {
+    "eyebrow": "ACE YOUR ENGLISH",
+    "headline": "Prepare for Your Future in Canada",
+    "subhead": "Enhance your English skills with CELPIP and embrace new opportunities in Canada’s stunning landscapes and vibrant wildlife.",
+    "primaryCta": "Start Preparing",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "📸",
+        "title": "Tailored for You",
+        "desc": "CELPIP is designed for everyday life in Canada, helping you communicate effectively in your new environment."
+      },
+      {
+        "icon": "🌍",
+        "title": "Recognised by Authorities",
+        "desc": "CELPIP is accepted by IRCC and DHA, supporting your journey towards permanent residency in Canada."
+      },
+      {
+        "icon": "🦅",
+        "title": "Flexible Testing Options",
+        "desc": "Choose from various test dates and locations to fit your schedule while preparing for your new life."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Amani Mwangi",
+        "location": "Nairobi, Kenya",
+        "quote": "I felt confident taking the CELPIP test. It truly prepared me for life in Canada, especially with my love for wildlife photography.",
+        "score": "CLB 8"
+      },
+      {
+        "name": "Josephine Otieno",
+        "location": "Mombasa, Kenya",
+        "quote": "The CELPIP preparation resources were essential. They helped me express my passion for nature and land a great job in Canada.",
+        "score": "CLB 9"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CELPIP?",
+        "a": "CELPIP is an English language proficiency test that assesses your listening, reading, writing, and speaking skills in everyday Canadian contexts."
+      },
+      {
+        "q": "How can CELPIP help my career in Canada?",
+        "a": "By improving your English skills with CELPIP, you’ll enhance your ability to communicate with clients and colleagues in your field, including wildlife photography."
+      },
+      {
+        "q": "What is the typical score for immigration?",
+        "a": "Most skilled migration applicants aim for a CELPIP score between CLB 7 and CLB 10, which demonstrates effective English communication."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "3 hrs",
+        "label": "Test Duration"
+      },
+      {
+        "value": "4-5 days",
+        "label": "Results Available"
+      },
+      {
+        "value": "100+",
+        "label": "Test Locations"
+      },
+      {
+        "value": "12",
+        "label": "Practice Tests Available"
+      }
+    ],
+    "adHeadline": "Unlock Your Canadian Adventure",
+    "adTagline": "Boost your English skills with CELPIP and thrive in Canada."
+  },
+  "ads": {
+    "hero": "/builder/mon55kbx-592003/hero.png",
+    "square": "/builder/mon55kbx-592003/ad-1x1.png",
+    "story": "/builder/mon55kbx-592003/ad-9x16.png",
+    "portrait": "/builder/mon55kbx-592003/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "An aspiring wildlife photographer from Kenya, seeking Can…",
+    "tag": "Layout",
+    "description": "A close-up shot of a young immigrant standing at the airport arrivals gate, nervously clutching their CELPIP preparation materials; as the crowd parts, a smiling friend rushes forw",
+    "heroImageSrc": "/builder/mon55kbx-592003/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "ACE YOUR ENGLISH",
+          "headline": "Prepare for Your Future in Canada",
+          "subhead": "Enhance your English skills with CELPIP and embrace new opportunities in Canada’s stunning landscapes and vibrant wildlife.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A close-up shot of a young immigrant standing at the airport arrivals gate, nerv"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "3 hrs",
+              "label": "Test Duration"
+            },
+            {
+              "value": "4-5 days",
+              "label": "Results Available"
+            },
+            {
+              "value": "100+",
+              "label": "Test Locations"
+            },
+            {
+              "value": "12",
+              "label": "Practice Tests Available"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Enhance your English skills with CELPIP and embrace new opportunities in Canada’s stunning landscapes and vibrant wildlife.",
+          "features": [
+            {
+              "icon": "📸",
+              "title": "Tailored for You",
+              "desc": "CELPIP is designed for everyday life in Canada, helping you communicate effectively in your new environment."
+            },
+            {
+              "icon": "🌍",
+              "title": "Recognised by Authorities",
+              "desc": "CELPIP is accepted by IRCC and DHA, supporting your journey towards permanent residency in Canada."
+            },
+            {
+              "icon": "🦅",
+              "title": "Flexible Testing Options",
+              "desc": "Choose from various test dates and locations to fit your schedule while preparing for your new life."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Amani Mwangi",
+              "location": "Nairobi, Kenya",
+              "quote": "I felt confident taking the CELPIP test. It truly prepared me for life in Canada, especially with my love for wildlife photography.",
+              "score": "CLB 8"
+            },
+            {
+              "name": "Josephine Otieno",
+              "location": "Mombasa, Kenya",
+              "quote": "The CELPIP preparation resources were essential. They helped me express my passion for nature and land a great job in Canada.",
+              "score": "CLB 9"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "ScoreEquivalencyTable",
+        "props": {
+          "heading": "Where your score lands",
+          "subheading": "CELPIP · CLB · CEFR · DHA at a glance",
+          "rows": [
+            {
+              "celpip": "10",
+              "clb": "10",
+              "cefr": "C1",
+              "dha": "Proficient",
+              "desc": "High professional proficiency"
+            },
+            {
+              "celpip": "9",
+              "clb": "9",
+              "cefr": "B2+",
+              "dha": "Proficient",
+              "desc": "Professional working proficiency"
+            },
+            {
+              "celpip": "8",
+              "clb": "8",
+              "cefr": "B2",
+              "dha": "Competent",
+              "desc": "Upper intermediate"
+            },
+            {
+              "celpip": "7",
+              "clb": "7",
+              "cefr": "B2",
+              "dha": "Competent",
+              "desc": "Intermediate"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP is an English language proficiency test that assesses your listening, reading, writing, and speaking skills in everyday Canadian contexts."
+            },
+            {
+              "q": "How can CELPIP help my career in Canada?",
+              "a": "By improving your English skills with CELPIP, you’ll enhance your ability to communicate with clients and colleagues in your field, including wildlife photography."
+            },
+            {
+              "q": "What is the typical score for immigration?",
+              "a": "Most skilled migration applicants aim for a CELPIP score between CLB 7 and CLB 10, which demonstrates effective English communication."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Prepare for Your Future in Canada",
+          "subheading": "Enhance your English skills with CELPIP and embrace new opportunities in Canada’s stunning landscapes and vibrant wildlife.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 78.5,
+  "imageFallback": false
+}

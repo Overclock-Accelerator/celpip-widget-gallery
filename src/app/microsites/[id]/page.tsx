@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 
 import { microsites, getMicrosite } from "@/microsites/data";
 import { renderBlock } from "@/microsites/render";
+import { MicrositeNavbar } from "@/components/MicrositeNavbar";
+import { MicrositeFooter } from "@/components/MicrositeFooter";
 
 // Pre-render all microsite shells at build time (10 layout/regional + 10 conversion-stage = 20).
 export function generateStaticParams() {
@@ -21,10 +23,14 @@ export default async function MicrositePage({
   if (!entry) notFound();
 
   return (
-    <article className="relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {entry.blocks.map((block, i) => renderBlock(block, i, entry.heroImageSrc))}
-      </div>
-    </article>
+    <>
+      <MicrositeNavbar />
+      <article className="relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+          {entry.blocks.map((block, i) => renderBlock(block, i, entry.heroImageSrc))}
+        </div>
+      </article>
+      <MicrositeFooter />
+    </>
   );
 }
