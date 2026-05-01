@@ -1,0 +1,179 @@
+{
+  "id": "india-software-canada-2026-05-01-9dde",
+  "name": "India · Software Engineers → Canada — 2026-05-01",
+  "audienceKey": "india-software-canada",
+  "audienceLabel": "India · Software Engineers → Canada",
+  "selectedKinds": [
+    "HeroGradient",
+    "MomentSpotlightLargePhoto",
+    "MetricsNavyDividers",
+    "FeatureNavyCards",
+    "WhyCelpipMomentum",
+    "BookingPanelStacked",
+    "FAQAccordion",
+    "CTANavyAccent"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "India · Software Engineers → Canada — 2026-05-01",
+    "tag": "Layout",
+    "description": "India · Software Engineers → Canada · 7 composed widgets",
+    "blocks": [
+      {
+        "kind": "HeroGradient",
+        "props": {
+          "eyebrow": "ACHIEVE YOUR DREAMS",
+          "headline": "Your Path to Canada Starts Here",
+          "subhead": "As Anjali Sharma from Bengaluru knows, CELPIP is recognised by IRCC for Express Entry, helping you boost your CRS score with confidence.",
+          "primaryCta": {
+            "label": "Get Started"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A diverse group of software engineers preparing for the CELPIP test."
+        }
+      },
+      {
+        "kind": "MomentSpotlightLargePhoto",
+        "props": {
+          "imageAlt": "Anjali Sharma celebrating her CELPIP success in Toronto",
+          "oneLineMoment": "Anjali Sharma celebrates her CELPIP success in Toronto after months of hard work.",
+          "paragraphQuote": "I felt so relieved when I received my CELPIP results. I had been studying for weeks, and I knew that my CLB 9 score would help boost my CRS points. The computer-based format made it easy to take the test, and I appreciated how quickly I got my results. CELPIP truly supported my journey to Canada.",
+          "attribution": {
+            "name": "Anjali Sharma",
+            "location": "Bengaluru → Toronto",
+            "score": "CLB 9",
+            "date": "April 2026"
+          },
+          "imageSrc": "https://picsum.photos/seed/composer-MomentSpotlightLargePhoto/1200/1400"
+        }
+      },
+      {
+        "kind": "MetricsNavyDividers",
+        "props": {
+          "metrics": [
+            {
+              "value": "5–7 days",
+              "label": "Results Available"
+            },
+            {
+              "value": "4 skills",
+              "label": "Test Assesses"
+            },
+            {
+              "value": "90%",
+              "label": "Confidence Rate"
+            },
+            {
+              "value": "100%",
+              "label": "Computer-Based Experience"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureNavyCards",
+        "props": {
+          "heading": "Why Choose CELPIP?",
+          "features": [
+            {
+              "icon": "\u001f",
+              "title": "Recognised by IRCC",
+              "desc": "CELPIP is recognised by IRCC for Express Entry, helping Anjali Sharma move closer to her Canadian dream."
+            },
+            {
+              "icon": "\u001f",
+              "title": "Four Skills Assessed",
+              "desc": "The test evaluates listening, reading, writing, and speaking, ensuring a comprehensive language assessment for Anjali Sharma."
+            },
+            {
+              "icon": "\u001f",
+              "title": "Computer-Based Testing",
+              "desc": "Enjoy a fully computer-based testing experience, designed for tech-savvy engineers like Anjali Sharma."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "WhyCelpipMomentum",
+        "props": {
+          "eyebrow": "Why Choose CELPIP?",
+          "heading": "Fuel Your Journey to Canada",
+          "pillars": [
+            {
+              "icon": "✅",
+              "title": "Recognised by IRCC",
+              "desc": "CELPIP is officially recognised by IRCC for Express Entry, making it a trusted choice for your pathway to Canada."
+            },
+            {
+              "icon": "🖥️",
+              "title": "Computer-Based Testing",
+              "desc": "Enjoy a fully computer-based testing experience with CELPIP. It's designed to fit your tech-savvy skills as a software engineer."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Quick Results",
+              "desc": "Receive your results in just 5 to 7 days. This speed helps Anjali Sharma and others like her to keep moving forward in their journey."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "BookingPanelStacked",
+        "props": {
+          "heading": "Book Your CELPIP Test Today",
+          "subheading": "Anjali Sharma is ready to take the next step to Canada! Are you?",
+          "sittings": [
+            {
+              "city": "Bengaluru",
+              "centreName": "Bengaluru — Prometric Testing",
+              "date": "Sat, April 15",
+              "time": "10:00 AM",
+              "seatsLeft": 5
+            },
+            {
+              "city": "Hyderabad",
+              "centreName": "Hyderabad — Pearson Professional Centres",
+              "date": "Sun, April 16",
+              "time": "1:00 PM",
+              "seatsLeft": 10
+            },
+            {
+              "city": "Pune",
+              "centreName": "Pune — Prometric Testing",
+              "date": "Mon, April 17",
+              "time": "9:00 AM",
+              "seatsLeft": 4
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Frequently Asked Questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP is a Canadian English language test recognised by IRCC for Express Entry. It assesses your listening, reading, writing, and speaking skills."
+            },
+            {
+              "q": "How does CELPIP help improve my CRS score?",
+              "a": "By achieving a high score in CELPIP, like Anjali Sharma with CLB 9, you can enhance your Comprehensive Ranking System (CRS) score, improving your chances for Express Entry."
+            },
+            {
+              "q": "What can I expect in the CELPIP test?",
+              "a": "The CELPIP test offers a fully computer-based experience, ensuring a smooth assessment of your language skills."
+            },
+            {
+              "q": "How long does it take to receive my results?",
+              "a": "Results are available in just 5 to 7 days, allowing you to plan your next steps quickly."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T19:00:12.049Z"
+}

@@ -1,0 +1,152 @@
+{
+  "id": "india-software-canada-2026-05-01-d737",
+  "name": "India · Software Engineers → Canada — 2026-05-01",
+  "audienceKey": "india-software-canada",
+  "audienceLabel": "India · Software Engineers → Canada",
+  "selectedKinds": [
+    "HeroSplitForm",
+    "MetricsNavyDividers",
+    "MomentSpotlightLargePhoto",
+    "BookingPanelStacked",
+    "ObjectionHandlerFAQ",
+    "ResourceFilteredList",
+    "CTANavyAccent"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "India · Software Engineers → Canada — 2026-05-01",
+    "tag": "Layout",
+    "description": "India · Software Engineers → Canada · 5 composed widgets",
+    "blocks": [
+      {
+        "kind": "MetricsNavyDividers",
+        "props": {
+          "metrics": [
+            {
+              "value": "3–4 days",
+              "label": "Results Available"
+            },
+            {
+              "value": "1",
+              "label": "Test Format"
+            },
+            {
+              "value": "5",
+              "label": "Practice Resources"
+            },
+            {
+              "value": "10+",
+              "label": "Test Centres"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "MomentSpotlightLargePhoto",
+        "props": {
+          "imageAlt": "Aarav Mehta celebrating his CELPIP success in Toronto.",
+          "oneLineMoment": "Aarav Mehta celebrates his CELPIP success, ready for a new life in Canada.",
+          "paragraphQuote": "When I received my CELPIP results, I felt a wave of relief. I had worked hard to improve my English skills, and knowing that CELPIP is accepted by IRCC for Express Entry gave me confidence. The test focused on real-life language use, which helped me prepare effectively. With results available in just days, I could quickly move forward in my journey to Canada. I’m excited to start this new chapter in Toronto!",
+          "attribution": {
+            "name": "Aarav Mehta",
+            "location": "Bengaluru → Toronto",
+            "score": "CLB 9",
+            "date": "March 2026"
+          },
+          "imageSrc": "https://picsum.photos/seed/composer-MomentSpotlightLargePhoto/1200/1400"
+        }
+      },
+      {
+        "kind": "BookingPanelStacked",
+        "props": {
+          "heading": "Book Your CELPIP Test",
+          "subheading": "Secure your spot to boost your CRS score with CELPIP's reliable English proficiency test.",
+          "sittings": [
+            {
+              "city": "Bengaluru",
+              "centreName": "Bengaluru — Prometric Testing",
+              "date": "Sat, May 16",
+              "time": "9:00 AM",
+              "seatsLeft": 5
+            },
+            {
+              "city": "Hyderabad",
+              "centreName": "Hyderabad — Prometric Testing",
+              "date": "Sun, May 17",
+              "time": "10:00 AM",
+              "seatsLeft": 3
+            },
+            {
+              "city": "Pune",
+              "centreName": "Pune — Prometric Testing",
+              "date": "Mon, May 18",
+              "time": "1:00 PM",
+              "seatsLeft": 2
+            }
+          ]
+        }
+      },
+      {
+        "kind": "ObjectionHandlerFAQ",
+        "props": {
+          "heading": "Your Concerns Matter",
+          "subheading": "We're here to help you feel confident in your CELPIP journey.",
+          "objections": [
+            {
+              "worry": "I'm worried I won't have enough time to prepare for the test.",
+              "reassurance": "Aarav Mehta from Bengaluru felt the same way. With CELPIP, you can use our online practice resources to fit studying into your busy schedule. The test measures real-life language skills, so you can focus on what matters most. You've got this, and we've got you."
+            },
+            {
+              "worry": "I’m not sure if the test centres will be convenient for me.",
+              "reassurance": "Many test centres are conveniently located across major cities. Aarav Mehta found a centre in Bengaluru that suited his needs perfectly. No need to stress—your CELPIP test is within reach."
+            },
+            {
+              "worry": "I'm anxious about the results and how long they'll take.",
+              "reassurance": "It's natural to feel anxious about the results. However, CELPIP provides results within days, allowing you to move forward on your Express Entry path quickly. Aarav Mehta appreciated the prompt feedback, which helped him plan his next steps with confidence."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "ResourceFilteredList",
+        "props": {
+          "heading": "Resources for Aarav Mehta and Fellow Software Engineers",
+          "filters": [
+            "Practice Tests",
+            "Preparation Guides",
+            "Community Insights",
+            "Test Information"
+          ],
+          "resources": [
+            {
+              "type": "Practice Tests",
+              "title": "CELPIP Practice Test",
+              "date": "2023-05-15",
+              "tag": "Practice"
+            },
+            {
+              "type": "Preparation Guides",
+              "title": "CELPIP Study Guide for Software Engineers",
+              "date": "2023-06-10",
+              "tag": "Preparation"
+            },
+            {
+              "type": "Community Insights",
+              "title": "Success Stories from Indian Software Engineers",
+              "date": "2023-07-01",
+              "tag": "Community"
+            },
+            {
+              "type": "Test Information",
+              "title": "Understanding CELPIP: What You Need to Know",
+              "date": "2023-08-20",
+              "tag": "Information"
+            }
+          ],
+          "activeFilter": "Practice Tests"
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T18:59:09.052Z"
+}

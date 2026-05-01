@@ -14,9 +14,16 @@
  * scores show up in the FAQ + score table, the same testimony recurs in
  * the moment spotlight + spotlight + quote cards.
  *
- * No images are generated here (out of scope — sample.heroImageSrc is left
- * undefined; user can swap in /heroes/N.png later by editing the sample).
+ * Hero imagery: when any image-bearing hero variant is selected (HeroSplit,
+ * HeroFullBleedImage, HeroSplitForm, HeroFloatingPanel, HeroBigStat,
+ * HeroCentered) we call OpenAI Images (`gpt-image-1`) once with an
+ * audience-themed editorial prompt and stash the file at
+ * `public/builds/{id}/hero.png`. `microsite.heroImageSrc` is wired to that
+ * path so the renderBlock fallback chain populates the variant correctly.
  */
+
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
 
 import type { Microsite, WidgetBlock } from "@/microsites/data";
 import type {
@@ -34,6 +41,63 @@ import { newSampleId, saveSample } from "./storage";
 
 const OPENAI_BASE = "https://api.openai.com/v1";
 const TEXT_MODEL = "gpt-4o-mini";
+const IMAGE_MODEL = "gpt-image-1";
+
+/**
+ * Hero kinds that consume `imageSrc` from `microsite.heroImageSrc`. If at
+ * least one of these is selected, the build pipeline generates a hero image.
+ * HeroGradient and HeroFormInHeader are intentionally excluded — they don't
+ * have an imagery slot.
+ */
+const HEROES_NEEDING_IMAGE = new Set<WidgetKind>([
+  "HeroSplit",
+  "HeroFullBleedImage",
+  "HeroSplitForm",
+  "HeroFloatingPanel",
+  "HeroBigStat",
+  "HeroCentered",
+]);
+
+async function generateHeroImage(
+  apiKey: string,
+  audienceLabel: string,
+  audienceContext: string,
+  outFile: string,
+): Promise<void> {
+  const prompt = [
+    "Photorealistic editorial photograph, 4:3 landscape.",
+    `Subject: a real working professional from this audience — ${audienceLabel}.`,
+    audienceContext,
+    "Show them in a moment of calm, focused confidence — at work, studying with a laptop, or in their professional environment. Avoid stock-photo cliches; aim for candid, lived-in, dignified.",
+    "Editorial photography style, shallow depth of field, 50mm lens at f/2.5, soft natural light.",
+    "No text, no logos, no watermark, no UI overlays.",
+  ].join(" ");
+
+  const res = await fetch(`${OPENAI_BASE}/images/generations`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: IMAGE_MODEL,
+      prompt,
+      size: "1536x1024",
+      n: 1,
+    }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`OpenAI image failed: ${res.status} ${body.slice(0, 240)}`);
+  }
+
+  const json = (await res.json()) as { data: { b64_json?: string }[] };
+  const b64 = json.data?.[0]?.b64_json;
+  if (!b64) throw new Error("OpenAI image returned no b64_json");
+  await mkdir(path.dirname(outFile), { recursive: true });
+  await writeFile(outFile, Buffer.from(b64, "base64"));
+}
 
 const COMPOSER_VOICE_SYSTEM = `You write web copy for CELPIP, the Canadian English Language Proficiency Index Program.
 
@@ -279,6 +343,10 @@ export async function runComposerBuild(
 
   const totalBlocks = args.selectedKinds.length;
 
+  // Generate the sample id up front so we can pin the hero image path before
+  // we know the blocks. Slug stays the URL fragment for the saved sample.
+  const id = newSampleId(args.audienceKey);
+
   // Step 1 — Frame
   emit({
     type: "step",
@@ -286,6 +354,33 @@ export async function runComposerBuild(
     label: "Drafting microsite frame…",
   });
   const frame = await generateFrame(apiKey, audienceContext, audienceLabel, args.selectedKinds);
+
+  // Step 1.5 — Hero image (only if any image-bearing hero is selected)
+  let heroImageSrc: string | undefined;
+  const needsHeroImage = args.selectedKinds.some((k) => HEROES_NEEDING_IMAGE.has(k));
+  if (needsHeroImage) {
+    emit({
+      type: "step",
+      step: "generating-hero-image",
+      label: "Generating hero image…",
+    });
+    try {
+      const heroFile = path.join(
+        process.cwd(),
+        "public",
+        "builds",
+        id,
+        "hero.png",
+      );
+      await generateHeroImage(apiKey, audienceLabel, audienceContext, heroFile);
+      heroImageSrc = `/builds/${id}/hero.png`;
+    } catch (err) {
+      emit({
+        type: "warning",
+        message: `Hero image generation failed: ${(err as Error).message}. Sample will use the placeholder fallback.`,
+      });
+    }
+  }
 
   // Step 2..N — One LLM call per block
   const blocks: WidgetBlock[] = [];
@@ -324,7 +419,6 @@ export async function runComposerBuild(
     label: "Composing microsite…",
   });
 
-  const id = newSampleId(args.audienceKey);
   const name =
     args.sampleName?.trim() ||
     `${audienceLabel} — ${new Date().toISOString().slice(0, 10)}`;
@@ -334,6 +428,7 @@ export async function runComposerBuild(
     title: name,
     tag: "Layout",
     description: `${audienceLabel} · ${blocks.length} composed widgets`,
+    heroImageSrc,
     blocks,
   };
 

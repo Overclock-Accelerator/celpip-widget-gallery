@@ -103,6 +103,7 @@ export type ComposerInput = {
 
 export type ComposerStep =
   | "drafting-frame"
+  | "generating-hero-image"
   | "rewriting-block"
   | "composing-microsite"
   | "saving-sample"

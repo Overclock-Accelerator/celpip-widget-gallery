@@ -1,0 +1,181 @@
+{
+  "id": "india-nurses-canada-2026-05-01-36f9",
+  "name": "India · Nurses → Canada — 2026-05-01",
+  "audienceKey": "india-nurses-canada",
+  "audienceLabel": "India · Nurses → Canada",
+  "selectedKinds": [
+    "HeroSplitForm",
+    "MomentSpotlightInline",
+    "FeatureNavyCards",
+    "MetricsCards",
+    "FeatureGrid",
+    "FAQAccordion",
+    "BookingPanelInline",
+    "FormSimpleLead",
+    "RichTextEditorial",
+    "CTABoldBanner"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "India · Nurses → Canada — 2026-05-01",
+    "tag": "Layout",
+    "description": "India · Nurses → Canada · 7 composed widgets",
+    "blocks": [
+      {
+        "kind": "MomentSpotlightInline",
+        "props": {
+          "imageAlt": "Priya Sharma, Indian registered nurse, smiling confidently in her scrubs.",
+          "oneLineMoment": "Priya Sharma embraced her journey to licensure in Canada with CELPIP's support.",
+          "paragraphQuote": "\"Preparing for the CELPIP test was a smooth experience for me. The flexible scheduling allowed me to balance my shifts and study effectively. I felt confident knowing that CELPIP is recognised by FMRAC and CAPR for nursing licensure. I truly believe this test is designed for busy professionals like me.\"",
+          "attribution": {
+            "name": "Priya Sharma",
+            "location": "Delhi, India",
+            "score": "CLB 8",
+            "date": "October 2023"
+          },
+          "imageSrc": "https://picsum.photos/seed/composer-MomentSpotlightInline/1200/1400"
+        }
+      },
+      {
+        "kind": "FeatureNavyCards",
+        "props": {
+          "heading": "Why Choose CELPIP?",
+          "features": [
+            {
+              "icon": "📅",
+              "title": "Flexible Scheduling",
+              "desc": "CELPIP offers flexible test dates and times, fitting perfectly into your busy life as a nurse, Priya Sharma."
+            },
+            {
+              "icon": "📊",
+              "title": "Fair Assessment",
+              "desc": "The CELPIP test provides a fair evaluation of your English skills, ensuring you are well-prepared for licensure."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Quick Results",
+              "desc": "Receive your results quickly, helping you stay on track with your nursing licensure process in Canada."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "MetricsCards",
+        "props": {
+          "metrics": [
+            {
+              "value": "3–4 days",
+              "label": "Results Availability"
+            },
+            {
+              "value": "1 test",
+              "label": "Flexible Scheduling"
+            },
+            {
+              "value": "8 test centres",
+              "label": "User-Friendly Access"
+            },
+            {
+              "value": "4 skills assessed",
+              "label": "Fair Assessment"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why Choose CELPIP?",
+          "subheading": "Discover how CELPIP supports your journey to nursing licensure in Canada.",
+          "features": [
+            {
+              "icon": "📅",
+              "title": "Flexible Scheduling",
+              "desc": "CELPIP is designed for busy professionals like Priya Sharma, allowing you to book test dates around your shifts."
+            },
+            {
+              "icon": "⚖️",
+              "title": "Fair Assessment",
+              "desc": "CELPIP provides a fair evaluation of your English skills, ensuring you are accurately assessed for nursing licensure."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Quick Results",
+              "desc": "Get your results quickly, helping you stay on track with your licensure process and career goals in Canada."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Frequently Asked Questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP and how does it help nurses like Priya Sharma?",
+              "a": "CELPIP is an English language test recognised by FMRAC and CAPR for nursing licensure in Canada. It assesses your skills fairly and helps you demonstrate your proficiency."
+            },
+            {
+              "q": "How flexible is the CELPIP test schedule for busy professionals?",
+              "a": "CELPIP offers flexible scheduling options, making it easier for nurses like Priya Sharma to find a time that fits around clinical shifts and study commitments."
+            },
+            {
+              "q": "How quickly can I expect my CELPIP results?",
+              "a": "CELPIP provides quick results, helping candidates like Priya Sharma stay on track with their licensure journey without unnecessary delays."
+            },
+            {
+              "q": "Is the CELPIP test format user-friendly?",
+              "a": "Yes, the CELPIP test format is designed to be user-friendly and accessible, ensuring candidates like Priya Sharma can focus on showcasing their English language skills."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "BookingPanelInline",
+        "props": {
+          "heading": "Upcoming CELPIP Test Sittings",
+          "subheading": "Find a CELPIP test sitting that fits your busy schedule. Priya Sharma, you're one step closer to your nursing licensure in Canada!",
+          "sittings": [
+            {
+              "city": "Delhi",
+              "centreName": "Delhi — Prometric Testing",
+              "date": "Sat, June 10",
+              "time": "10:00 AM",
+              "seatsLeft": 5
+            },
+            {
+              "city": "Mumbai",
+              "centreName": "Mumbai — Prometric Testing",
+              "date": "Sun, June 18",
+              "time": "1:00 PM",
+              "seatsLeft": 8
+            },
+            {
+              "city": "Bangalore",
+              "centreName": "Bangalore — Prometric Testing",
+              "date": "Fri, June 23",
+              "time": "9:00 AM",
+              "seatsLeft": 3
+            },
+            {
+              "city": "Chennai",
+              "centreName": "Chennai — Prometric Testing",
+              "date": "Mon, June 26",
+              "time": "11:00 AM",
+              "seatsLeft": 7
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FormSimpleLead",
+        "props": {
+          "heading": "Join Priya Sharma on Your Path to Nursing Licensure in Canada",
+          "subheading": "Stay updated and get the support you need as you prepare for the CELPIP test. Sign up now to receive helpful tips and resources tailored for Indian registered nurses like you.",
+          "ctaLabel": "Subscribe Now"
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T18:58:09.817Z"
+}
