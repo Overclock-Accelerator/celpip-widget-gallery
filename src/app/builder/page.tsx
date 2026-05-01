@@ -239,24 +239,43 @@ export default function BuilderPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Hero */}
-      <header className="mb-10">
-        <p className="font-heading text-sm tracking-[0.2em] uppercase text-[#00A651]">
-          AI-Assisted Page Builder
-        </p>
-        <h1 className="font-heading text-3xl sm:text-4xl font-bold text-[#0B2341] mt-2">
-          Describe your audience and concept.
-        </h1>
-        <p className="text-gray-600 mt-3 max-w-2xl text-base sm:text-lg">
-          We&rsquo;ll generate three ad creatives, a structured copy brief, and a
-          complete microsite &mdash; all themed to your concept &mdash; in under 90 seconds.
-        </p>
+      {/* Hero with gradient accent */}
+      <header className="mb-10 relative">
+        <div
+          aria-hidden
+          className="absolute -top-12 -left-20 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{ background: "radial-gradient(circle, #00A651 0%, transparent 70%)" }}
+        />
+        <div
+          aria-hidden
+          className="absolute -top-8 right-0 w-48 h-48 rounded-full opacity-15 blur-3xl pointer-events-none"
+          style={{ background: "radial-gradient(circle, #17FFDC 0%, transparent 70%)" }}
+        />
+        <div className="relative">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#0B2341]">
+              <svg className="w-4 h-4 text-[#17FFDC]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456Z" />
+              </svg>
+            </span>
+            <p className="font-heading text-sm tracking-[0.2em] uppercase text-[#00A651] font-semibold">
+              AI-Assisted Page Builder
+            </p>
+          </div>
+          <h1 className="font-heading text-3xl sm:text-4xl font-bold text-[#0B2341]">
+            Describe your audience and concept.
+          </h1>
+          <p className="text-gray-500 mt-3 max-w-2xl text-base sm:text-lg leading-relaxed">
+            We&rsquo;ll generate three ad creatives, a structured copy brief, and a
+            complete microsite &mdash; all themed to your concept &mdash; in under 90&nbsp;seconds.
+          </p>
+        </div>
       </header>
 
       {/* Form */}
       <form
         onSubmit={submit}
-        className="rounded-xl bg-white border border-gray-200 p-6 sm:p-8 shadow-sm"
+        className="rounded-2xl bg-white border border-gray-200/80 p-6 sm:p-8 shadow-lg shadow-gray-200/50"
       >
         <div className="grid grid-cols-1 gap-6">
           <div>
@@ -397,9 +416,9 @@ export default function BuilderPage() {
           <button
             type="submit"
             disabled={!canSubmit}
-            className="bg-[#00A651] hover:bg-[#00C764] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            className="bg-[#00A651] hover:bg-[#00C764] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold px-8 py-3 rounded-xl transition-all shadow-md shadow-[#00A651]/20 hover:shadow-lg hover:shadow-[#00A651]/30 disabled:shadow-none"
           >
-            {busy ? "Generating…" : "Generate"}
+            {busy ? "Generating���" : "Generate"}
           </button>
           {busy && (
             <button
@@ -418,11 +437,18 @@ export default function BuilderPage() {
 
       {/* Progress + state */}
       {(busy || completedSteps.size > 0 || warnings.length > 0 || error) && (
-        <section className="mt-8 rounded-xl bg-white border border-gray-200 p-6 sm:p-8">
-          <h2 className="font-heading text-lg font-semibold text-[#0B2341] mb-4">
-            Progress
-          </h2>
-          <ol className="space-y-2">
+        <section className="mt-8 rounded-2xl bg-white border border-gray-200/80 p-6 sm:p-8 shadow-lg shadow-gray-200/50">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#0B2341]/5">
+              <svg className="w-4 h-4 text-[#0B2341]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+              </svg>
+            </span>
+            <h2 className="font-heading text-lg font-semibold text-[#0B2341]">
+              Progress
+            </h2>
+          </div>
+          <ol className="space-y-3">
             {STEP_ORDER.filter((s) => s !== "complete").map((step) => {
               const done = completedSteps.has(step);
               const active = !done && activeSteps.has(step);
@@ -540,7 +566,7 @@ function Indicator({ done, active }: { done: boolean; active: boolean }) {
     return (
       <span
         aria-hidden
-        className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#00A651] text-white text-[11px]"
+        className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00A651] text-white text-xs shadow-sm shadow-[#00A651]/30"
       >
         &#10003;
       </span>
@@ -550,14 +576,14 @@ function Indicator({ done, active }: { done: boolean; active: boolean }) {
     return (
       <span
         aria-hidden
-        className="inline-block w-5 h-5 rounded-full border-2 border-[#0B2341] border-t-transparent animate-spin"
+        className="inline-block w-6 h-6 rounded-full border-2 border-[#0B2341] border-t-transparent animate-spin"
       />
     );
   }
   return (
     <span
       aria-hidden
-      className="inline-block w-5 h-5 rounded-full border-2 border-gray-200"
+      className="inline-block w-6 h-6 rounded-full border-2 border-gray-200"
     />
   );
 }
