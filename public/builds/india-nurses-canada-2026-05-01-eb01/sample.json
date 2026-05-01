@@ -1,0 +1,155 @@
+{
+  "id": "india-nurses-canada-2026-05-01-eb01",
+  "name": "India · Nurses → Canada — 2026-05-01",
+  "audienceKey": "india-nurses-canada",
+  "audienceLabel": "India · Nurses → Canada",
+  "selectedKinds": [
+    "HeroSplit",
+    "MetricsNavyDividers",
+    "FeatureGrid",
+    "WhyCelpipMomentum",
+    "BookingPanelInline",
+    "FormSimpleLead"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "India · Nurses → Canada — 2026-05-01",
+    "tag": "Layout",
+    "description": "India · Nurses → Canada · 6 composed widgets",
+    "heroImageSrc": "/builds/india-nurses-canada-2026-05-01-eb01/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "YOUR PATH TO SUCCESS",
+          "headline": "Achieve Your Nursing Goals in Canada",
+          "subhead": "As Aditi Sharma knows, balancing shifts and study is tough. CELPIP is recognised for its fairness and flexibility, making it the ideal English test for busy nurses like you.",
+          "primaryCta": {
+            "label": "Get Started"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A nurse studying with CELPIP materials while on a break during a clinical shift."
+        }
+      },
+      {
+        "kind": "MetricsNavyDividers",
+        "props": {
+          "metrics": [
+            {
+              "value": "4–5 days",
+              "label": "Results Available"
+            },
+            {
+              "value": "4",
+              "label": "Skills Assessed"
+            },
+            {
+              "value": "Convenient",
+              "label": "Testing Times"
+            },
+            {
+              "value": "FMRAC, CAPR",
+              "label": "Recognised By"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "CELPIP Features for Aditi Sharma",
+          "subheading": "Discover how CELPIP supports your journey to licensure in Canada.",
+          "features": [
+            {
+              "icon": "📅",
+              "title": "Flexible Scheduling",
+              "desc": "CELPIP is available at convenient times, fitting your busy shifts as a nurse."
+            },
+            {
+              "icon": "📝",
+              "title": "Comprehensive Assessment",
+              "desc": "The test evaluates listening, reading, writing, and speaking skills, ensuring a complete proficiency check."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Quick Results",
+              "desc": "Receive your results in just 4 to 5 days, helping you move forward with your licensure process."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "WhyCelpipMomentum",
+        "props": {
+          "eyebrow": "Your Path to Success",
+          "heading": "Why Choose CELPIP?",
+          "pillars": [
+            {
+              "icon": "✅",
+              "title": "Recognised by Authorities",
+              "desc": "CELPIP is recognised by FMRAC and CAPR, making it a reliable choice for your nursing licensure in Canada."
+            },
+            {
+              "icon": "🕒",
+              "title": "Convenient Scheduling",
+              "desc": "With testing times that fit your busy shifts, CELPIP allows you to prepare and test at your convenience."
+            },
+            {
+              "icon": "🔊",
+              "title": "Comprehensive Assessment",
+              "desc": "CELPIP evaluates all four language skills: listening, reading, writing, and speaking, ensuring a complete assessment."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "BookingPanelInline",
+        "props": {
+          "heading": "Upcoming CELPIP Sittings",
+          "subheading": "Find a convenient CELPIP test sitting that fits your busy schedule, just like Aditi Sharma, as you work towards your CLB 8 in Canada.",
+          "sittings": [
+            {
+              "city": "Delhi",
+              "centreName": "Delhi — Prometric Testing",
+              "date": "Sat, December 2",
+              "time": "10:00 AM",
+              "seatsLeft": 5
+            },
+            {
+              "city": "Delhi",
+              "centreName": "Delhi — Prometric Testing",
+              "date": "Mon, December 4",
+              "time": "1:00 PM",
+              "seatsLeft": 3
+            },
+            {
+              "city": "Delhi",
+              "centreName": "Delhi — Prometric Testing",
+              "date": "Wed, December 6",
+              "time": "8:00 AM",
+              "seatsLeft": 4
+            },
+            {
+              "city": "Delhi",
+              "centreName": "Delhi — Prometric Testing",
+              "date": "Fri, December 8",
+              "time": "5:00 PM",
+              "seatsLeft": 2
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FormSimpleLead",
+        "props": {
+          "heading": "Join Aditi Sharma on Her Journey to Canada",
+          "subheading": "As an Indian registered nurse, you can take the CELPIP test to support your licensure process. Sign up today to receive updates and tips on preparing for the test, recognised by FMRAC and CAPR.",
+          "ctaLabel": "Get Started"
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T19:20:12.810Z"
+}

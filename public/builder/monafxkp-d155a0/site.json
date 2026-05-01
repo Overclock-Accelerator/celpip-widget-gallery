@@ -1,0 +1,223 @@
+{
+  "sessionId": "monafxkp-d155a0",
+  "input": {
+    "audience": "Meet Arjun, a 29-year-old software engineer from Bengaluru, India, who aspires to obtain Canadian permanent residency through Express Entry. With five years of experience in developing mobile applications, Arjun is determined to enhance his English proficiency to meet the CELPIP test requirements. He envisions a bright future in tech hubs like Toronto or Vancouver, where he can thrive in his career and contribute to Canada's innovative landscape.",
+    "concept": "A young woman stands at the airport, suitcase in hand, watching as families embrace and laughter fills the air; her reflection in the glass reveals a mix of nervousness and determination—cut to her confidently taking the CELPIP test, surrounded by supportive peers, with the tagline: \"Every milestone begins with a step; take yours.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "YOUR CANADIAN JOURNEY",
+    "headline": "Open Doors to Canada with CELPIP",
+    "subhead": "Enhance your English skills and take the first step towards your dream of living in Canada. You've got this, and we've got you.",
+    "primaryCta": "Start Preparing",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "🗣️",
+        "title": "Four Test Components",
+        "desc": "CELPIP tests listening, reading, writing, and speaking. Each section helps you demonstrate your English proficiency effectively."
+      },
+      {
+        "icon": "📅",
+        "title": "Fast Results",
+        "desc": "Receive your test results in just 4-5 days. Quickly see how you can move forward with your Canadian residency plans."
+      },
+      {
+        "icon": "💻",
+        "title": "Convenient Online Format",
+        "desc": "Take the test at your convenience. CELPIP offers an online platform that fits your busy schedule."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Priya Sharma",
+        "location": "Toronto, Canada",
+        "quote": "CELPIP helped me improve my English and prepare for life in Canada. I scored CLB 9, and I feel ready for my new adventure!",
+        "score": "CLB 9"
+      },
+      {
+        "name": "Raj Patel",
+        "location": "Bengaluru, India",
+        "quote": "The CELPIP test was straightforward and supportive. I aimed for CLB 8 and achieved it. Now, I’m heading to Canada!",
+        "score": "CLB 8"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CELPIP?",
+        "a": "CELPIP is a Canadian English language proficiency test that assesses your listening, reading, writing, and speaking skills. It is accepted by IRCC for immigration purposes."
+      },
+      {
+        "q": "How can I prepare for CELPIP?",
+        "a": "You can prepare for CELPIP through official study materials, practice tests, and preparation courses. This will help you feel confident on test day."
+      },
+      {
+        "q": "What scores do I need for PR?",
+        "a": "For Canadian permanent residency, a CLB score of 7-10 is commonly required. Check with IRCC for specific requirements related to your application."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "4-5 days",
+        "label": "Results Turnaround"
+      },
+      {
+        "value": "100+",
+        "label": "Test Locations"
+      },
+      {
+        "value": "1 million+",
+        "label": "Test Takers Worldwide"
+      },
+      {
+        "value": "95%",
+        "label": "Test Satisfaction Rate"
+      }
+    ],
+    "adHeadline": "Take Your First Step to Canada",
+    "adTagline": "Every milestone begins with a step; take yours."
+  },
+  "ads": {
+    "hero": "/builder/monafxkp-d155a0/hero.png",
+    "square": "/builder/monafxkp-d155a0/ad-1x1.png",
+    "story": "/builder/monafxkp-d155a0/ad-9x16.png",
+    "portrait": "/builder/monafxkp-d155a0/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "Meet Arjun, a 29-year-old software engineer from Bengalur…",
+    "tag": "Layout",
+    "description": "A young woman stands at the airport, suitcase in hand, watching as families embrace and laughter fills the air; her reflection in the glass reveals a mix of nervousness and determi",
+    "heroImageSrc": "/builder/monafxkp-d155a0/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "YOUR CANADIAN JOURNEY",
+          "headline": "Open Doors to Canada with CELPIP",
+          "subhead": "Enhance your English skills and take the first step towards your dream of living in Canada. You've got this, and we've got you.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A young woman stands at the airport, suitcase in hand, watching as families embr"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "4-5 days",
+              "label": "Results Turnaround"
+            },
+            {
+              "value": "100+",
+              "label": "Test Locations"
+            },
+            {
+              "value": "1 million+",
+              "label": "Test Takers Worldwide"
+            },
+            {
+              "value": "95%",
+              "label": "Test Satisfaction Rate"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Enhance your English skills and take the first step towards your dream of living in Canada. You've got this, and we've got you.",
+          "features": [
+            {
+              "icon": "🗣️",
+              "title": "Four Test Components",
+              "desc": "CELPIP tests listening, reading, writing, and speaking. Each section helps you demonstrate your English proficiency effectively."
+            },
+            {
+              "icon": "📅",
+              "title": "Fast Results",
+              "desc": "Receive your test results in just 4-5 days. Quickly see how you can move forward with your Canadian residency plans."
+            },
+            {
+              "icon": "💻",
+              "title": "Convenient Online Format",
+              "desc": "Take the test at your convenience. CELPIP offers an online platform that fits your busy schedule."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Priya Sharma",
+            "location": "Toronto, Canada",
+            "quote": "CELPIP helped me improve my English and prepare for life in Canada. I scored CLB 9, and I feel ready for my new adventure!",
+            "score": "CLB 9"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Priya Sharma",
+              "location": "Toronto, Canada",
+              "quote": "CELPIP helped me improve my English and prepare for life in Canada. I scored CLB 9, and I feel ready for my new adventure!",
+              "score": "CLB 9"
+            },
+            {
+              "name": "Raj Patel",
+              "location": "Bengaluru, India",
+              "quote": "The CELPIP test was straightforward and supportive. I aimed for CLB 8 and achieved it. Now, I’m heading to Canada!",
+              "score": "CLB 8"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP is a Canadian English language proficiency test that assesses your listening, reading, writing, and speaking skills. It is accepted by IRCC for immigration purposes."
+            },
+            {
+              "q": "How can I prepare for CELPIP?",
+              "a": "You can prepare for CELPIP through official study materials, practice tests, and preparation courses. This will help you feel confident on test day."
+            },
+            {
+              "q": "What scores do I need for PR?",
+              "a": "For Canadian permanent residency, a CLB score of 7-10 is commonly required. Check with IRCC for specific requirements related to your application."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Open Doors to Canada with CELPIP",
+          "subheading": "Enhance your English skills and take the first step towards your dream of living in Canada. You've got this, and we've got you.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 33.7,
+  "imageFallback": false
+}

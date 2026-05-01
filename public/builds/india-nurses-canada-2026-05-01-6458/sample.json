@@ -1,0 +1,210 @@
+{
+  "id": "india-nurses-canada-2026-05-01-6458",
+  "name": "India · Nurses → Canada — 2026-05-01",
+  "audienceKey": "india-nurses-canada",
+  "audienceLabel": "India · Nurses → Canada",
+  "selectedKinds": [
+    "HeroSplitForm",
+    "UrgencyBar",
+    "FeatureGrid",
+    "TestimonialSpotlight",
+    "ImageGalleryCarousel",
+    "ReadinessQuiz",
+    "FAQAccordion",
+    "CTABoldBanner"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "India · Nurses → Canada — 2026-05-01",
+    "tag": "Layout",
+    "description": "India · Nurses → Canada · 6 composed widgets",
+    "heroImageSrc": "/builds/india-nurses-canada-2026-05-01-6458/hero.png",
+    "blocks": [
+      {
+        "kind": "UrgencyBar",
+        "props": {
+          "city": "Toronto",
+          "date": "Sat, May 16",
+          "seatsLeft": 12,
+          "ctaLabel": "Book Now"
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Key Features of CELPIP",
+          "subheading": "Explore how CELPIP supports your journey to licensure in Canada, Anjali Sharma.",
+          "features": [
+            {
+              "icon": "🏥",
+              "title": "Healthcare Context",
+              "desc": "CELPIP evaluates your real-life English skills in a healthcare setting, crucial for your nursing career."
+            },
+            {
+              "icon": "📅",
+              "title": "Flexible Scheduling",
+              "desc": "With flexible test dates, you can choose a time that fits around your clinical shifts and studies."
+            },
+            {
+              "icon": "📍",
+              "title": "Convenient Locations",
+              "desc": "Take your CELPIP test at convenient locations across Canada, making it easier for you to prepare."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Anjali Sharma",
+            "location": "Mumbai → Toronto",
+            "quote": "Preparing for my licensure in Canada while working night shifts was challenging. CELPIP made it easier with flexible test dates and convenient locations. I received my results in just a few days, and the test truly reflected the English I use in healthcare. It was a supportive step in my journey!",
+            "score": "CLB 8"
+          }
+        }
+      },
+      {
+        "kind": "ImageGalleryCarousel",
+        "props": {
+          "heading": "Visualise Your Journey with CELPIP",
+          "images": [
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-0/800/800",
+              "alt": "Anjali Sharma studying for the CELPIP test",
+              "caption": "Anjali Sharma from Mumbai balancing her studies and clinical shifts."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-1/800/800",
+              "alt": "CELPIP test centre in Canada",
+              "caption": "Convenient testing locations across Canada to fit your busy schedule."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-2/800/800",
+              "alt": "CELPIP test preparation materials",
+              "caption": "Prepare with resources designed for real-life English skills in healthcare."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-3/800/800",
+              "alt": "Anjali Sharma celebrating her CELPIP results",
+              "caption": "CELPIP results available in just a few days, supporting your path to licensure."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-4/800/800",
+              "alt": "Flexible test dates calendar",
+              "caption": "Choose flexible test dates that work around your night rotations."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "ReadinessQuiz",
+        "props": {
+          "heading": "Are You Ready for the CELPIP Test?",
+          "subheading": "Find out how prepared you are for your English proficiency journey.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "How comfortable are you speaking English in a healthcare setting?",
+              "options": [
+                {
+                  "label": "Very comfortable",
+                  "score": 3
+                },
+                {
+                  "label": "Somewhat comfortable",
+                  "score": 2
+                },
+                {
+                  "label": "Not comfortable",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "id": "q2",
+              "question": "How often do you practice English in your daily life?",
+              "options": [
+                {
+                  "label": "Daily",
+                  "score": 3
+                },
+                {
+                  "label": "A few times a week",
+                  "score": 2
+                },
+                {
+                  "label": "Rarely",
+                  "score": 1
+                }
+              ]
+            },
+            {
+              "id": "q3",
+              "question": "Are you familiar with the CELPIP test format?",
+              "options": [
+                {
+                  "label": "Yes, very familiar",
+                  "score": 3
+                },
+                {
+                  "label": "Somewhat familiar",
+                  "score": 2
+                },
+                {
+                  "label": "Not familiar at all",
+                  "score": 1
+                }
+              ]
+            }
+          ],
+          "results": [
+            {
+              "thresholdMin": 9,
+              "title": "You're Ready!",
+              "body": "Anjali Sharma, you seem well-prepared for the CELPIP test. Your English skills are strong, and you’re ready to take the next step towards licensure in Canada. Book your test today!",
+              "ctaLabel": "Book Your CELPIP Test"
+            },
+            {
+              "thresholdMin": 5,
+              "title": "Almost Ready!",
+              "body": "Anjali Sharma, you’re on the right track but might benefit from some additional practice. Consider reviewing the CELPIP test format and practicing your English skills in healthcare situations.",
+              "ctaLabel": "Explore Study Resources"
+            },
+            {
+              "thresholdMin": 0,
+              "title": "Prep First!",
+              "body": "Anjali Sharma, it looks like you could use some more preparation before taking the CELPIP test. Focus on improving your English skills, especially in a healthcare context, to boost your confidence.",
+              "ctaLabel": "Start Your Preparation"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Frequently Asked Questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP and how is it relevant for nurses like Anjali Sharma?",
+              "a": "CELPIP is an English language test accepted by FMRAC and CAPR for licensure. It evaluates real-life English skills in a healthcare context, making it ideal for nurses like Anjali Sharma."
+            },
+            {
+              "q": "Where can I take the CELPIP test in Canada?",
+              "a": "CELPIP offers convenient testing locations across Canada, ensuring that you can find a test centre that fits your busy schedule."
+            },
+            {
+              "q": "How quickly will I receive my CELPIP results?",
+              "a": "CELPIP results are available in just a few days, allowing you to plan your next steps towards licensure without delay."
+            },
+            {
+              "q": "Are there flexible test dates available?",
+              "a": "Yes, CELPIP provides flexible test dates that accommodate your clinical shifts, making it easier for you to balance your studies and work."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T19:16:47.221Z"
+}

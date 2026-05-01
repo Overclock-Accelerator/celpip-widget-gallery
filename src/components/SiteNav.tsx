@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/widgets", label: "Widgets" },
   { href: "/microsites", label: "Microsites" },
-  { href: "/builder", label: "Builder" },
   { href: "/campaigns", label: "Campaigns" },
+  { href: "/builder", label: "Builder" },
 ];
 
 export function SiteNav() {

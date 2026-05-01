@@ -42,18 +42,18 @@ export default function ChooserHome() {
               accent="green"
             />
             <ChooserCard
-              href="/builder"
-              eyebrow="Widget composer"
-              title="Builder"
-              description="Pick widget variants you like — AI rewrites the copy into one cohesive, shareable microsite sample."
-              accent="gold"
-            />
-            <ChooserCard
               href="/campaigns"
               eyebrow="AI page builder"
               title="Campaigns"
               description="Describe an audience and concept — get ad creatives plus a full microsite."
               accent="purple"
+            />
+            <ChooserCard
+              href="/builder"
+              eyebrow="Widget composer"
+              title="Builder"
+              description="Pick widget variants you like — AI rewrites the copy into one cohesive, shareable microsite sample."
+              accent="gold"
             />
           </div>
         </div>
