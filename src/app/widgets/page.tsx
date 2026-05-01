@@ -79,10 +79,6 @@ export default function WidgetsPage() {
               </li>
             ))}
           </ul>
-          <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-[#153A5C]">
-            <p className="text-xs text-gray-500">Phase 1 Exploration</p>
-            <p className="text-xs text-gray-500">April 2026</p>
-          </div>
         </nav>
 
         {/* Main Content */}
