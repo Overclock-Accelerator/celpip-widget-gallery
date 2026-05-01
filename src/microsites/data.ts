@@ -1361,6 +1361,1637 @@ export const microsites: Microsite[] = [
       },
     ],
   },
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // Microsites #11–#20 — conversion-stage, copy anchored in research/
+  // celpip-positioning.md (verbatim/lightly adapted from celpip.ca).
+  // Audience: leads who have already chosen CELPIP and need a final push to
+  // register. Voice rules: "officially designated by IRCC", "officially
+  // recognized by DHA", "Find a Test Date" as primary CTA, no immigration
+  // advice, no competitor names, no pass-rate claims, no pricing on hero,
+  // Sitting.price left undefined throughout.
+  // ═════════════════════════════════════════════════════════════════════════
+
+  // ───────────────────── 11. India · Nurses → Canada ─────────────────────
+  {
+    id: 11,
+    title: "India · Nurses → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian nurses pursuing licensure and PR in Canada.",
+    heroImageSrc: "/heroes/11.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR HEALTHCARE PROFESSIONALS",
+          headline: "Your nursing career in Canada starts with one English test.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency, and accepted by FMRAC and CAPR for nursing licensure. Test in 9 centres across India, computer-delivered in one sitting, results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Indian nurse reviewing her CELPIP score report at home",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "FMRAC", subLabel: "Medical regulators of Canada" },
+            { label: "CAPR", subLabel: "Physiotherapy regulators" },
+            { label: "BC HCAP", subLabel: "Health care assistant program" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-11-moment/1200/1400",
+          imageAlt:
+            "Aastha at her kitchen table reviewing her CELPIP score report on a laptop",
+          oneLineMoment:
+            "From a night shift in Mumbai to a PSW pathway in Ontario, in one sitting.",
+          paragraphQuote:
+            "I was working night shifts as a staff nurse and didn't think I had time to prepare. The CELPIP questions felt like easy-to-understand English and vocabulary taken from everyday situations — the same conversations I have on the ward. I tested on a Saturday morning and had my CLB scores by the next Wednesday.",
+          attribution: {
+            name: "Aastha Patel",
+            location: "Mumbai → Ontario",
+            score: "CLB 9",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in India",
+          subheading:
+            "Open sittings across 9 CELPIP test centres in India — computer-delivered in one sitting, results in 3 to 4 business days.",
+          sittings: [
+            {
+              city: "New Delhi",
+              centreName: "New Delhi — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Mumbai",
+              centreName: "Mumbai — Prometric Testing",
+              date: "Sun, May 17",
+              time: "1:00 PM",
+              seatsLeft: 3,
+            },
+            {
+              city: "Bengaluru",
+              centreName: "Bengaluru — Prometric Testing",
+              date: "Sat, May 23",
+              time: "9:30 AM",
+              seatsLeft: 8,
+            },
+            {
+              city: "Chennai",
+              centreName: "Chennai — Prometric Testing",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Indian nurses ask before booking — answered honestly.",
+          objections: [
+            {
+              worry: "I work night shifts — can I prepare in a few weeks?",
+              reassurance:
+                "Yes. CELPIP offers 100+ hours of free prep — practice tests, weekly webinars, study guides, and self-paced courses. Two free practice tests come with your CELPIP Account, and recordings of every webinar are on YouTube so you can prep around your shift schedule.",
+              softCta: { label: "See free prep resources" },
+            },
+            {
+              worry: "Will my English skills hold up?",
+              reassurance:
+                "CELPIP is built on easy-to-understand English and vocabulary taken from everyday situations — workplace conversations, voicemails, and community signs. It is focused on practical, real-world communication for school, career, and life, not academic essays.",
+            },
+            {
+              worry: "What CELPIP score do nurses need?",
+              reassurance:
+                "FMRAC requires CELPIP 9 in each component; CAPR requires CELPIP 8 in each component. Specific licensing requirements vary by province — please check with your provincial licensing body. We are not licensed to give immigration advice.",
+              softCta: { label: "View score concordance" },
+            },
+            {
+              worry: "How fast will I get my results?",
+              reassurance:
+                "Your PDF score report is available online in 3 to 4 business days after the test date. The PDF score report is official and accepted by IRCC, FMRAC, CAPR, and other licensing bodies — no paper, no waiting on mail.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 12. India · Software Engineers → Canada ─────────────────────
+  {
+    id: 12,
+    title: "India · Software Engineers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian software engineers on the Express Entry path.",
+    heroImageSrc: "/heroes/12.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR TECH PROFESSIONALS",
+          headline: "Your Express Entry score starts here.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Test in less than 3 hours with results in 2 to 4 days, computer-delivered in one sitting, in 9 centres across India's tech corridors.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "See Test Centres" },
+          imageAlt:
+            "Bengaluru software engineer working on a laptop in a modern office",
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from here to PR",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc:
+                "Pick a date and centre — Bengaluru, Hyderabad, Pune, Chennai, or Gurgaon. Confirmed instantly.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Practice with free materials",
+              desc:
+                "Two free practice tests, 100+ hours of prep videos, and weekly webinars — all free.",
+              cta: { label: "Get prep pack" },
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc:
+                "Self-paced test is completed during one sitting in 3 hours or less, computer-delivered.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Get results in 2–4 days",
+              desc:
+                "Official PDF score report online, ready to upload to your Express Entry profile.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in India",
+          subheading:
+            "Open sittings in India's tech corridors — secure an available test date within 2 weeks in most major cities.",
+          sittings: [
+            {
+              city: "Bengaluru",
+              centreName: "Bengaluru — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Hyderabad",
+              centreName: "Hyderabad — Prometric Testing",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 9,
+            },
+            {
+              city: "Pune",
+              centreName: "Pune — Prometric Testing",
+              date: "Sat, May 23",
+              time: "1:00 PM",
+              seatsLeft: 2,
+            },
+            {
+              city: "Gurgaon",
+              centreName: "Gurgaon — Prometric Testing",
+              date: "Sun, May 24",
+              time: "9:30 AM",
+              seatsLeft: 7,
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-12-moment/300/300",
+          imageAlt: "Portrait of Vikram, a software engineer from Bengaluru",
+          oneLineMoment:
+            "He booked CELPIP on a Tuesday and uploaded his CLB scores to Express Entry the same week.",
+          paragraphQuote:
+            "Vikram had been putting the test off for months. CELPIP fit his life: register online in minutes, test in less than 3 hours, results in 2 to 4 days. He took it on a Saturday morning in Bengaluru and had his Express Entry profile updated by Wednesday.",
+          attribution: {
+            name: "Vikram Iyer",
+            location: "Bengaluru → Toronto",
+            score: "CLB 10",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Express Entry · PR" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "CLB", subLabel: "Aligned scoring" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "200+", subLabel: "Centres in 40+ countries" },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "Ready when you are.",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 13. India · Finance & Accounting → Canada ─────────────────────
+  {
+    id: 13,
+    title: "India · Finance & Accounting → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian CAs and finance professionals moving to Canada.",
+    heroImageSrc: "/heroes/13.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR FINANCE PROFESSIONALS",
+          headline: "From Mumbai to your Canadian career, in one English test.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Test in less than 3 hours with results in 2 to 4 days, computer-delivered in one sitting.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt:
+            "Indian chartered accountant reviewing financial documents at her desk",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "IRCC", subLabel: "Citizenship" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in India",
+          subheading:
+            "Open sittings across India's finance hubs — secure an available test date within 2 weeks.",
+          sittings: [
+            {
+              city: "Mumbai",
+              centreName: "Mumbai — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Gurgaon",
+              centreName: "Gurgaon — Prometric Testing",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Kolkata",
+              centreName: "Kolkata — Prometric Testing",
+              date: "Sat, May 23",
+              time: "9:30 AM",
+              seatsLeft: 2,
+            },
+            {
+              city: "New Delhi",
+              centreName: "New Delhi — Prometric Testing",
+              date: "Sun, May 24",
+              time: "1:00 PM",
+              seatsLeft: 8,
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-13-moment/300/300",
+          imageAlt: "Portrait of Neha, a chartered accountant from Mumbai",
+          oneLineMoment:
+            "She finished her CELPIP on a Saturday morning and had her CLB scores by Thursday.",
+          paragraphQuote:
+            "Neha is a CA with seven years at a Big 4 firm in Mumbai. She had no time for a test that demanded weeks of leave. CELPIP fit because the self-paced test is completed during one sitting in 3 hours or less with results in 2 to 4 days. Her credentialing file with the Canadian firm closed two weeks later.",
+          attribution: {
+            name: "Neha Krishnan",
+            location: "Mumbai → Toronto",
+            score: "CLB 10",
+            date: "February 2026",
+          },
+        },
+      },
+      {
+        kind: "ReadinessQuiz",
+        props: {
+          heading: "Are you ready to book?",
+          subheading:
+            "A 30-second check. We will tell you what to do next based on your answers.",
+          questions: [
+            {
+              id: "computer",
+              question: "How comfortable are you with computer-based tests?",
+              options: [
+                {
+                  label: "Very comfortable — I work on a computer every day.",
+                  score: 3,
+                },
+                {
+                  label: "Mostly fine — I would want a quick walkthrough first.",
+                  score: 2,
+                },
+                {
+                  label: "A bit nervous — I would prefer to try the interface first.",
+                  score: 1,
+                },
+              ],
+            },
+            {
+              id: "since-exam",
+              question: "How long since your last English exam?",
+              options: [
+                { label: "Within the last 12 months.", score: 3 },
+                { label: "1–3 years ago.", score: 2 },
+                { label: "More than 3 years — or never.", score: 1 },
+              ],
+            },
+            {
+              id: "daily-english",
+              question: "How much daily English do you use at work?",
+              options: [
+                { label: "All day — meetings, emails, client calls.", score: 3 },
+                { label: "Most of the day, but in writing more than speaking.", score: 2 },
+                { label: "Some — mostly written reports.", score: 1 },
+              ],
+            },
+          ],
+          results: [
+            {
+              thresholdMin: 7,
+              title: "You are ready. Find a test date.",
+              body:
+                "Based on your answers, you are well-positioned to book now. Most people in your situation are within range on the first official practice test.",
+              ctaLabel: "Find a Test Date",
+            },
+            {
+              thresholdMin: 4,
+              title: "Almost there. Try a free practice test first.",
+              body:
+                "You are close. Two free practice tests come with your CELPIP Account — take one to confirm your range, then book.",
+              ctaLabel: "Try a free practice test",
+            },
+            {
+              thresholdMin: 0,
+              title: "Start with the prep pack.",
+              body:
+                "No problem — most people start here. CELPIP offers 100+ hours of free prep. Two to three weeks of focused study and you will be ready for the practice test.",
+              ctaLabel: "Send me the prep pack",
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading: "The real questions finance professionals ask before booking.",
+          objections: [
+            {
+              worry: "I have not taken a standardized test in years.",
+              reassurance:
+                "CELPIP is computer-delivered in one sitting and uses easy-to-understand English and vocabulary taken from everyday situations. Two free practice tests come with your CELPIP Account so you can rehearse the format before test day.",
+              softCta: { label: "Try a free practice test" },
+            },
+            {
+              worry: "Will my CELPIP score be accepted by Canadian employers?",
+              reassurance:
+                "CELPIP is officially designated by IRCC for permanent residency, and the CELPIP Tests are officially accepted by several governments, professional organizations, colleges, universities, and employers. The PDF score report is official.",
+            },
+            {
+              worry: "How long are CELPIP scores valid?",
+              reassurance:
+                "CELPIP scores are valid for 2 years from the test date for most immigration purposes. For program-specific score requirements, please consult a licensed immigration consultant.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 14. Philippines · Nurses → Canada ─────────────────────
+  {
+    id: 14,
+    title: "Philippines · Nurses → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Filipino nurses pursuing Canadian PR and licensure.",
+    heroImageSrc: "/heroes/14.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN PHILIPPINES · FOR HEALTHCARE PROFESSIONALS",
+          headline: "Your Canadian nursing career — closer than you think.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency, and accepted by FMRAC and CAPR for nursing licensure. Computer-delivered tests done in one sitting with quick online results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Filipino nurse in scrubs smiling at the nurses' station",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "FMRAC", subLabel: "Medical regulators of Canada" },
+            { label: "CAPR", subLabel: "Physiotherapy regulators" },
+            { label: "BC HCAP", subLabel: "Health care assistant program" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-14-moment/1200/1400",
+          imageAlt:
+            "Filipino nurse Maria reviewing her CELPIP score report on a laptop at home in Manila",
+          oneLineMoment:
+            "From a hospital ward in Manila to a PSW pathway in Ontario — in one sitting.",
+          paragraphQuote:
+            "I am a registered nurse working night shifts at a private hospital in Manila. CELPIP fit because all four components are computer-delivered in one sitting — no separate speaking session, no second appointment. The questions felt like easy-to-understand English and vocabulary taken from everyday situations, the same conversations I have on the ward every day.",
+          attribution: {
+            name: "Maria Santos",
+            location: "Manila → Ontario",
+            score: "CLB 9",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Available CELPIP sittings in the Philippines",
+          subheading:
+            "87 options nationwide — pick the date and centre that works around your shift.",
+          sittings: [
+            {
+              city: "Manila",
+              centreName: "Manila — Makati Test Centre",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 5,
+              address: "Makati City, Metro Manila",
+              parkingNote: "Accessible by Ayala MRT station — 5 min walk.",
+            },
+            {
+              city: "Cebu",
+              centreName: "Cebu City Test Centre",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 2,
+              address: "Cebu Business Park, Cebu City",
+              parkingNote: "Free parking on premises.",
+            },
+            {
+              city: "Davao",
+              centreName: "Davao Test Centre",
+              date: "Sat, May 23",
+              time: "1:00 PM",
+              seatsLeft: 8,
+              address: "Davao City, Davao del Sur",
+            },
+            {
+              city: "Bacolod",
+              centreName: "Bacolod City Test Centre",
+              date: "Sun, May 24",
+              time: "9:30 AM",
+              seatsLeft: 4,
+              address: "Bacolod City, Negros Occidental",
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Filipino nurses ask before booking — answered honestly.",
+          objections: [
+            {
+              worry: "I work 12-hour hospital shifts — can I prepare in time?",
+              reassurance:
+                "Yes. CELPIP offers 100+ hours of free prep — practice tests, weekly webinars, and self-paced courses you can take around your roster. Two free practice tests come with your CELPIP Account, and Webinar Study Materials specific to the Philippines are available on celpip.ca.",
+              softCta: { label: "See free prep resources" },
+            },
+            {
+              worry: "Will my English skills hold up under test conditions?",
+              reassurance:
+                "CELPIP uses easy-to-understand English and vocabulary taken from everyday situations — workplace conversations, voicemails, and community signs. It is focused on practical, real-world communication for school, career, and life.",
+            },
+            {
+              worry: "What CELPIP score do nurses need?",
+              reassurance:
+                "FMRAC requires CELPIP 9 in each component; CAPR requires CELPIP 8 in each component. Specific licensing requirements vary by province — please check with your provincial licensing body. We are not licensed to give immigration advice.",
+              softCta: { label: "View score concordance" },
+            },
+            {
+              worry: "How fast will I see my results?",
+              reassurance:
+                "Your PDF score report is available online in 3 to 4 business days after the test date. The PDF score report is official and accepted by IRCC, FMRAC, CAPR, and other licensing bodies.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 15. Philippines · Engineers → Canada ─────────────────────
+  {
+    id: 15,
+    title: "Philippines · Engineers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Filipino engineers on the Express Entry path.",
+    heroImageSrc: "/heroes/15.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN PHILIPPINES · FOR ENGINEERS",
+          headline: "Build your career in Canada — starting in one sitting.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered tests done in one sitting with quick online results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "See Test Centres" },
+          imageAlt: "Filipino engineer reviewing technical drawings on a tablet",
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from here to PR",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc:
+                "Pick a date and centre — Manila, Cebu, or Makati. Register online in minutes.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Practice with free materials",
+              desc:
+                "Two free practice tests, 100+ hours of prep videos, weekly webinars — all free.",
+              cta: { label: "Get prep pack" },
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc:
+                "Self-paced test is completed during one sitting in 3 hours or less, computer-delivered.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Results in 2–4 days",
+              desc:
+                "Official PDF score report online — upload to your Express Entry profile.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in the Philippines",
+          subheading:
+            "Open sittings — 87 options nationwide. Find an available exam to schedule within 2 weeks.",
+          sittings: [
+            {
+              city: "Manila",
+              centreName: "Manila — Makati Test Centre",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Cebu",
+              centreName: "Cebu City Test Centre",
+              date: "Sun, May 17",
+              time: "1:00 PM",
+              seatsLeft: 3,
+            },
+            {
+              city: "Makati",
+              centreName: "Makati Business District",
+              date: "Sat, May 23",
+              time: "9:30 AM",
+              seatsLeft: 9,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Quezon City Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-15-moment/300/300",
+          imageAlt: "Portrait of Joshua, a Filipino engineer from Cebu",
+          oneLineMoment:
+            "He registered online in minutes and tested in Cebu the following weekend.",
+          paragraphQuote:
+            "Joshua is a mechanical engineer in Cebu. He had been waiting to take an English test for over a year. CELPIP made it simple — register online in minutes, test in less than 3 hours, results in 2 to 4 days. He uploaded his CLB scores to Express Entry the same week.",
+          attribution: {
+            name: "Joshua Reyes",
+            location: "Cebu → Vancouver",
+            score: "CLB 9",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "ReadinessQuiz",
+        props: {
+          heading: "Are you ready to book?",
+          subheading:
+            "A 30-second check. We will tell you what to do next based on your answers.",
+          questions: [
+            {
+              id: "computer",
+              question: "How comfortable are you with a 3-hour test on a computer?",
+              options: [
+                { label: "Very comfortable — I work on a computer daily.", score: 3 },
+                { label: "Mostly fine — I want a quick walkthrough first.", score: 2 },
+                { label: "A bit nervous — I want to try the interface first.", score: 1 },
+              ],
+            },
+            {
+              id: "english-use",
+              question: "How much daily English do you use at work?",
+              options: [
+                { label: "All day — meetings, technical reports, calls.", score: 3 },
+                { label: "Most of the day, mostly written.", score: 2 },
+                { label: "Some — mostly emails.", score: 1 },
+              ],
+            },
+            {
+              id: "timeline",
+              question: "How urgent is your timeline?",
+              options: [
+                { label: "I need scores in the next 4 weeks.", score: 3 },
+                { label: "I have 1–3 months.", score: 2 },
+                { label: "3+ months — no rush.", score: 1 },
+              ],
+            },
+          ],
+          results: [
+            {
+              thresholdMin: 7,
+              title: "You are ready. Find a test date.",
+              body:
+                "Based on your answers, you are well-positioned to book now. The longer you wait, the more you forget.",
+              ctaLabel: "Find a Test Date",
+            },
+            {
+              thresholdMin: 4,
+              title: "Almost there. Try a free practice test first.",
+              body:
+                "You are close. A free official practice test will tell you exactly where you stand.",
+              ctaLabel: "Try a free practice test",
+            },
+            {
+              thresholdMin: 0,
+              title: "Start with the prep pack.",
+              body:
+                "Most people start here. 100+ hours of free prep — two to three weeks of focused study and you will be ready.",
+              ctaLabel: "Send me the prep pack",
+            },
+          ],
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Express Entry · PR" },
+            { label: "Engineers Canada", subLabel: "Designation pathway" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "Ready when you are.",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 16. Philippines · Finance Professionals → Canada ─────────────────────
+  {
+    id: 16,
+    title: "Philippines · Finance Professionals → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Filipino finance professionals targeting Canadian PR.",
+    heroImageSrc: "/heroes/16.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN PHILIPPINES · FOR FINANCE PROFESSIONALS",
+          headline: "Take the CELPIP Test in Philippines — your Canadian PR pathway.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered tests done in one sitting with quick online results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt:
+            "Filipino finance professional working in a Makati office tower",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "IRCC", subLabel: "Citizenship" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in the Philippines",
+          subheading:
+            "Open sittings across Makati, Manila, and Cebu — 87 options nationwide.",
+          sittings: [
+            {
+              city: "Makati",
+              centreName: "Makati Business District",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Quezon City Centre",
+              date: "Sun, May 17",
+              time: "1:00 PM",
+              seatsLeft: 7,
+            },
+            {
+              city: "Cebu",
+              centreName: "Cebu City Test Centre",
+              date: "Sat, May 23",
+              time: "9:30 AM",
+              seatsLeft: 2,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Ortigas Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 6,
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-16-moment/300/300",
+          imageAlt: "Portrait of Carla, a CPA in Makati",
+          oneLineMoment:
+            "She registered online in minutes and uploaded her CLB scores the same week.",
+          paragraphQuote:
+            "Carla is a CPA at a multinational bank in Makati. She did not have time for an exam that took weeks to schedule and weeks to score. CELPIP fit: register online in minutes, test in less than 3 hours, results in 2 to 4 days. Two months later her Canadian PR application was complete.",
+          attribution: {
+            name: "Carla Reyes",
+            location: "Makati → Toronto",
+            score: "CLB 10",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "PrepStarterPackInline",
+        props: {
+          eyebrow: "FREE",
+          headline: "Get the official CELPIP practice test, free.",
+          benefits: [
+            "Two free practice tests with your CELPIP Account",
+            "100+ hours of prep videos and webinars",
+            "Self-scoring rubrics for writing and speaking",
+            "Audio for the listening section",
+          ],
+          ctaLabel: "Send me the prep pack",
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions finance professionals ask before booking.",
+          objections: [
+            {
+              worry: "I have not taken a standardized test in years.",
+              reassurance:
+                "CELPIP is computer-delivered in one sitting and uses easy-to-understand English and vocabulary taken from everyday situations. Two free practice tests come with your CELPIP Account.",
+              softCta: { label: "Try a free practice test" },
+            },
+            {
+              worry: "Will my CELPIP score be accepted by Canadian employers?",
+              reassurance:
+                "The CELPIP Tests are officially accepted by several governments, professional organizations, colleges, universities, and employers. The PDF score report is official.",
+            },
+            {
+              worry: "How long are CELPIP scores valid?",
+              reassurance:
+                "CELPIP scores are valid for 2 years from the test date for most immigration purposes. For program-specific requirements, please consult a licensed immigration consultant.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 17. Nigeria · Healthcare → Canada ─────────────────────
+  {
+    id: 17,
+    title: "Nigeria · Healthcare → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Nigerian healthcare professionals targeting Canadian licensure and PR.",
+    heroImageSrc: "/heroes/17.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP · FOR HEALTHCARE PROFESSIONALS",
+          headline: "Your medical career in Canada is one test away.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency, and accepted by FMRAC and Colleges of Physicians and Surgeons across Canada. Computer-delivered tests done in one sitting with quick online results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Nigerian doctor in a Lagos hospital reviewing patient charts",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "FMRAC", subLabel: "Medical regulators of Canada" },
+            { label: "CAPR", subLabel: "Physiotherapy regulators" },
+            { label: "CPSCs", subLabel: "Physicians and Surgeons across Canada" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-17-moment/1200/1400",
+          imageAlt:
+            "Dr. Adekunle reviewing his CELPIP score report on a laptop in his Lagos office",
+          oneLineMoment:
+            "From a Lagos teaching hospital to specialist licensure in Toronto — in one sitting.",
+          paragraphQuote:
+            "I am a consultant in internal medicine at a Lagos teaching hospital. I had been delaying the English test because I thought it would take months. CELPIP fit my schedule — register online in minutes, all four components in one sitting in 3 hours or less, official PDF score report in 3 to 4 business days. The questions were easy-to-understand English and vocabulary taken from everyday situations.",
+          attribution: {
+            name: "Dr. Tunde Adekunle",
+            location: "Lagos → Toronto",
+            score: "CLB 10",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Available CELPIP sittings in Nigeria",
+          subheading:
+            "Pick the date and centre that works for you — booking is confirmed instantly with payment.",
+          sittings: [
+            {
+              city: "Lagos",
+              centreName: "Lagos — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 6,
+              address: "Victoria Island, Lagos",
+              parkingNote: "Secure on-site parking available.",
+            },
+            {
+              city: "Abuja",
+              centreName: "Abuja — Prometric Testing",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 4,
+              address: "Wuse 2, Abuja",
+            },
+            {
+              city: "Port Harcourt",
+              centreName: "Port Harcourt — Prometric Testing",
+              date: "Sat, May 23",
+              time: "1:00 PM",
+              seatsLeft: 2,
+              address: "Trans Amadi, Port Harcourt",
+            },
+          ],
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from here to licensure",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc: "Pick a date and centre — Lagos, Abuja, or Port Harcourt.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Prepare with free resources",
+              desc: "100+ hours of free prep — two free practice tests, weekly webinars.",
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc: "Computer-delivered, all four components in 3 hours or less.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Submit to your regulator",
+              desc:
+                "Official PDF score report in 3 to 4 business days — share directly with FMRAC or your CPSC.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Nigerian healthcare professionals ask before booking.",
+          objections: [
+            {
+              worry: "I work long clinical hours — can I prepare in time?",
+              reassurance:
+                "Yes. CELPIP offers 100+ hours of free prep — practice tests, weekly webinars, and self-paced courses. Two free practice tests come with your CELPIP Account.",
+              softCta: { label: "See free prep resources" },
+            },
+            {
+              worry: "What CELPIP score do healthcare professionals need?",
+              reassurance:
+                "FMRAC requires CELPIP 9 in each component; CAPR requires CELPIP 8 in each component. Specific licensing requirements vary by province and college — please check with your provincial licensing body.",
+            },
+            {
+              worry: "Will my English skills hold up?",
+              reassurance:
+                "CELPIP uses easy-to-understand English and vocabulary taken from everyday situations. It is focused on practical, real-world communication for school, career, and life.",
+            },
+            {
+              worry: "How fast will I see my results?",
+              reassurance:
+                "Your PDF score report is available online in 3 to 4 business days after the test date. The PDF score report is official and accepted by IRCC, FMRAC, CAPR, and the Colleges of Physicians and Surgeons across Canada.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 18. Nigeria · Engineers → Canada ─────────────────────
+  {
+    id: 18,
+    title: "Nigeria · Engineers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Nigerian engineers on the Express Entry path.",
+    heroImageSrc: "/heroes/18.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP · FOR ENGINEERS",
+          headline: "Your Express Entry path — one English test, one sitting.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered tests done in one sitting with quick online results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "See Test Centres" },
+          imageAlt: "Nigerian engineer at a construction site in Lagos with a tablet",
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from here to PR",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc: "Pick a date and centre — Lagos, Abuja, or Port Harcourt.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Practice with free materials",
+              desc: "Two free practice tests, 100+ hours of free prep videos and webinars.",
+              cta: { label: "Get prep pack" },
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc: "Self-paced test in 3 hours or less, computer-delivered.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Results in 2–4 days",
+              desc: "Official PDF score report — upload to your Express Entry profile.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in Nigeria",
+          subheading:
+            "Open sittings across Lagos, Abuja, and Port Harcourt — secure an available test date within 2 weeks.",
+          sittings: [
+            {
+              city: "Lagos",
+              centreName: "Lagos — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 7,
+            },
+            {
+              city: "Abuja",
+              centreName: "Abuja — Prometric Testing",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Port Harcourt",
+              centreName: "Port Harcourt — Prometric Testing",
+              date: "Sat, May 23",
+              time: "1:00 PM",
+              seatsLeft: 3,
+            },
+            {
+              city: "Lagos",
+              centreName: "Lagos — Lekki Centre",
+              date: "Sun, May 24",
+              time: "9:30 AM",
+              seatsLeft: 8,
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-18-moment/300/300",
+          imageAlt: "Portrait of Chinedu, a Nigerian engineer in Lagos",
+          oneLineMoment:
+            "He booked CELPIP on a Tuesday and uploaded his CLB scores to Express Entry the same week.",
+          paragraphQuote:
+            "Chinedu is a structural engineer in Lagos. He had been preparing on his own for six months. CELPIP fit his life — register online in minutes, test in less than 3 hours, results in 2 to 4 days. The questions felt like easy-to-understand English from everyday situations, not academic essays.",
+          attribution: {
+            name: "Chinedu Okeke",
+            location: "Lagos → Calgary",
+            score: "CLB 10",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Express Entry · PR" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "CLB", subLabel: "Aligned scoring" },
+            { label: "200+", subLabel: "Centres in 40+ countries" },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading: "The real questions engineers ask before booking.",
+          objections: [
+            {
+              worry: "How long does the whole test take?",
+              reassurance:
+                "Self-paced test is completed during one sitting in 3 hours or less, with no separate speaking session. All four components — listening, reading, writing, speaking — on the same computer.",
+            },
+            {
+              worry: "What CELPIP score do most Express Entry candidates target?",
+              reassurance:
+                "Higher CELPIP scores translate to higher CLB levels and more Express Entry points. CLB 9 across all four components is a common target. We are not licensed to give immigration advice — please check the IRCC website for current program requirements.",
+              softCta: { label: "View score concordance" },
+            },
+            {
+              worry: "Are my scores accepted internationally?",
+              reassurance:
+                "The CELPIP Tests are officially accepted by several governments, professional organizations, colleges, universities, and employers. CELPIP scores are aligned to CLB and CEFR standards.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "Ready when you are.",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 19. Nigeria · Finance → Canada ─────────────────────
+  {
+    id: 19,
+    title: "Nigeria · Finance → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Nigerian finance professionals targeting Canadian PR.",
+    heroImageSrc: "/heroes/19.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP · FOR FINANCE PROFESSIONALS",
+          headline: "Take the leading English test for Canadian PR.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered tests done in one sitting with quick online results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Nigerian finance professional in a Lagos office tower",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "IRCC", subLabel: "Citizenship" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in Nigeria",
+          subheading:
+            "Open sittings across Lagos and Abuja — find an available exam to schedule within 2 weeks.",
+          sittings: [
+            {
+              city: "Lagos",
+              centreName: "Lagos — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Abuja",
+              centreName: "Abuja — Prometric Testing",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Lagos",
+              centreName: "Lagos — Victoria Island",
+              date: "Sat, May 23",
+              time: "1:00 PM",
+              seatsLeft: 2,
+            },
+            {
+              city: "Abuja",
+              centreName: "Abuja — Wuse 2",
+              date: "Sun, May 24",
+              time: "9:30 AM",
+              seatsLeft: 5,
+            },
+          ],
+        },
+      },
+      {
+        kind: "ReadinessQuiz",
+        props: {
+          heading: "Are you ready to book?",
+          subheading:
+            "A 30-second check. We will tell you what to do next based on your answers.",
+          questions: [
+            {
+              id: "computer",
+              question: "How comfortable are you with computer-based tests?",
+              options: [
+                { label: "Very comfortable — I work on a computer daily.", score: 3 },
+                { label: "Mostly fine — I would want a quick walkthrough.", score: 2 },
+                { label: "A bit nervous — I want to try the interface first.", score: 1 },
+              ],
+            },
+            {
+              id: "since-exam",
+              question: "How long since your last formal English exam?",
+              options: [
+                { label: "Within the last 12 months.", score: 3 },
+                { label: "1–3 years ago.", score: 2 },
+                { label: "More than 3 years — or never.", score: 1 },
+              ],
+            },
+            {
+              id: "english-use",
+              question: "How much daily English do you use at work?",
+              options: [
+                { label: "All day — meetings, audits, emails.", score: 3 },
+                { label: "Most of the day, mostly written.", score: 2 },
+                { label: "Some — mostly written reports.", score: 1 },
+              ],
+            },
+          ],
+          results: [
+            {
+              thresholdMin: 7,
+              title: "You are ready. Find a test date.",
+              body:
+                "Based on your answers, you are well-positioned to book now. Take a free official practice test to confirm your range, then register.",
+              ctaLabel: "Find a Test Date",
+            },
+            {
+              thresholdMin: 4,
+              title: "Almost there. Try a free practice test first.",
+              body:
+                "You are close. Two free practice tests come with your CELPIP Account.",
+              ctaLabel: "Try a free practice test",
+            },
+            {
+              thresholdMin: 0,
+              title: "Start with the prep pack.",
+              body:
+                "Most people start here. CELPIP offers 100+ hours of free prep. Two to three weeks of focused study and you will be ready for the practice test.",
+              ctaLabel: "Send me the prep pack",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-19-moment/300/300",
+          imageAlt: "Portrait of Aisha, a Nigerian finance professional",
+          oneLineMoment:
+            "She booked CELPIP on a Wednesday, tested Saturday, and uploaded her CLB scores to Express Entry the next Friday.",
+          paragraphQuote:
+            "Aisha is a senior auditor at a Lagos bank. She had been planning her PR application for two years. CELPIP fit because the self-paced test is completed during one sitting in 3 hours or less with results in 2 to 4 days. The questions used easy-to-understand English from everyday situations.",
+          attribution: {
+            name: "Aisha Bello",
+            location: "Lagos → Toronto",
+            score: "CLB 9",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "PrepStarterPackInline",
+        props: {
+          eyebrow: "FREE",
+          headline: "Get the official CELPIP practice test, free.",
+          benefits: [
+            "Two free practice tests with your CELPIP Account",
+            "100+ hours of prep videos and webinars",
+            "Self-scoring rubrics for writing and speaking",
+            "Audio for the listening section",
+          ],
+          ctaLabel: "Send me the prep pack",
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 20. India · Nurses → Australia (DHA path) ─────────────────────
+  {
+    id: 20,
+    title: "India · Nurses → Australia",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian nurses pursuing an Australian visa via the DHA path.",
+    heroImageSrc: "/heroes/20.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR AUSTRALIAN VISA APPLICANTS",
+          headline: "Apply for an Australian Visa with confidence.",
+          subhead:
+            "Immigrate to Australia with the CELPIP English proficiency test, officially recognized by the Department of Home Affairs (DHA) to meet several program requirements. Test in India — your scores travel with you.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "DHA Score Levels" },
+          imageAlt: "Indian nurse with a suitcase outside Sydney Opera House",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "DHA Australia", subLabel: "Department of Home Affairs" },
+            { label: "Engineers Australia", subLabel: "National engineering body" },
+            { label: "TAFE", subLabel: "Vocational education Australia" },
+            { label: "Visa 482 / 485 / PR", subLabel: "Skilled migration pathways" },
+            { label: "200+", subLabel: "Centres in 40+ countries" },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Test in India — scores recognized in Australia",
+          subheading:
+            "Take CELPIP at a centre near you in India. Your DHA-recognized PDF score report is delivered online in 2 to 4 days, ready to submit with your visa application.",
+          sittings: [
+            {
+              city: "Mumbai",
+              centreName: "Mumbai — Prometric Testing",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 5,
+              address: "Andheri East, Mumbai",
+            },
+            {
+              city: "Bengaluru",
+              centreName: "Bengaluru — Prometric Testing",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 3,
+              address: "Whitefield, Bengaluru",
+            },
+            {
+              city: "Hyderabad",
+              centreName: "Hyderabad — Prometric Testing",
+              date: "Sat, May 23",
+              time: "1:00 PM",
+              seatsLeft: 7,
+              address: "HITEC City, Hyderabad",
+            },
+            {
+              city: "New Delhi",
+              centreName: "New Delhi — CPS Global",
+              date: "Sun, May 24",
+              time: "9:30 AM",
+              seatsLeft: 2,
+              address: "Connaught Place, New Delhi",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-20-moment/1200/1400",
+          imageAlt:
+            "Indian nurse with her CELPIP score report and an Australian Visa 482 application",
+          oneLineMoment:
+            "From a Mumbai ward to a Sydney hospital — recognized by the DHA on the first attempt.",
+          paragraphQuote:
+            "I am a registered nurse in Mumbai with five years of experience. I needed Proficient English for my Visa 482 application. CELPIP fit: register online in minutes, test in less than 3 hours, results in 2 to 4 days. The questions were easy-to-understand English and vocabulary taken from everyday situations — the same conversations I have on the ward. My visa was lodged within a fortnight of my test.",
+          attribution: {
+            name: "Priya Nair",
+            location: "Mumbai → Sydney",
+            score: "DHA Proficient",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "DHA-specific questions for nurses applying for an Australian visa.",
+          objections: [
+            {
+              worry: "Which DHA level do I need for my visa?",
+              reassurance:
+                "DHA recognises four English proficiency levels: Vocational (CELPIP 5 in each component), Competent (CELPIP 7 in each component), Proficient (typically CELPIP 8–9), and Superior (CELPIP 10+). Specific level requirements vary by visa subclass — please check with a registered MARA agent or the Department of Home Affairs for your stream.",
+              softCta: { label: "View DHA score levels" },
+            },
+            {
+              worry: "Will my CELPIP score be accepted by the DHA?",
+              reassurance:
+                "Yes. CELPIP is officially recognized by the Department of Home Affairs (DHA) to meet several program requirements, including Visa 482 (Temporary Skills Shortage), Visa 485 (Temporary Graduate), and Permanent Residency.",
+            },
+            {
+              worry: "Can I take the test in India even though I am applying to Australia?",
+              reassurance:
+                "Yes. CELPIP has 9 test centres in India and 200+ test centres in 40+ countries worldwide. Your DHA-recognized PDF score report is delivered online in 2 to 4 days and travels with you.",
+            },
+            {
+              worry: "How long are CELPIP scores valid for DHA purposes?",
+              reassurance:
+                "CELPIP scores are valid for 2 years from the test date. We are not migration agents — for visa-specific score and validity requirements please consult a registered MARA agent.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from here to your Australian visa",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test in India",
+              desc: "Pick a date and centre — Mumbai, Bengaluru, Hyderabad, or New Delhi.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Prepare with free resources",
+              desc: "100+ hours of free prep, two free practice tests, weekly webinars.",
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc: "All four components in 3 hours or less, computer-delivered.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Submit to DHA",
+              desc:
+                "Official PDF score report in 2 to 4 days — submit with your visa application.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "Ready when you are.",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
 ];
 
 export const TOTAL_MICROSITES = microsites.length;

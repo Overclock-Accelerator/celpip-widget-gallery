@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { microsites, getMicrosite } from "@/microsites/data";
 import { renderBlock } from "@/microsites/render";
 
-// Pre-render all 10 microsite shells at build time.
+// Pre-render all microsite shells at build time (10 layout/regional + 10 conversion-stage = 20).
 export function generateStaticParams() {
   return microsites.map((m) => ({ id: String(m.id) }));
 }
