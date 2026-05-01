@@ -26,6 +26,14 @@ import { ResourceCardGrid, ResourceFilteredList } from "@/components/widgets/Res
 import { ScoreEquivalencyTable } from "@/components/widgets/ScoreChart";
 import { ImageGalleryGrid, ImageGalleryCarousel } from "@/components/widgets/ImageGallery";
 import { RichTextEditorial, RichTextCompact } from "@/components/widgets/RichText";
+import { TrustStrip } from "@/components/widgets/TrustStrip";
+import { MomentSpotlightLargePhoto, MomentSpotlightInline } from "@/components/widgets/MomentSpotlight";
+import { BookingPanelInline, BookingPanelStacked } from "@/components/widgets/BookingPanel";
+import { NextStepsHorizontal, NextStepsVertical } from "@/components/widgets/NextStepsRoadmap";
+import { UrgencyBar } from "@/components/widgets/UrgencyBar";
+import { PrepStarterPackHero, PrepStarterPackInline } from "@/components/widgets/PrepStarterPack";
+import { ObjectionHandlerFAQ } from "@/components/widgets/ObjectionHandlerFAQ";
+import { ReadinessQuiz } from "@/components/widgets/ReadinessQuiz";
 
 export function renderRichTextBlock(block: RichTextBlock, key: number): ReactNode {
   switch (block.type) {
@@ -148,5 +156,31 @@ export function renderBlock(
           ))}
         </RichTextCompact>
       );
+
+    // Conversion-stage widgets (microsites #11–#20)
+    case "TrustStrip":
+      return <TrustStrip key={key} {...block.props} />;
+    case "MomentSpotlightLargePhoto":
+      return <MomentSpotlightLargePhoto key={key} {...block.props} />;
+    case "MomentSpotlightInline":
+      return <MomentSpotlightInline key={key} {...block.props} />;
+    case "BookingPanelInline":
+      return <BookingPanelInline key={key} {...block.props} />;
+    case "BookingPanelStacked":
+      return <BookingPanelStacked key={key} {...block.props} />;
+    case "NextStepsHorizontal":
+      return <NextStepsHorizontal key={key} {...block.props} />;
+    case "NextStepsVertical":
+      return <NextStepsVertical key={key} {...block.props} />;
+    case "UrgencyBar":
+      return <UrgencyBar key={key} {...block.props} />;
+    case "PrepStarterPackHero":
+      return <PrepStarterPackHero key={key} {...block.props} />;
+    case "PrepStarterPackInline":
+      return <PrepStarterPackInline key={key} {...block.props} />;
+    case "ObjectionHandlerFAQ":
+      return <ObjectionHandlerFAQ key={key} {...block.props} />;
+    case "ReadinessQuiz":
+      return <ReadinessQuiz key={key} {...block.props} />;
   }
 }

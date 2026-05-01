@@ -92,7 +92,20 @@ export type WidgetBlock =
   | { kind: "ImageGalleryGrid"; props: { heading?: string; images: GalleryImage[] } }
   | { kind: "ImageGalleryCarousel"; props: { heading?: string; images: GalleryImage[] } }
   | { kind: "RichTextEditorial"; props: { content: RichTextContent } }
-  | { kind: "RichTextCompact"; props: { content: RichTextContent } };
+  | { kind: "RichTextCompact"; props: { content: RichTextContent } }
+  // Conversion-stage widgets (microsites #11–#20)
+  | { kind: "TrustStrip"; props: TrustStripProps }
+  | { kind: "MomentSpotlightLargePhoto"; props: MomentSpotlightProps }
+  | { kind: "MomentSpotlightInline"; props: MomentSpotlightProps }
+  | { kind: "BookingPanelInline"; props: BookingPanelProps }
+  | { kind: "BookingPanelStacked"; props: BookingPanelProps }
+  | { kind: "NextStepsHorizontal"; props: NextStepsRoadmapProps }
+  | { kind: "NextStepsVertical"; props: NextStepsRoadmapProps }
+  | { kind: "UrgencyBar"; props: UrgencyBarProps }
+  | { kind: "PrepStarterPackHero"; props: PrepStarterPackProps }
+  | { kind: "PrepStarterPackInline"; props: PrepStarterPackProps }
+  | { kind: "ObjectionHandlerFAQ"; props: ObjectionHandlerFAQProps }
+  | { kind: "ReadinessQuiz"; props: ReadinessQuizProps };
 
 export type MicrositeTag = "Regional" | "Layout";
 
