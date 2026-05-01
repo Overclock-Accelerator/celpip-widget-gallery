@@ -4914,6 +4914,7 @@ export const microsites: Microsite[] = [
     tag: "Regional",
     description:
       "Conversion-stage microsite for Mexican pharmacists pursuing PEBC licensure and Canadian PR.",
+    heroImageSrc: "/heroes/39.png",
     blocks: [
       {
         kind: "HeroSplit",
@@ -5075,6 +5076,7 @@ export const microsites: Microsite[] = [
     tag: "Regional",
     description:
       "Conversion-stage microsite for Brazilian accountants and finance professionals targeting Canadian PR.",
+    heroImageSrc: "/heroes/40.png",
     blocks: [
       {
         kind: "HeroSplit",
@@ -5228,6 +5230,7 @@ export const microsites: Microsite[] = [
     tag: "Regional",
     description:
       "Conversion-stage microsite for medical laboratory technicians in the UAE pursuing CSMLS certification and Canadian PR.",
+    heroImageSrc: "/heroes/41.png",
     blocks: [
       {
         kind: "HeroSplit",
