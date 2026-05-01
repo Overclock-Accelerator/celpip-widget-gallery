@@ -1,0 +1,223 @@
+{
+  "sessionId": "mon92ws8-3c326e",
+  "input": {
+    "audience": "A 28-year-old software engineer from Hyderabad, India, is eager to secure her Canadian Permanent Residency through the Express Entry program. Recently married, she and her husband are excited about the prospect of starting a new life in Toronto, where they can contribute to the booming tech industry while enjoying the vibrant multicultural environment. Her CELPIP preparation is fueled by the desire to provide a stable future for their family and pursue career advancement opportunities in Canada.",
+    "concept": "A young woman stands at the edge of a bustling Toronto waterfront, clutching her CELPIP results, her eyes glistening with tears of joy as she watches a diverse group of friends excitedly discussing their future plans nearby. The ad captures her moment of triumph and newfound confidence, emphasizing how mastering English has unlocked doors to opportunities in a vibrant new city.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "ENGLISH FOR YOUR FUTURE",
+    "headline": "Unlock Your Future in Canada",
+    "subhead": "Prepare for your CELPIP test and open doors to new opportunities in Toronto's thriving tech scene. You've got this. And we've got you.",
+    "primaryCta": "Start Preparing",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "📚",
+        "title": "Comprehensive Preparation",
+        "desc": "Access study materials tailored for the CELPIP test, designed to help you achieve your desired CLB score."
+      },
+      {
+        "icon": "🌏",
+        "title": "Recognised by IRCC",
+        "desc": "CELPIP is accepted by the IRCC, making it a key step towards your Canadian Permanent Residency."
+      },
+      {
+        "icon": "🤝",
+        "title": "Supportive Community",
+        "desc": "Join a network of fellow test-takers who share your journey and can offer guidance and encouragement."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Anita R.",
+        "location": "Toronto, ON",
+        "quote": "Passing CELPIP changed everything for me. I feel confident and ready for my new life in Canada!",
+        "score": "CLB 9"
+      },
+      {
+        "name": "Ravi K.",
+        "location": "Brampton, ON",
+        "quote": "The preparation resources were excellent. I achieved my CLB score and got my PR!",
+        "score": "CLB 8"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CELPIP?",
+        "a": "CELPIP, the Canadian English Language Proficiency Index Program, measures your English skills in everyday situations. It's important for immigration and job applications in Canada."
+      },
+      {
+        "q": "How can I prepare for CELPIP?",
+        "a": "You can use official preparation materials, take practice tests, and join study groups to enhance your skills and confidence before the exam."
+      },
+      {
+        "q": "What scores do I need for immigration?",
+        "a": "For skilled migration, a CLB score of 7 or higher is often required. Check with IRCC for specific requirements."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "97%",
+        "label": "Test-taker satisfaction"
+      },
+      {
+        "value": "4-5 days",
+        "label": "Results turnaround"
+      },
+      {
+        "value": "100+",
+        "label": "Test locations across Canada"
+      },
+      {
+        "value": "7+",
+        "label": "Available practice tests"
+      }
+    ],
+    "adHeadline": "Achieve Your CELPIP Goals",
+    "adTagline": "Start your journey to Canadian residency and career success."
+  },
+  "ads": {
+    "hero": "/builder/mon92ws8-3c326e/hero.png",
+    "square": "/builder/mon92ws8-3c326e/ad-1x1.png",
+    "story": "/builder/mon92ws8-3c326e/ad-9x16.png",
+    "portrait": "/builder/mon92ws8-3c326e/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "A 28-year-old software engineer from Hyderabad, India, is…",
+    "tag": "Layout",
+    "description": "A young woman stands at the edge of a bustling Toronto waterfront, clutching her CELPIP results, her eyes glistening with tears of joy as she watches a diverse group of friends exc",
+    "heroImageSrc": "/builder/mon92ws8-3c326e/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "ENGLISH FOR YOUR FUTURE",
+          "headline": "Unlock Your Future in Canada",
+          "subhead": "Prepare for your CELPIP test and open doors to new opportunities in Toronto's thriving tech scene. You've got this. And we've got you.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A young woman stands at the edge of a bustling Toronto waterfront, clutching her"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "97%",
+              "label": "Test-taker satisfaction"
+            },
+            {
+              "value": "4-5 days",
+              "label": "Results turnaround"
+            },
+            {
+              "value": "100+",
+              "label": "Test locations across Canada"
+            },
+            {
+              "value": "7+",
+              "label": "Available practice tests"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Prepare for your CELPIP test and open doors to new opportunities in Toronto's thriving tech scene. You've got this. And we've got you.",
+          "features": [
+            {
+              "icon": "📚",
+              "title": "Comprehensive Preparation",
+              "desc": "Access study materials tailored for the CELPIP test, designed to help you achieve your desired CLB score."
+            },
+            {
+              "icon": "🌏",
+              "title": "Recognised by IRCC",
+              "desc": "CELPIP is accepted by the IRCC, making it a key step towards your Canadian Permanent Residency."
+            },
+            {
+              "icon": "🤝",
+              "title": "Supportive Community",
+              "desc": "Join a network of fellow test-takers who share your journey and can offer guidance and encouragement."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Anita R.",
+            "location": "Toronto, ON",
+            "quote": "Passing CELPIP changed everything for me. I feel confident and ready for my new life in Canada!",
+            "score": "CLB 9"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Anita R.",
+              "location": "Toronto, ON",
+              "quote": "Passing CELPIP changed everything for me. I feel confident and ready for my new life in Canada!",
+              "score": "CLB 9"
+            },
+            {
+              "name": "Ravi K.",
+              "location": "Brampton, ON",
+              "quote": "The preparation resources were excellent. I achieved my CLB score and got my PR!",
+              "score": "CLB 8"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP, the Canadian English Language Proficiency Index Program, measures your English skills in everyday situations. It's important for immigration and job applications in Canada."
+            },
+            {
+              "q": "How can I prepare for CELPIP?",
+              "a": "You can use official preparation materials, take practice tests, and join study groups to enhance your skills and confidence before the exam."
+            },
+            {
+              "q": "What scores do I need for immigration?",
+              "a": "For skilled migration, a CLB score of 7 or higher is often required. Check with IRCC for specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Unlock Your Future in Canada",
+          "subheading": "Prepare for your CELPIP test and open doors to new opportunities in Toronto's thriving tech scene. You've got this. And we've got you.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 77.7,
+  "imageFallback": false
+}
