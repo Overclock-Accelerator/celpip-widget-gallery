@@ -26,7 +26,7 @@ export default function ChooserHome() {
           </p>
 
           {/* Cards */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <ChooserCard
               href="/widgets"
               eyebrow="Component library"
@@ -40,6 +40,13 @@ export default function ChooserHome() {
               title="Microsite Concepts"
               description="Walk through 35 sample microsites — widget layouts, regional conversions, and custom landing pages."
               accent="green"
+            />
+            <ChooserCard
+              href="/builder"
+              eyebrow="Widget composer"
+              title="Builder"
+              description="Pick widget variants you like — AI rewrites the copy into one cohesive, shareable microsite sample."
+              accent="gold"
             />
             <ChooserCard
               href="/campaigns"
@@ -70,15 +77,16 @@ function ChooserCard({
   eyebrow: string;
   title: string;
   description: string;
-  accent: "teal" | "green" | "purple";
+  accent: "teal" | "green" | "purple" | "gold";
 }) {
-  const accentColor = accent === "teal" ? "#17FFDC" : accent === "green" ? "#00A651" : "#A78BFA";
-  const accentBorder =
-    accent === "teal"
-      ? "hover:border-[#17FFDC]"
-      : accent === "green"
-        ? "hover:border-[#00A651]"
-        : "hover:border-[#A78BFA]";
+  const accentMap: Record<typeof accent, { color: string; border: string }> = {
+    teal: { color: "#17FFDC", border: "hover:border-[#17FFDC]" },
+    green: { color: "#00A651", border: "hover:border-[#00A651]" },
+    gold: { color: "#FFBD17", border: "hover:border-[#FFBD17]" },
+    purple: { color: "#A78BFA", border: "hover:border-[#A78BFA]" },
+  };
+  const accentColor = accentMap[accent].color;
+  const accentBorder = accentMap[accent].border;
   return (
     <Link
       href={href}
