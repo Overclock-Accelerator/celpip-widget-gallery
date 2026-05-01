@@ -341,7 +341,19 @@ export async function runComposerBuild(
     : preset!.context;
   const audienceLabel = preset?.label ?? "Custom audience";
 
-  const totalBlocks = args.selectedKinds.length;
+  // Defensive ordering: a marketer can pick variants in any sequence in the
+  // wizard, but the rendered microsite must follow the canonical layout
+  // arc (Hero → trust → features → social proof → conversion → CTA).
+  // We sort the selection into that arc here.
+  // If no Hero variant was picked, prepend HeroSplit so the page always
+  // opens with a hero. (Without this defensive add, a build with FeatureGrid
+  // first looks broken — exactly what was happening pre-fix.)
+  let orderedKinds = sortKindsIntoLayoutOrder(args.selectedKinds);
+  if (!orderedKinds.some((k) => k.startsWith("Hero"))) {
+    orderedKinds = ["HeroSplit" as WidgetKind, ...orderedKinds];
+  }
+
+  const totalBlocks = orderedKinds.length;
 
   // Generate the sample id up front so we can pin the hero image path before
   // we know the blocks. Slug stays the URL fragment for the saved sample.
@@ -353,11 +365,11 @@ export async function runComposerBuild(
     step: "drafting-frame",
     label: "Drafting microsite frame…",
   });
-  const frame = await generateFrame(apiKey, audienceContext, audienceLabel, args.selectedKinds);
+  const frame = await generateFrame(apiKey, audienceContext, audienceLabel, orderedKinds);
 
   // Step 1.5 — Hero image (only if any image-bearing hero is selected)
   let heroImageSrc: string | undefined;
-  const needsHeroImage = args.selectedKinds.some((k) => HEROES_NEEDING_IMAGE.has(k));
+  const needsHeroImage = orderedKinds.some((k) => HEROES_NEEDING_IMAGE.has(k));
   if (needsHeroImage) {
     emit({
       type: "step",
@@ -384,8 +396,8 @@ export async function runComposerBuild(
 
   // Step 2..N — One LLM call per block
   const blocks: WidgetBlock[] = [];
-  for (let i = 0; i < args.selectedKinds.length; i++) {
-    const kind = args.selectedKinds[i];
+  for (let i = 0; i < orderedKinds.length; i++) {
+    const kind = orderedKinds[i];
     const entry = CATALOG_BY_KIND.get(kind);
     emit({
       type: "step",
@@ -437,7 +449,9 @@ export async function runComposerBuild(
     name,
     audienceKey: args.audienceKey,
     audienceLabel,
-    selectedKinds: args.selectedKinds,
+    // Persist the canonical-ordered list so the sample summary reflects what
+    // actually rendered — not the user's click order.
+    selectedKinds: orderedKinds,
     microsite,
     createdAt: new Date().toISOString(),
   };
@@ -454,6 +468,84 @@ export async function runComposerBuild(
   });
 
   return { sample, microsite };
+}
+
+// ─────────────────────────────────────────────────────────────────────────
+// Canonical layout order
+// ─────────────────────────────────────────────────────────────────────────
+//
+// Marketers select widgets in arbitrary order in the wizard. The rendered
+// microsite must always read top-down as a real landing page: Hero on top,
+// CTA at the bottom, social proof and conversion in between. This table
+// assigns every kind to a stage; we stable-sort by stage so within-stage
+// order matches the user's click order (lets them rearrange e.g. two CTAs).
+const LAYOUT_STAGE: Record<WidgetKind, number> = {
+  // 0 — Hero (any of the 8 variants)
+  HeroSplit: 0,
+  HeroFullBleedImage: 0,
+  HeroSplitForm: 0,
+  HeroFloatingPanel: 0,
+  HeroBigStat: 0,
+  HeroCentered: 0,
+  HeroFormInHeader: 0,
+  HeroGradient: 0,
+  // 1 — Urgency strip (sits right under the hero)
+  UrgencyBar: 1,
+  // 2 — Trust signals
+  TrustStrip: 2,
+  // 3 — Vanity metrics
+  MetricsRow: 3,
+  MetricsNavyDividers: 3,
+  MetricsCards: 3,
+  // 4 — Why CELPIP / features (the "value prop" arc)
+  WhyCelpipPillars: 4,
+  WhyCelpipTestCards: 4,
+  WhyCelpipMomentum: 4,
+  FeatureGrid: 4,
+  FeatureNavyCards: 4,
+  // 5 — Social proof / moments
+  MomentSpotlightLargePhoto: 5,
+  MomentSpotlightInline: 5,
+  TestimonialSpotlight: 5,
+  TestimonialQuoteCards: 5,
+  TestimonialVideo: 5,
+  // 6 — Score / equivalence (interpretive)
+  ScoreEquivalencyTable: 6,
+  // 7 — Content / editorial (rich text + galleries)
+  RichTextEditorial: 7,
+  RichTextCompact: 7,
+  ImageGalleryGrid: 7,
+  ImageGalleryCarousel: 7,
+  // 8 — Conversion machinery
+  BookingPanelInline: 8,
+  BookingPanelStacked: 8,
+  NextStepsHorizontal: 8,
+  NextStepsVertical: 8,
+  ReadinessQuiz: 8,
+  PrepStarterPackHero: 8,
+  PrepStarterPackInline: 8,
+  // 9 — Resources / lead-magnet listings
+  ResourceCardGrid: 9,
+  ResourceFilteredList: 9,
+  // 10 — Objection handling (last-mile FAQs come before the CTA)
+  ObjectionHandlerFAQ: 10,
+  FAQAccordion: 10,
+  FAQTabbedByCategory: 10,
+  // 11 — Lead forms
+  FormSimpleLead: 11,
+  FormInline: 11,
+  FormB2BContact: 11,
+  // 12 — Final CTA
+  CTABoldBanner: 12,
+  CTANavyAccent: 12,
+  CTACardWithIcon: 12,
+};
+
+function sortKindsIntoLayoutOrder(kinds: WidgetKind[]): WidgetKind[] {
+  return kinds
+    .map((k, i) => ({ k, i, stage: LAYOUT_STAGE[k] ?? 99 }))
+    .sort((a, b) => a.stage - b.stage || a.i - b.i)
+    .map((x) => x.k);
 }
 
 // Suppress unused-warning for the imported AUDIENCE_PRESETS (kept for tree-shake clarity).

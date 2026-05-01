@@ -1,0 +1,114 @@
+{
+  "id": "philippines-nurses-canada-2026-05-01-db38",
+  "name": "Philippines · Nurses → Canada — 2026-05-01",
+  "audienceKey": "philippines-nurses-canada",
+  "audienceLabel": "Philippines · Nurses → Canada",
+  "selectedKinds": [
+    "HeroSplitForm",
+    "FeatureNavyCards",
+    "MomentSpotlightLargePhoto",
+    "TestimonialQuoteCards",
+    "CTABoldBanner",
+    "ImageGalleryCarousel"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "Philippines · Nurses → Canada — 2026-05-01",
+    "tag": "Layout",
+    "description": "Philippines · Nurses → Canada · 4 composed widgets",
+    "heroImageSrc": "/builds/philippines-nurses-canada-2026-05-01-db38/hero.png",
+    "blocks": [
+      {
+        "kind": "FeatureNavyCards",
+        "props": {
+          "heading": "Key Features of CELPIP for Nurses",
+          "features": [
+            {
+              "icon": "📚",
+              "title": "Real-Life Evaluation",
+              "desc": "CELPIP assesses your English skills in real-life scenarios, ensuring you are well-prepared for your nursing career in Canada."
+            },
+            {
+              "icon": "💻",
+              "title": "Flexible Testing",
+              "desc": "With CELPIP's online testing option, you can choose a convenient time that fits your busy schedule, just like Maria Santos from Cebu."
+            },
+            {
+              "icon": "📝",
+              "title": "Practice Materials",
+              "desc": "Access a variety of practice materials to help you prepare effectively and boost your confidence as you aim for a high CLB score."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "MomentSpotlightLargePhoto",
+        "props": {
+          "imageAlt": "Maria Santos celebrating her CELPIP success in Toronto",
+          "oneLineMoment": "Maria Santos celebrates her CELPIP success, ready for her nursing career in Canada.",
+          "paragraphQuote": "I felt a wave of relief when I received my CELPIP results. Scoring CLB 9 was a dream come true. The test prepared me for real-life situations, which boosted my confidence. Now, I can focus on my nursing career in Canada while supporting my family back in Cebu. I’m grateful for the practice materials that helped me get here.",
+          "attribution": {
+            "name": "Maria Santos",
+            "location": "Cebu → Toronto",
+            "score": "CLB 9",
+            "date": "March 2026"
+          },
+          "imageSrc": "https://picsum.photos/seed/composer-MomentSpotlightLargePhoto/1200/1400"
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Maria Santos",
+              "location": "Cebu \n Toronto",
+              "quote": "CELPIP helped me show my English skills. It was easy to prepare with their materials. I felt confident on test day!",
+              "score": "CLB 9"
+            },
+            {
+              "name": "Jasmine Reyes",
+              "location": "Davao \n Toronto",
+              "quote": "Taking CELPIP was a great choice. The test reflected real-life situations. I'm now one step closer to my nursing career in Canada!",
+              "score": "CLB 9"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "ImageGalleryCarousel",
+        "props": {
+          "heading": "Visualising Your Journey to Canada as a Nurse",
+          "images": [
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-0/800/800",
+              "alt": "Maria Santos studying for the CELPIP test",
+              "caption": "Maria Santos preparing for the CELPIP test to demonstrate her English proficiency."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-1/800/800",
+              "alt": "A nurse working in a Canadian hospital",
+              "caption": "Canadian employers recognise CELPIP scores, opening doors for nurses like Maria."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-2/800/800",
+              "alt": "An online CELPIP test interface",
+              "caption": "Experience the convenience of CELPIP's flexible online testing option."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-3/800/800",
+              "alt": "CELPIP practice materials",
+              "caption": "Access practice materials to help you achieve a high CLB score."
+            },
+            {
+              "src": "https://picsum.photos/seed/composer-ImageGalleryCarousel-4/800/800",
+              "alt": "Maria Santos celebrating her success",
+              "caption": "Maria Santos reaches her goal, ready to start her nursing career in Canada."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T19:08:07.865Z"
+}
