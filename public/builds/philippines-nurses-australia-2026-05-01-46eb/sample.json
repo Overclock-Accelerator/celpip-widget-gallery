@@ -1,0 +1,120 @@
+{
+  "id": "philippines-nurses-australia-2026-05-01-46eb",
+  "name": "Philippines · Nurses → Australia (DHA) — 2026-05-01",
+  "audienceKey": "philippines-nurses-australia",
+  "audienceLabel": "Philippines · Nurses → Australia (DHA)",
+  "selectedKinds": [
+    "HeroGradient",
+    "FeatureNavyCards",
+    "MomentSpotlightLargePhoto",
+    "TestimonialSpotlight",
+    "FAQAccordion",
+    "FormInline",
+    "CTANavyAccent"
+  ],
+  "microsite": {
+    "id": 0,
+    "title": "Philippines · Nurses → Australia (DHA) — 2026-05-01",
+    "tag": "Layout",
+    "description": "Philippines · Nurses → Australia (DHA) · 6 composed widgets",
+    "blocks": [
+      {
+        "kind": "HeroGradient",
+        "props": {
+          "eyebrow": "YOUR NURSING JOURNEY",
+          "headline": "Achieve Your Nursing Career Dreams in Australia",
+          "subhead": "As a Filipino registered nurse like Maria Santos, CELPIP can help you meet English requirements for AHPRA and boost your confidence in communication.",
+          "primaryCta": {
+            "label": "Start Your Preparation"
+          },
+          "secondaryCta": {
+            "label": "Learn About CELPIP"
+          },
+          "imageAlt": "A Filipino nurse studying for the CELPIP test."
+        }
+      },
+      {
+        "kind": "FeatureNavyCards",
+        "props": {
+          "heading": "Key Features of CELPIP for Nurses",
+          "features": [
+            {
+              "icon": "📚",
+              "title": "AHPRA Acceptance",
+              "desc": "CELPIP is accepted by AHPRA for nursing registration. Maria Santos trusts CELPIP for her journey to Australia."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Fast Results",
+              "desc": "Receive fast, accurate results that support your migration journey. With CELPIP, you can plan your next steps confidently."
+            },
+            {
+              "icon": "🗣️",
+              "title": "Real-life Skills",
+              "desc": "CELPIP tests everyday communication skills relevant to nursing. Show your proficiency in a way that matters."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "MomentSpotlightLargePhoto",
+        "props": {
+          "imageAlt": "Maria Santos celebrating her CELPIP test success in Sydney",
+          "oneLineMoment": "Maria Santos proudly holds her CELPIP results in Sydney, ready for the next step.",
+          "paragraphQuote": "I felt nervous before my CELPIP test, but I knew it was the key to my nursing career in Australia. The test was straightforward and focused on everyday communication, which is so important for nurses. When I got my results, I felt a wave of relief. CELPIP helped me demonstrate my English skills clearly, and now I can move forward with my dreams. I’m grateful for the support it offered during my journey.",
+          "attribution": {
+            "name": "Maria Santos",
+            "location": "Cebu → Sydney",
+            "score": "CLB 8",
+            "date": "April 2026"
+          },
+          "imageSrc": "https://picsum.photos/seed/composer-MomentSpotlightLargePhoto/1200/1400"
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Maria Santos",
+            "location": "Cebu → Sydney",
+            "quote": "Taking the CELPIP test was a great experience for me. It was straightforward and focused on real-life communication, which is essential for my nursing career. I felt prepared, and the results came quickly. AHPRA accepts CELPIP, which gave me confidence in my journey. I truly believe I've got this, and CELPIP has supported me every step of the way.",
+            "score": "CLB 8"
+          }
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Frequently Asked Questions for Filipino Nurses",
+          "faqs": [
+            {
+              "q": "What English tests are accepted by AHPRA for nursing registration?",
+              "a": "AHPRA accepts CELPIP as a valid English test for nursing registration. This means you can confidently use CELPIP to demonstrate your English proficiency as you pursue your career in Australia."
+            },
+            {
+              "q": "How quickly will I receive my CELPIP results?",
+              "a": "CELPIP provides fast, accurate results to support your migration journey. You can expect to receive your scores in a timely manner, allowing you to move forward with your plans."
+            },
+            {
+              "q": "What skills does the CELPIP test assess?",
+              "a": "The CELPIP test assesses everyday communication skills that are relevant to nursing. This includes listening, reading, writing, and speaking, ensuring you are well-prepared for your role."
+            },
+            {
+              "q": "Where can I take the CELPIP test?",
+              "a": "CELPIP test centres are conveniently located across Canada and you also have the option to take the test online, making it accessible for you as you prepare for your journey."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FormInline",
+        "props": {
+          "heading": "Stay Informed, Maria Santos!",
+          "subheading": "Sign up for updates on CELPIP and your journey to nursing in Australia.",
+          "ctaLabel": "Subscribe Now"
+        }
+      }
+    ]
+  },
+  "createdAt": "2026-05-01T19:25:09.608Z"
+}

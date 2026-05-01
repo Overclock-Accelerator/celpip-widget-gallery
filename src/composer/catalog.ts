@@ -192,7 +192,7 @@ export const CATALOG: CatalogEntry[] = [
   { kind: "WhyCelpipMomentum", category: "Features", displayName: "Why CELPIP — Momentum", intent: "Momentum-framed value pillars for conversion-stage pages." },
 
   // Testimonials
-  { kind: "TestimonialQuoteCards", category: "Testimonials", displayName: "Testimonial Cards", intent: "Two short testimonial cards side-by-side." },
+  { kind: "TestimonialQuoteCards", category: "Testimonials", displayName: "Testimonial Cards", intent: "Three short testimonial cards in a row." },
   { kind: "TestimonialSpotlight", category: "Testimonials", displayName: "Testimonial Spotlight", intent: "One long-form testimonial with photo." },
   { kind: "TestimonialVideo", category: "Testimonials", displayName: "Testimonial Video", intent: "Video thumbnail + quote attribution." },
 
@@ -530,7 +530,7 @@ export const PROP_SCHEMAS: Record<WidgetKind, JSONSchema> = {
     type: "object",
     additionalProperties: false,
     required: ["testimonials"],
-    properties: { testimonials: { type: "array", minItems: 2, maxItems: 2, items: testimonialSchema } },
+    properties: { testimonials: { type: "array", minItems: 3, maxItems: 3, items: testimonialSchema } },
   },
   TestimonialSpotlight: {
     type: "object",

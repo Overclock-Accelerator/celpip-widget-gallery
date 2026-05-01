@@ -1,0 +1,223 @@
+{
+  "sessionId": "monax4tn-bf721a",
+  "input": {
+    "audience": "A prospective test taker is a civil engineer from Nigeria, currently seeking to immigrate to Canada through the Express Entry system. With several years of experience in infrastructure projects, they are eager to showcase their language proficiency and secure their Canadian permanent residency to build a brighter future for their family.",
+    "concept": "A warm, sunlit moment captures a young woman standing in front of a vibrant marketplace, clutching her CELPIP results while a diverse group of friends celebrate with her, their faces beaming with joy and pride; the text reads, “Your journey begins with confidence—unlock the world.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "LANGUAGE TESTING MADE EASY",
+    "headline": "Unlock Your Future in Canada",
+    "subhead": "CELPIP helps you demonstrate your English skills for Canadian immigration. Take the first step towards your dream life today.",
+    "primaryCta": "Get Started Now",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "🏗️",
+        "title": "Designed for Professionals",
+        "desc": "CELPIP is tailored to assess language skills relevant to your career, making it ideal for civil engineers and other professionals."
+      },
+      {
+        "icon": "📅",
+        "title": "Quick Results",
+        "desc": "Receive your results in just 4-5 days, so you can plan your next steps towards immigration without delay."
+      },
+      {
+        "icon": "🌎",
+        "title": "Recognised by IRCC",
+        "desc": "CELPIP is accepted by Immigration, Refugees and Citizenship Canada, ensuring your scores are valid for Express Entry."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Chinedu Okafor",
+        "location": "Lagos, Nigeria",
+        "quote": "I was nervous about the test, but CELPIP helped me understand my strengths. I scored CLB 8, and now I'm on my way to Canada!",
+        "score": "CLB 8"
+      },
+      {
+        "name": "Aisha Bello",
+        "location": "Abuja, Nigeria",
+        "quote": "Preparing for CELPIP was straightforward. I felt supported throughout, and my CLB 9 score opened many doors for me.",
+        "score": "CLB 9"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CELPIP?",
+        "a": "CELPIP is a Canadian English language proficiency test that assesses your listening, reading, writing, and speaking skills. It is recognised by IRCC for immigration purposes."
+      },
+      {
+        "q": "How long does the test take?",
+        "a": "The CELPIP test takes about 3 hours to complete. It includes all four language skills, making it comprehensive and efficient."
+      },
+      {
+        "q": "How can I prepare for CELPIP?",
+        "a": "You can prepare for CELPIP using official study materials, practice tests, and preparation courses. Familiarising yourself with the test format will help boost your confidence."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "4-5 days",
+        "label": "Results Turnaround"
+      },
+      {
+        "value": "3 hrs",
+        "label": "Total Test Duration"
+      },
+      {
+        "value": "100+",
+        "label": "Test Locations Worldwide"
+      },
+      {
+        "value": "CLB 7-10",
+        "label": "Common Score Range"
+      }
+    ],
+    "adHeadline": "Your Journey Begins with Confidence",
+    "adTagline": "Unlock your world with CELPIP and Canada."
+  },
+  "ads": {
+    "hero": "/builder/monax4tn-bf721a/hero.png",
+    "square": "/builder/monax4tn-bf721a/ad-1x1.png",
+    "story": "/builder/monax4tn-bf721a/ad-9x16.png",
+    "portrait": "/builder/monax4tn-bf721a/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "A prospective test taker is a civil engineer from Nigeria…",
+    "tag": "Layout",
+    "description": "A warm, sunlit moment captures a young woman standing in front of a vibrant marketplace, clutching her CELPIP results while a diverse group of friends celebrate with her, their fac",
+    "heroImageSrc": "/builder/monax4tn-bf721a/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "LANGUAGE TESTING MADE EASY",
+          "headline": "Unlock Your Future in Canada",
+          "subhead": "CELPIP helps you demonstrate your English skills for Canadian immigration. Take the first step towards your dream life today.",
+          "primaryCta": {
+            "label": "Get Started Now"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A warm, sunlit moment captures a young woman standing in front of a vibrant mark"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "4-5 days",
+              "label": "Results Turnaround"
+            },
+            {
+              "value": "3 hrs",
+              "label": "Total Test Duration"
+            },
+            {
+              "value": "100+",
+              "label": "Test Locations Worldwide"
+            },
+            {
+              "value": "CLB 7-10",
+              "label": "Common Score Range"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "CELPIP helps you demonstrate your English skills for Canadian immigration. Take the first step towards your dream life today.",
+          "features": [
+            {
+              "icon": "🏗️",
+              "title": "Designed for Professionals",
+              "desc": "CELPIP is tailored to assess language skills relevant to your career, making it ideal for civil engineers and other professionals."
+            },
+            {
+              "icon": "📅",
+              "title": "Quick Results",
+              "desc": "Receive your results in just 4-5 days, so you can plan your next steps towards immigration without delay."
+            },
+            {
+              "icon": "🌎",
+              "title": "Recognised by IRCC",
+              "desc": "CELPIP is accepted by Immigration, Refugees and Citizenship Canada, ensuring your scores are valid for Express Entry."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Chinedu Okafor",
+            "location": "Lagos, Nigeria",
+            "quote": "I was nervous about the test, but CELPIP helped me understand my strengths. I scored CLB 8, and now I'm on my way to Canada!",
+            "score": "CLB 8"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Chinedu Okafor",
+              "location": "Lagos, Nigeria",
+              "quote": "I was nervous about the test, but CELPIP helped me understand my strengths. I scored CLB 8, and now I'm on my way to Canada!",
+              "score": "CLB 8"
+            },
+            {
+              "name": "Aisha Bello",
+              "location": "Abuja, Nigeria",
+              "quote": "Preparing for CELPIP was straightforward. I felt supported throughout, and my CLB 9 score opened many doors for me.",
+              "score": "CLB 9"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP is a Canadian English language proficiency test that assesses your listening, reading, writing, and speaking skills. It is recognised by IRCC for immigration purposes."
+            },
+            {
+              "q": "How long does the test take?",
+              "a": "The CELPIP test takes about 3 hours to complete. It includes all four language skills, making it comprehensive and efficient."
+            },
+            {
+              "q": "How can I prepare for CELPIP?",
+              "a": "You can prepare for CELPIP using official study materials, practice tests, and preparation courses. Familiarising yourself with the test format will help boost your confidence."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Unlock Your Future in Canada",
+          "subheading": "CELPIP helps you demonstrate your English skills for Canadian immigration. Take the first step towards your dream life today.",
+          "primaryCta": {
+            "label": "Get Started Now"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 32.1,
+  "imageFallback": false
+}
