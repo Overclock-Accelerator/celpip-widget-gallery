@@ -13,8 +13,7 @@ export type UrgencyBarProps = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// UrgencyBar — slim navy banner, green pulsing dot, microcopy + CTA.
-// Sticky-feel even when not actually fixed-positioned.
+// UrgencyBar — slim navy banner with green pulse dot, imminent-action microcopy.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function UrgencyBar({
@@ -24,22 +23,20 @@ export function UrgencyBar({
   ctaLabel = "Reserve your seat",
 }: UrgencyBarProps = {}) {
   return (
-    <div className="rounded-lg bg-[#0B2341] text-white px-4 py-3 md:px-6 md:py-3.5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 shadow-md">
-      <div className="flex items-center gap-3 flex-1 min-w-0">
-        <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00A651] opacity-75" />
-          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#00C764]" />
+    <div className="rounded-lg bg-[#0B2341] text-white px-4 py-3 md:px-6 md:py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-md">
+      <div className="flex items-center gap-3 min-w-0">
+        <span className="relative flex h-3 w-3 shrink-0" aria-hidden>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00A651] opacity-75" />
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-[#00A651]" />
         </span>
-        <p className="text-sm md:text-base flex-1 min-w-0">
-          <span className="font-heading font-semibold text-[#17FFDC] uppercase tracking-wider text-xs mr-2">
-            Next sitting in {city}:
-          </span>
-          <span className="font-semibold">{date}</span>
-          <span className="text-gray-300 mx-2">&middot;</span>
-          <span className="text-[#00C764] font-bold">{seatsLeft} seats left</span>
+        <p className="text-sm md:text-base font-medium truncate">
+          Next sitting in <span className="font-bold text-[#17FFDC]">{city}</span>:{" "}
+          <span className="font-bold">{date}</span>{" "}
+          <span className="text-[#17FFDC]">&middot;</span>{" "}
+          <span className="font-bold text-[#FFBD17]">{seatsLeft} seats left</span>
         </p>
       </div>
-      <button className="bg-[#00A651] hover:bg-[#00C764] text-white font-semibold px-5 py-2 rounded-md text-sm transition-colors whitespace-nowrap shrink-0">
+      <button className="bg-[#00A651] hover:bg-[#00C764] text-white font-semibold px-5 py-2 rounded-md transition-colors text-sm whitespace-nowrap self-start sm:self-auto shrink-0">
         {ctaLabel} &rarr;
       </button>
     </div>
@@ -53,7 +50,7 @@ export function UrgencyBar({
 export function UrgencyBarVariants() {
   return (
     <>
-      <VariantLabel label="A — Slim Urgency Bar" />
+      <VariantLabel label="A — Imminent Sitting Bar" />
       <UrgencyBar />
     </>
   );
