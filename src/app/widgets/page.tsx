@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { HeroVariants } from "@/components/widgets/Hero";
+import { HeroVariants, HeroBoldVariants } from "@/components/widgets/Hero";
 import { CTAVariants } from "@/components/widgets/CTA";
 import { FeatureHighlights } from "@/components/widgets/FeatureHighlights";
 import { TestimonialVariants } from "@/components/widgets/Testimonials";
@@ -25,6 +25,7 @@ import { SiteNav } from "@/components/SiteNav";
 
 const sections = [
   { id: "hero", label: "Hero Sections" },
+  { id: "hero-bold", label: "Hero — Compelling Above-the-fold" },
   { id: "cta", label: "CTAs" },
   { id: "features", label: "Feature Highlights" },
   { id: "testimonials", label: "Testimonials" },
@@ -102,6 +103,10 @@ export default function WidgetsPage() {
 
             <WidgetSection id="hero" title="Hero Sections" description="Primary landing section with headline, subtext, and CTA buttons.">
               <HeroVariants />
+            </WidgetSection>
+
+            <WidgetSection id="hero-bold" title="Hero — Compelling Above-the-fold" description="Five bolder above-the-fold variants — bigger imagery, stronger lead capture, more visual variation.">
+              <HeroBoldVariants />
             </WidgetSection>
 
             <WidgetSection id="cta" title="Call-to-Action Blocks" description="Conversion-focused modules with heading, summary, and action buttons.">

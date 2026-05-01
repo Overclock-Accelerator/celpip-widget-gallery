@@ -15,7 +15,12 @@
  * recognized for — never give immigration advice.
  */
 
-import type { HeroProps, HeroFormInHeaderProps } from "@/components/widgets/Hero";
+import type {
+  HeroProps,
+  HeroFormInHeaderProps,
+  HeroSplitFormProps,
+  HeroBigStatProps,
+} from "@/components/widgets/Hero";
 import type { CTAProps } from "@/components/widgets/CTA";
 import type { Feature } from "@/components/widgets/FeatureHighlights";
 import type { Testimonial } from "@/components/widgets/Testimonials";
@@ -65,6 +70,11 @@ export type WidgetBlock =
   | { kind: "HeroGradient"; props: Partial<HeroProps> }
   | { kind: "HeroSplit"; props: Partial<HeroProps> }
   | { kind: "HeroFormInHeader"; props: Partial<HeroFormInHeaderProps> }
+  | { kind: "HeroFullBleedImage"; props: Partial<HeroProps> }
+  | { kind: "HeroSplitForm"; props: Partial<HeroSplitFormProps> }
+  | { kind: "HeroFloatingPanel"; props: Partial<HeroProps> }
+  | { kind: "HeroBigStat"; props: Partial<HeroBigStatProps> }
+  | { kind: "HeroCentered"; props: Partial<HeroProps> }
   | { kind: "CTABoldBanner"; props: Partial<CTAProps> }
   | { kind: "CTANavyAccent"; props: Partial<CTAProps> }
   | { kind: "CTACardWithIcon"; props: Partial<CTAProps> }
@@ -4462,6 +4472,439 @@ export const microsites: Microsite[] = [
       "Social proof grid of 14 candidate testimonials with profession filter pills.",
     blocks: [],
     customPage: "TestimonialWall",
+  },
+
+  // ───────────────────── 36. Aspirational · Express Entry (HeroFullBleedImage) ─────────────────────
+  {
+    id: 36,
+    title: "Aspirational · Express Entry",
+    tag: "Layout",
+    description:
+      "Editorial above-the-fold using the new full-bleed hero. Aspirational, image-led, conversion-focused.",
+    heroImageSrc: "/heroes/12.png",
+    blocks: [
+      {
+        kind: "HeroFullBleedImage",
+        props: {
+          eyebrow: "ACCELERATE YOUR FUTURE",
+          headline: "Your Canada-bound nursing career, in one English test.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Less than 3 hours, computer-delivered, results in 2 to 4 days — globally accepted in 200+ centres across 40+ countries.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "See Test Centres" },
+          imageSrc: "/heroes/12.png",
+          imageAlt: "Aspirational candidate portrait — software engineer en route to PR",
+        },
+      },
+      {
+        kind: "MetricsRow",
+        props: {
+          metrics: [
+            { value: "2–4", label: "days to results" },
+            { value: "3hrs", label: "one sitting, all four skills" },
+            { value: "200+", label: "test centres worldwide" },
+            { value: "40+", label: "countries served" },
+          ],
+        },
+      },
+      {
+        kind: "WhyCelpipPillars",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Speed, reliability, flexibility, ease, and credibility.",
+          pillars: [
+            {
+              icon: "&#9201;",
+              title: "Fast and accessible",
+              desc: "Self-paced test is completed during one sitting in 3 hours or less with results in 2 to 4 days.",
+            },
+            {
+              icon: "&#128218;",
+              title: "Guided test prep",
+              desc: "Free practice tests, webinars, study guides, and courses to help you succeed.",
+            },
+            {
+              icon: "&#127758;",
+              title: "Real-world English",
+              desc: "Focused on practical, real-world communication for school, career, and life.",
+            },
+            {
+              icon: "&#9989;",
+              title: "Trusted credibility",
+              desc: "Developed at the University of British Columbia and aligned with CLB and CEFR standards.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-36-moment/1200/1400",
+          imageAlt:
+            "Candidate at her desk reviewing CELPIP score report on a laptop",
+          oneLineMoment:
+            "She tested in Bengaluru on a Saturday and uploaded her CLB scores by Wednesday.",
+          paragraphQuote:
+            "I worked on weekend prep with the free practice tests. The CELPIP listening tasks sounded like the conversations I have at work every day. I tested at the Bengaluru centre on a Saturday morning and had my official PDF score report by the next Wednesday.",
+          attribution: {
+            name: "Priya Iyer",
+            location: "Bengaluru → Toronto",
+            score: "CLB 9",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Find your CELPIP sitting",
+          subheading:
+            "Open sittings worldwide — register online in minutes, results in 2 to 4 business days.",
+          sittings: [
+            {
+              city: "Toronto",
+              centreName: "Toronto — Yonge & Bloor",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Bengaluru",
+              centreName: "Bengaluru — Prometric Testing",
+              date: "Sat, May 23",
+              time: "9:30 AM",
+              seatsLeft: 8,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Makati Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Dubai",
+              centreName: "Dubai — DIFC Test Centre",
+              date: "Sat, Jun 6",
+              time: "1:00 PM",
+              seatsLeft: 6,
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "Accelerate your future. Book your CELPIP test today.",
+          subheading:
+            "Finish your registration online in minutes to join thousands worldwide who achieve their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 37. Lead-Magnet Form-First (HeroSplitForm) ─────────────────────
+  {
+    id: 37,
+    title: "Lead-Magnet · Free Prep",
+    tag: "Layout",
+    description:
+      "Form-first above-the-fold using the new split-form hero. Optimized for top-funnel email capture via the official free practice test.",
+    heroImageSrc: "/heroes/9.png",
+    blocks: [
+      {
+        kind: "HeroSplitForm",
+        props: {
+          eyebrow: "CELPIP — APPROVED BY IRCC",
+          headline: "Get the official CELPIP practice test, free.",
+          subhead:
+            "Two free practice tests, weekly webinars, and 100+ hours of guided prep. Tell us where you are testing and we will send everything to your inbox.",
+          formHeading: "Get free prep + test dates",
+          formCtaLabel: "Send Me the Free Prep",
+          formDisclaimer: "We respect your privacy. No spam.",
+          fields: [
+            { type: "text", placeholder: "Full Name" },
+            { type: "email", placeholder: "Email Address" },
+            { type: "tel", placeholder: "Phone Number" },
+            {
+              type: "select",
+              placeholder: "Target Test City",
+              options: ["Toronto", "Vancouver", "Mumbai", "Manila", "Lagos", "Dubai"],
+            },
+          ],
+          imageSrc: "/heroes/9.png",
+          imageAlt: "Candidate at a CELPIP test centre workstation",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "DHA", subLabel: "Australian visas" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "Paragon", subLabel: "Operating subsidiary" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "WhyCelpipTestCards",
+        props: {
+          eyebrow: "WHAT YOU GET",
+          heading: "Everything you need, on the house.",
+          pillars: [
+            {
+              icon: "&#128218;",
+              title: "Two free practice tests",
+              desc: "Full-length, official, and timed — included with your free CELPIP Account.",
+            },
+            {
+              icon: "&#127909;",
+              title: "Weekly live webinars",
+              desc: "Walkthroughs of every section, hosted by certified CELPIP coaches. Recordings on YouTube.",
+            },
+            {
+              icon: "&#128214;",
+              title: "Study guides + courses",
+              desc: "Self-paced courses, downloadable PDFs, and writing-task walkthroughs.",
+            },
+            {
+              icon: "&#9201;",
+              title: "Done in one sitting",
+              desc: "All four components in 3 hours or less — no second day, no live examiner.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-37-moment/300/300",
+          imageAlt: "Portrait of Maria, a Filipina nurse",
+          oneLineMoment:
+            "She started with the free practice tests. Six weeks later she had her CLB 9 score.",
+          paragraphQuote:
+            "I downloaded the free practice tests on a Tuesday night after my shift. Four weekends of study, one Saturday at the Manila centre, and four days later I had my official PDF score report in my inbox. The CELPIP English felt like the way I already speak with patients and colleagues.",
+          attribution: {
+            name: "Maria Santos",
+            location: "Manila → Vancouver",
+            score: "CLB 9",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions candidates ask before booking — answered honestly.",
+          objections: [
+            {
+              worry: "How much does the practice test really cost?",
+              reassurance:
+                "Two full-length practice tests come free with your CELPIP Account — no credit card required. Additional practice tests are available if you want extra reps.",
+              softCta: { label: "Create your free account" },
+            },
+            {
+              worry: "I have not taken a standardised test in years.",
+              reassurance:
+                "CELPIP uses easy-to-understand English and vocabulary taken from everyday situations — workplace conversations, voicemails, and community signs. The free practice tests show you exactly what to expect, and the weekly webinars walk through every question type.",
+              softCta: { label: "Watch a sample webinar" },
+            },
+            {
+              worry: "What CLB score do I actually need?",
+              reassurance:
+                "It depends on the programme. Express Entry requires CLB 7 in each component for the Federal Skilled Worker programme. Higher scores earn more CRS points. We are not licensed to give immigration advice — please visit IRCC for current requirements.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You have already decided. Now book.",
+          subheading:
+            "Finish your registration online in minutes. Results in 2 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 38. Big-Stat Editorial (HeroBigStat) ─────────────────────
+  {
+    id: 38,
+    title: "Big-Stat Editorial",
+    tag: "Layout",
+    description:
+      "Stat-led above-the-fold using the new big-stat hero. Anchors the page on a single dominant credibility number.",
+    heroImageSrc: "/heroes/8.png",
+    blocks: [
+      {
+        kind: "HeroBigStat",
+        props: {
+          eyebrow: "CELPIP — GLOBALLY ACCEPTED",
+          headline: "200+ test centres across 40+ countries — find yours.",
+          subhead:
+            "CELPIP English exams are globally accepted and approved by IRCC and DHA for immigration to Canada and Australia. Less than 3 hours, computer-delivered, results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Centre" },
+          secondaryCta: { label: "See Test Dates" },
+          stat: { value: "200+", label: "centres in 40+ countries" },
+          imageSrc: "/heroes/8.png",
+          imageAlt: "Candidate reviewing CELPIP score report",
+        },
+      },
+      {
+        kind: "WhyCelpipMomentum",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Speed, reliability, flexibility, ease, and credibility.",
+          pillars: [
+            {
+              icon: "&#127758;",
+              title: "Globally accepted",
+              desc: "Approved by IRCC for permanent residency and citizenship, and by DHA for Australian visas.",
+            },
+            {
+              icon: "&#128187;",
+              title: "Computer-delivered",
+              desc: "Done in just one sitting, with features like a personal timer, word counter, and spell-check.",
+            },
+            {
+              icon: "&#9201;",
+              title: "Quick online results",
+              desc: "Available online within 3 to 4 business days. The PDF score report is official and accepted by institutions.",
+            },
+            {
+              icon: "&#128218;",
+              title: "Free study materials",
+              desc: "Free sample tests, videos, online information sessions, preparation courses, and webinars.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "TestimonialQuoteCards",
+        props: {
+          testimonials: [
+            {
+              quote:
+                "I tested at the Dubai DIFC centre on a Saturday and had my CLB scores by Wednesday. The whole experience felt human — supportive staff, clear instructions, no surprises.",
+              name: "Omar Al-Rashid",
+              location: "Project Manager · Dubai → Calgary",
+              score: "CLB 9",
+            },
+            {
+              quote:
+                "CELPIP felt like a natural extension of the English I already use at work — practical, real-world, no obscure vocabulary. I prepped with the free practice tests on weekends.",
+              name: "Liya Tesfaye",
+              location: "Civil Engineer · Addis Ababa → Toronto",
+              score: "CLB 10",
+            },
+            {
+              quote:
+                "One sitting, three hours, all four components. I was done by lunch and had my PDF score report on my laptop screen by the next Wednesday morning.",
+              name: "Tomas Reyes",
+              location: "Registered Nurse · Manila → Edmonton",
+              score: "CLB 9",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Open sittings, around the world.",
+          subheading:
+            "Pick the date and centre that works for you — weekend and weekday options at every region.",
+          sittings: [
+            {
+              city: "Toronto",
+              centreName: "Toronto — Yonge & Bloor",
+              date: "Sat, May 16",
+              time: "9:00 AM",
+              seatsLeft: 5,
+              address: "Yonge St, Toronto",
+            },
+            {
+              city: "London",
+              centreName: "London — King's Cross Centre",
+              date: "Sun, May 17",
+              time: "10:00 AM",
+              seatsLeft: 7,
+              address: "King's Cross, London",
+            },
+            {
+              city: "Dubai",
+              centreName: "Dubai — DIFC Test Centre",
+              date: "Sat, Jun 6",
+              time: "1:00 PM",
+              seatsLeft: 6,
+              address: "DIFC, Dubai",
+            },
+            {
+              city: "Sydney",
+              centreName: "Sydney — Circular Quay",
+              date: "Sun, Jun 7",
+              time: "9:00 AM",
+              seatsLeft: 3,
+              address: "Circular Quay, Sydney",
+            },
+          ],
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from here to results",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc:
+                "Pick a date and centre — confirmed instantly. 200+ centres across 40+ countries.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Practice with free materials",
+              desc:
+                "Two free practice tests, 100+ hours of prep videos, and weekly webinars — all free.",
+              cta: { label: "Get prep pack" },
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc:
+                "Self-paced test is completed during one sitting in 3 hours or less, computer-delivered.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Get results in 2–4 days",
+              desc:
+                "Official PDF score report online — accepted by IRCC, DHA, and professional bodies.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "Find your centre. Book your date. Get on with your life.",
+          subheading:
+            "200+ test centres across 40+ countries. Results in 2 to 4 business days.",
+          primaryCta: { label: "Find a Test Centre" },
+        },
+      },
+    ],
   },
 ];
 

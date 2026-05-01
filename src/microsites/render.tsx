@@ -11,7 +11,16 @@ import { Fragment, type ReactNode } from "react";
 
 import type { WidgetBlock, RichTextBlock } from "@/microsites/data";
 
-import { HeroGradient, HeroSplit, HeroFormInHeader } from "@/components/widgets/Hero";
+import {
+  HeroGradient,
+  HeroSplit,
+  HeroFormInHeader,
+  HeroFullBleedImage,
+  HeroSplitForm,
+  HeroFloatingPanel,
+  HeroBigStat,
+  HeroCentered,
+} from "@/components/widgets/Hero";
 import { CTABoldBanner, CTANavyAccent, CTACardWithIcon } from "@/components/widgets/CTA";
 import { FeatureGrid, FeatureNavyCards } from "@/components/widgets/FeatureHighlights";
 import {
@@ -93,6 +102,46 @@ export function renderBlock(
       );
     case "HeroFormInHeader":
       return <HeroFormInHeader key={key} {...block.props} />;
+    case "HeroFullBleedImage":
+      return (
+        <HeroFullBleedImage
+          key={key}
+          {...block.props}
+          imageSrc={block.props.imageSrc ?? heroImageSrc}
+        />
+      );
+    case "HeroSplitForm":
+      return (
+        <HeroSplitForm
+          key={key}
+          {...block.props}
+          imageSrc={block.props.imageSrc ?? heroImageSrc}
+        />
+      );
+    case "HeroFloatingPanel":
+      return (
+        <HeroFloatingPanel
+          key={key}
+          {...block.props}
+          imageSrc={block.props.imageSrc ?? heroImageSrc}
+        />
+      );
+    case "HeroBigStat":
+      return (
+        <HeroBigStat
+          key={key}
+          {...block.props}
+          imageSrc={block.props.imageSrc ?? heroImageSrc}
+        />
+      );
+    case "HeroCentered":
+      return (
+        <HeroCentered
+          key={key}
+          {...block.props}
+          imageSrc={block.props.imageSrc ?? heroImageSrc}
+        />
+      );
 
     case "CTABoldBanner":
       return <CTABoldBanner key={key} {...block.props} />;
