@@ -30,7 +30,7 @@ Purpose right now: build the widget catalog and 10 sample microsites we can show
 - Content-team training (up to 3 people) + workflow documentation
 - All code in client GitHub repo
 
-> **⚠️ Scope flag, pending Ahmed:** SOW says **5** sample microsites for Phase 1. Ahmed asked for **10** (3 regional + 7 layout) for the early demo. Decision unresolved — assume 10 for now; revisit if it stretches Phase 1 budget.
+> **Scope decision (resolved 2026-05-01):** SOW says 5 sample microsites; **we are building 10 for the initial Zoom demo** to give Prometric "volume of consideration" — lots of variation to ooh and ahh at. The extra 5 are sales-demo overhead, not Phase 1 deliverable inflation.
 
 ---
 
@@ -220,9 +220,22 @@ Full celpip.ca rebuild on Next.js + Sanity + Azure · dynamic API modules pullin
 
 ---
 
-## 13. Open decisions / things to revisit
+## 13. Demo strategy (today's Zoom)
 
-- [ ] **5 vs. 10 sample microsites** for Phase 1 demo (SOW says 5; Ahmed asked for 10).
+- **Two surfaces, in parallel**: `/widgets` (gallery for granular reactions) and `/microsites/[id]` (10 microsites with persistent prev/next shell for big-picture reactions).
+- **Goal**: convey momentum and visual progress. Lots of variation. Client reacts in-call, verbally; Ahmed captures.
+- **Reaction layer is a stub for today** — 👍 / 👎 / 💬 buttons appear on every variant card and microsite shell, but are non-functional with a "coming next week" tooltip. Pitched as the async feedback mechanism we'll wire up after the call.
+- **Hero imagery via Nano Banana** — 10 audience-themed images, one per microsite. Prompts checkpointed with Ahmed before generation to control credit spend.
+- **Async follow-up next week**: real reaction layer (localStorage + JSON/markdown export) gets built then.
+
+## 14. Open decisions / things to revisit
+
 - [ ] Whether to split Testimonials videos out of `Testimonials.tsx` into its own file for clean Appendix A alignment.
 - [ ] When (Phase 2?) to migrate to the 2025 brand palette — and whether to wire the existing tokens JSON into Tailwind v4 `@theme` at that time.
-- [ ] Whether testimonial portraits get Nano Banana treatment in the first pass or stay stylized initials.
+- [ ] Whether testimonial portraits get Nano Banana treatment in the next pass or stay stylized initials.
+
+## 15. Active build session
+
+- **PRD (system of record)**: `~/.claude/MEMORY/WORK/20260501-150653_celpip-microsite-gallery-build/PRD.md`
+- **Effort tier**: Comprehensive (72 ISC criteria including 5 anti-criteria)
+- **Capabilities engaged**: Engineer (parallel), Media (Nano Banana), Designer, Architect, Explore, /simplify, /review, QATester

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CELPIP Widget Gallery | Overclock Accelerator",
-  description: "Component library exploration for CELPIP marketing microsites",
+  title: "CELPIP Microsite Infrastructure | Overclock Accelerator",
+  description: "Phase 1 exploration: widget gallery and microsite concepts for CELPIP.",
 };
 
 export default function RootLayout({

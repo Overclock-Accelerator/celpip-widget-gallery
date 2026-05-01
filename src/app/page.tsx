@@ -1,137 +1,103 @@
-"use client";
-import { useState } from "react";
-import { HeroVariants } from "@/components/widgets/Hero";
-import { CTAVariants } from "@/components/widgets/CTA";
-import { FeatureHighlights } from "@/components/widgets/FeatureHighlights";
-import { TestimonialVariants } from "@/components/widgets/Testimonials";
-import { FAQVariants } from "@/components/widgets/FAQ";
-import { VanityMetrics } from "@/components/widgets/VanityMetrics";
-import { FormVariants } from "@/components/widgets/Forms";
-import { ResourceList } from "@/components/widgets/ResourceList";
-import { ScoreChart } from "@/components/widgets/ScoreChart";
+import Link from "next/link";
 
-const sections = [
-  { id: "hero", label: "Hero Sections" },
-  { id: "cta", label: "CTAs" },
-  { id: "features", label: "Feature Highlights" },
-  { id: "testimonials", label: "Testimonials" },
-  { id: "faq", label: "FAQ Accordion" },
-  { id: "metrics", label: "Vanity Metrics" },
-  { id: "forms", label: "Lead Forms" },
-  { id: "resources", label: "Resource List" },
-  { id: "score", label: "Score Chart" },
-];
-
-export default function Home() {
-  const [activeSection, setActiveSection] = useState("hero");
-
+export default function ChooserHome() {
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar Nav */}
-      <nav className="w-64 bg-[#0B2341] text-white fixed h-full overflow-y-auto z-50 hidden lg:block">
-        <div className="p-6 border-b border-[#153A5C]">
-          <h1 className="font-heading text-lg font-bold text-[#17FFDC]">CELPIP</h1>
-          <p className="text-sm text-gray-300 mt-1">Widget Gallery</p>
-          <p className="text-xs text-gray-400 mt-0.5">Overclock Accelerator</p>
-        </div>
-        <ul className="py-4">
-          {sections.map((s) => (
-            <li key={s.id}>
-              <a
-                href={`#${s.id}`}
-                onClick={() => setActiveSection(s.id)}
-                className={`block px-6 py-3 text-sm transition-colors hover:bg-[#153A5C] ${
-                  activeSection === s.id
-                    ? "bg-[#153A5C] border-l-4 border-[#00A651] text-white font-medium"
-                    : "text-gray-300"
-                }`}
-              >
-                {s.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-[#153A5C]">
-          <p className="text-xs text-gray-500">Phase 1 Exploration</p>
-          <p className="text-xs text-gray-500">April 2026</p>
-        </div>
-      </nav>
+    <main className="min-h-screen flex flex-col bg-[#0B2341] text-white relative overflow-hidden">
+      {/* subtle radial accent */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none opacity-60"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 20% 0%, rgba(23,255,220,0.10) 0%, transparent 60%), radial-gradient(50% 50% at 90% 100%, rgba(0,166,81,0.18) 0%, transparent 60%)",
+        }}
+      />
 
-      {/* Main Content */}
-      <main className="flex-1 lg:ml-64">
-        {/* Mobile Header */}
-        <div className="lg:hidden sticky top-0 z-40 bg-[#0B2341] text-white p-4">
-          <h1 className="font-heading text-lg font-bold text-[#17FFDC]">CELPIP Widget Gallery</h1>
-        </div>
+      <section className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-16">
+        <div className="max-w-5xl w-full text-center">
+          <p className="font-heading text-sm tracking-[0.2em] uppercase text-[#17FFDC] mb-4">
+            Overclock Accelerator &times; Prometric
+          </p>
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            CELPIP Microsite Infrastructure
+          </h1>
+          <p className="mt-4 text-lg sm:text-xl text-gray-300">
+            Phase 1 exploration &middot; Overclock Accelerator &times; Prometric
+          </p>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="mb-12">
-            <h1 className="font-heading text-3xl font-bold text-[#0B2341]">CELPIP Component Library</h1>
-            <p className="text-gray-600 mt-2 text-lg">
-              Exploration of widget designs for CELPIP marketing microsites.
-              Each section shows multiple design variants for discussion and selection.
-            </p>
+          {/* Cards */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ChooserCard
+              href="/widgets"
+              eyebrow="Component library"
+              title="Widget Gallery"
+              description="Browse the component library and design variants."
+              accent="teal"
+            />
+            <ChooserCard
+              href="/microsites"
+              eyebrow="10 sample microsites"
+              title="Microsite Concepts"
+              description="Walk through 10 sample microsites built from the widgets."
+              accent="green"
+            />
           </div>
-
-          <WidgetSection id="hero" title="Hero Sections" description="Primary landing section with headline, subtext, and CTA buttons.">
-            <HeroVariants />
-          </WidgetSection>
-
-          <WidgetSection id="cta" title="Call-to-Action Blocks" description="Conversion-focused modules with heading, summary, and action buttons.">
-            <CTAVariants />
-          </WidgetSection>
-
-          <WidgetSection id="features" title="Feature Highlights" description="Showcase key benefits and features with icons and descriptions.">
-            <FeatureHighlights />
-          </WidgetSection>
-
-          <WidgetSection id="testimonials" title="Testimonials" description="Social proof through quotes and video testimonials.">
-            <TestimonialVariants />
-          </WidgetSection>
-
-          <WidgetSection id="faq" title="FAQ Accordion" description="Expandable question-and-answer sections, filterable by category.">
-            <FAQVariants />
-          </WidgetSection>
-
-          <WidgetSection id="metrics" title="Vanity Metrics" description="Key statistics and numbers that build credibility.">
-            <VanityMetrics />
-          </WidgetSection>
-
-          <WidgetSection id="forms" title="Lead Capture Forms" description="Form modules for lead generation, integrated with Braze/Salesforce.">
-            <FormVariants />
-          </WidgetSection>
-
-          <WidgetSection id="resources" title="Resource List" description="Blogs, podcasts, webinars, and YouTube Lives with category filtering.">
-            <ResourceList />
-          </WidgetSection>
-
-          <WidgetSection id="score" title="Score Alignment Chart" description="Interactive CLB / DHA / CEFR equivalency display.">
-            <ScoreChart />
-          </WidgetSection>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="relative z-10 px-6 py-6 text-center">
+        <p className="text-xs text-gray-400">Built for Zoom demo &middot; 2026-05-01</p>
+      </footer>
+    </main>
   );
 }
 
-function WidgetSection({
-  id,
+function ChooserCard({
+  href,
+  eyebrow,
   title,
   description,
-  children,
+  accent,
 }: {
-  id: string;
+  href: string;
+  eyebrow: string;
   title: string;
   description: string;
-  children: React.ReactNode;
+  accent: "teal" | "green";
 }) {
+  const accentColor = accent === "teal" ? "#17FFDC" : "#00A651";
+  const accentBorder = accent === "teal" ? "hover:border-[#17FFDC]" : "hover:border-[#00A651]";
   return (
-    <section id={id} className="mb-16 scroll-mt-8">
-      <div className="border-b-2 border-[#0B2341] pb-3 mb-8">
-        <h2 className="font-heading text-2xl font-bold text-[#0B2341]">{title}</h2>
-        <p className="text-gray-500 mt-1">{description}</p>
-      </div>
-      <div className="space-y-8">{children}</div>
-    </section>
+    <Link
+      href={href}
+      className={`group relative text-left rounded-2xl border border-[#153A5C] bg-[#0E2B4F]/80 p-8 transition-all hover:bg-[#153A5C] hover:-translate-y-1 ${accentBorder}`}
+    >
+      <p
+        className="font-heading text-xs tracking-widest uppercase mb-3"
+        style={{ color: accentColor }}
+      >
+        {eyebrow}
+      </p>
+      <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white">{title}</h2>
+      <p className="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed">{description}</p>
+      <span
+        className="mt-6 inline-flex items-center gap-2 text-sm font-medium"
+        style={{ color: accentColor }}
+      >
+        Open
+        <svg
+          className="w-4 h-4 transition-transform group-hover:translate-x-1"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden
+        >
+          <path
+            fillRule="evenodd"
+            d="M7.21 14.77a.75.75 0 0 1 .02-1.06L10.94 10 7.23 6.29a.75.75 0 1 1 1.04-1.08l4.25 4.25a.75.75 0 0 1 0 1.08l-4.25 4.25a.75.75 0 0 1-1.06-.02Z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </span>
+    </Link>
   );
 }
