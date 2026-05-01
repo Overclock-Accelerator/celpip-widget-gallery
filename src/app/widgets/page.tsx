@@ -20,6 +20,7 @@ import { UrgencyBarVariants } from "@/components/widgets/UrgencyBar";
 import { PrepStarterPackVariants } from "@/components/widgets/PrepStarterPack";
 import { ObjectionHandlerFAQVariants } from "@/components/widgets/ObjectionHandlerFAQ";
 import { ReadinessQuizVariants } from "@/components/widgets/ReadinessQuiz";
+import { WhyCelpipVariants } from "@/components/widgets/WhyCelpip";
 import { SiteNav } from "@/components/SiteNav";
 
 const sections = [
@@ -43,6 +44,7 @@ const sections = [
   { id: "prep", label: "Prep Starter Pack" },
   { id: "objections", label: "Objection Handler FAQ" },
   { id: "readiness", label: "Readiness Quiz" },
+  { id: "whycelpip", label: "Why CELPIP" },
 ];
 
 export default function WidgetsPage() {
@@ -176,6 +178,10 @@ export default function WidgetsPage() {
 
             <WidgetSection id="readiness" title="Readiness Quiz" description="3-question interactive check — submit yields a personalized 'Ready / Almost / Use prep pack' result with the right CTA.">
               <ReadinessQuizVariants />
+            </WidgetSection>
+
+            <WidgetSection id="whycelpip" title="Why CELPIP" description="Branded benefit-pillar block modelled on celpip.ca/india. Three variants: homepage 4-pillar, country test cards, stat-led navy momentum.">
+              <WhyCelpipVariants />
             </WidgetSection>
           </div>
         </main>

@@ -33,6 +33,7 @@ import type { UrgencyBarProps } from "@/components/widgets/UrgencyBar";
 import type { PrepStarterPackProps } from "@/components/widgets/PrepStarterPack";
 import type { ObjectionHandlerFAQProps } from "@/components/widgets/ObjectionHandlerFAQ";
 import type { ReadinessQuizProps } from "@/components/widgets/ReadinessQuiz";
+import type { WhyCelpipProps } from "@/components/widgets/WhyCelpip";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // RichText block shape
@@ -105,7 +106,10 @@ export type WidgetBlock =
   | { kind: "PrepStarterPackHero"; props: PrepStarterPackProps }
   | { kind: "PrepStarterPackInline"; props: PrepStarterPackProps }
   | { kind: "ObjectionHandlerFAQ"; props: ObjectionHandlerFAQProps }
-  | { kind: "ReadinessQuiz"; props: ReadinessQuizProps };
+  | { kind: "ReadinessQuiz"; props: ReadinessQuizProps }
+  | { kind: "WhyCelpipPillars"; props: WhyCelpipProps }
+  | { kind: "WhyCelpipTestCards"; props: WhyCelpipProps }
+  | { kind: "WhyCelpipMomentum"; props: WhyCelpipProps };
 
 export type MicrositeTag = "Regional" | "Layout";
 

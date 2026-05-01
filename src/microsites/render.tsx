@@ -34,6 +34,11 @@ import { UrgencyBar } from "@/components/widgets/UrgencyBar";
 import { PrepStarterPackHero, PrepStarterPackInline } from "@/components/widgets/PrepStarterPack";
 import { ObjectionHandlerFAQ } from "@/components/widgets/ObjectionHandlerFAQ";
 import { ReadinessQuiz } from "@/components/widgets/ReadinessQuiz";
+import {
+  WhyCelpipPillars,
+  WhyCelpipTestCards,
+  WhyCelpipMomentum,
+} from "@/components/widgets/WhyCelpip";
 
 export function renderRichTextBlock(block: RichTextBlock, key: number): ReactNode {
   switch (block.type) {
@@ -182,5 +187,12 @@ export function renderBlock(
       return <ObjectionHandlerFAQ key={key} {...block.props} />;
     case "ReadinessQuiz":
       return <ReadinessQuiz key={key} {...block.props} />;
+
+    case "WhyCelpipPillars":
+      return <WhyCelpipPillars key={key} {...block.props} />;
+    case "WhyCelpipTestCards":
+      return <WhyCelpipTestCards key={key} {...block.props} />;
+    case "WhyCelpipMomentum":
+      return <WhyCelpipMomentum key={key} {...block.props} />;
   }
 }

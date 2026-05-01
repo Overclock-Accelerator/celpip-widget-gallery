@@ -1,0 +1,223 @@
+{
+  "sessionId": "mon5f8ot-d921d3",
+  "input": {
+    "audience": "A prospective test taker is a civil engineer from Nigeria, aiming to secure Canadian permanent residency through the Express Entry system. With a solid background in structural design and project management, they seek to improve their English proficiency to meet the language requirements and enhance their chances of success in the competitive immigration process. Driven by the desire for professional growth and a better quality of life for their family, they are determined to excel in the CELPIP test.",
+    "concept": "A woman stands at an airport arrivals gate, clutching her CELPIP certificate in one hand and a small suitcase in the other, as her family rushes toward her with open arms. The camera captures her mixed expression of nervous excitement and pride, symbolizing the confidence gained through preparation, as she takes her first steps into a new life filled with opportunities.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "ACHIEVE YOUR DREAMS",
+    "headline": "Unlock Your Future in Canada",
+    "subhead": "Prepare for the CELPIP test and take a confident step towards permanent residency and a brighter life for your family.",
+    "primaryCta": "Start Preparing",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "📚",
+        "title": "Comprehensive Test Preparation",
+        "desc": "Access study materials tailored to help you improve your English skills for the CELPIP test and succeed in your immigration journey."
+      },
+      {
+        "icon": "🌍",
+        "title": "Recognised by Canada",
+        "desc": "CELPIP is an official English language test accepted by IRCC for Canadian immigration, ensuring your efforts are aligned with your goals."
+      },
+      {
+        "icon": "💪",
+        "title": "Boost Your Confidence",
+        "desc": "With practice and guidance, you can achieve a CLB score of 7-10, enhancing your chances for Express Entry."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Oluwatobi A.",
+        "location": "Abuja, Nigeria",
+        "quote": "Preparing for the CELPIP test was the best decision I made. I scored CLB 9, and now I’m ready for my new life in Canada!",
+        "score": "CLB 9"
+      },
+      {
+        "name": "Chinonso E.",
+        "location": "Lagos, Nigeria",
+        "quote": "The CELPIP study materials were clear and helpful. I felt confident going into the test and achieved my goal!",
+        "score": "CLB 8"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the CELPIP test?",
+        "a": "The CELPIP test measures your English language proficiency in listening, reading, writing, and speaking. It’s designed for those looking to immigrate to Canada."
+      },
+      {
+        "q": "How can I prepare for the CELPIP test?",
+        "a": "You can prepare by using CELPIP’s official study materials, taking practice tests, and enrolling in preparation courses to strengthen your skills."
+      },
+      {
+        "q": "What CLB scores are required for immigration?",
+        "a": "For Canadian Express Entry, a CLB score of 7 or higher is often recommended. Achieving this can improve your chances of success."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "3-4 hrs",
+        "label": "Test Duration"
+      },
+      {
+        "value": "100+",
+        "label": "Test Centres Worldwide"
+      },
+      {
+        "value": "4 Skills",
+        "label": "Listening, Reading, Writing, Speaking"
+      },
+      {
+        "value": "1 Result",
+        "label": "Quick Results"
+      }
+    ],
+    "adHeadline": "Prepare for CELPIP, Unlock Canada",
+    "adTagline": "Your journey to a new life starts with the right preparation."
+  },
+  "ads": {
+    "hero": "/builder/mon5f8ot-d921d3/hero.png",
+    "square": "/builder/mon5f8ot-d921d3/ad-1x1.png",
+    "story": "/builder/mon5f8ot-d921d3/ad-9x16.png",
+    "portrait": "/builder/mon5f8ot-d921d3/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "A prospective test taker is a civil engineer from Nigeria…",
+    "tag": "Layout",
+    "description": "A woman stands at an airport arrivals gate, clutching her CELPIP certificate in one hand and a small suitcase in the other, as her family rushes toward her with open arms. The came",
+    "heroImageSrc": "/builder/mon5f8ot-d921d3/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "ACHIEVE YOUR DREAMS",
+          "headline": "Unlock Your Future in Canada",
+          "subhead": "Prepare for the CELPIP test and take a confident step towards permanent residency and a brighter life for your family.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A woman stands at an airport arrivals gate, clutching her CELPIP certificate in "
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "3-4 hrs",
+              "label": "Test Duration"
+            },
+            {
+              "value": "100+",
+              "label": "Test Centres Worldwide"
+            },
+            {
+              "value": "4 Skills",
+              "label": "Listening, Reading, Writing, Speaking"
+            },
+            {
+              "value": "1 Result",
+              "label": "Quick Results"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Prepare for the CELPIP test and take a confident step towards permanent residency and a brighter life for your family.",
+          "features": [
+            {
+              "icon": "📚",
+              "title": "Comprehensive Test Preparation",
+              "desc": "Access study materials tailored to help you improve your English skills for the CELPIP test and succeed in your immigration journey."
+            },
+            {
+              "icon": "🌍",
+              "title": "Recognised by Canada",
+              "desc": "CELPIP is an official English language test accepted by IRCC for Canadian immigration, ensuring your efforts are aligned with your goals."
+            },
+            {
+              "icon": "💪",
+              "title": "Boost Your Confidence",
+              "desc": "With practice and guidance, you can achieve a CLB score of 7-10, enhancing your chances for Express Entry."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Oluwatobi A.",
+            "location": "Abuja, Nigeria",
+            "quote": "Preparing for the CELPIP test was the best decision I made. I scored CLB 9, and now I’m ready for my new life in Canada!",
+            "score": "CLB 9"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Oluwatobi A.",
+              "location": "Abuja, Nigeria",
+              "quote": "Preparing for the CELPIP test was the best decision I made. I scored CLB 9, and now I’m ready for my new life in Canada!",
+              "score": "CLB 9"
+            },
+            {
+              "name": "Chinonso E.",
+              "location": "Lagos, Nigeria",
+              "quote": "The CELPIP study materials were clear and helpful. I felt confident going into the test and achieved my goal!",
+              "score": "CLB 8"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is the CELPIP test?",
+              "a": "The CELPIP test measures your English language proficiency in listening, reading, writing, and speaking. It’s designed for those looking to immigrate to Canada."
+            },
+            {
+              "q": "How can I prepare for the CELPIP test?",
+              "a": "You can prepare by using CELPIP’s official study materials, taking practice tests, and enrolling in preparation courses to strengthen your skills."
+            },
+            {
+              "q": "What CLB scores are required for immigration?",
+              "a": "For Canadian Express Entry, a CLB score of 7 or higher is often recommended. Achieving this can improve your chances of success."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Unlock Your Future in Canada",
+          "subheading": "Prepare for the CELPIP test and take a confident step towards permanent residency and a brighter life for your family.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 73.1,
+  "imageFallback": false
+}
