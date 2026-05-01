@@ -57,7 +57,57 @@ export default function BuilderPage() {
   const [warnings, setWarnings] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
+  // Random-prompt state. One in-flight kind at a time + a per-kind error
+  // we surface as a small inline "Try again" hint without blocking the form.
+  const [randomBusy, setRandomBusy] = useState<null | "audience" | "concept">(
+    null,
+  );
+  const [randomError, setRandomError] = useState<{
+    kind: "audience" | "concept";
+    message: string;
+  } | null>(null);
+
   const abortRef = useRef<AbortController | null>(null);
+
+  const requestRandomPrompt = useCallback(
+    async (kind: "audience" | "concept") => {
+      if (busy || randomBusy) return;
+      const previous = kind === "audience" ? audience : concept;
+      const setter = kind === "audience" ? setAudience : setConcept;
+      setRandomBusy(kind);
+      setRandomError(null);
+      setter("Generating…");
+      try {
+        const res = await fetch("/api/builder/random-prompt", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ kind }),
+        });
+        if (!res.ok) {
+          const text = await res.text();
+          let msg = text;
+          try {
+            msg = (JSON.parse(text) as { error?: string }).error ?? text;
+          } catch {
+            // not JSON — keep raw
+          }
+          throw new Error(msg || `Server returned ${res.status}`);
+        }
+        const data = (await res.json()) as { prompt?: string };
+        if (!data.prompt) throw new Error("Empty prompt from server.");
+        setter(data.prompt);
+      } catch (err) {
+        setter(previous);
+        setRandomError({
+          kind,
+          message: (err as Error).message || "Couldn't generate a prompt.",
+        });
+      } finally {
+        setRandomBusy(null);
+      }
+    },
+    [audience, concept, busy, randomBusy],
+  );
 
   const canSubmit = useMemo(
     () =>
@@ -210,12 +260,20 @@ export default function BuilderPage() {
       >
         <div className="grid grid-cols-1 gap-6">
           <div>
-            <label
-              htmlFor="audience"
-              className="block text-sm font-semibold text-[#0B2341] mb-1"
-            >
-              Audience description
-            </label>
+            <div className="flex items-center justify-between mb-1">
+              <label
+                htmlFor="audience"
+                className="block text-sm font-semibold text-[#0B2341]"
+              >
+                Audience description
+              </label>
+              <RandomButton
+                label="Random audience"
+                busy={randomBusy === "audience"}
+                disabled={busy || randomBusy !== null}
+                onClick={() => requestRandomPrompt("audience")}
+              />
+            </div>
             <p className="text-xs text-gray-500 mb-2">
               Who is this for? Background, life stage, what they&rsquo;re juggling.
             </p>
@@ -224,21 +282,42 @@ export default function BuilderPage() {
               rows={4}
               value={audience}
               onChange={(e) => setAudience(e.target.value)}
-              disabled={busy}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-[#0B2341]"
+              disabled={busy || randomBusy === "audience"}
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-[#0B2341] disabled:bg-gray-50 disabled:text-gray-500"
               placeholder="Filipino healthcare workers in their late 20s preparing for Canadian PR…"
               required
             />
-            <CharCount value={audience} min={10} max={1500} />
+            <div className="mt-1 flex items-start justify-between gap-3">
+              {randomError?.kind === "audience" ? (
+                <button
+                  type="button"
+                  onClick={() => requestRandomPrompt("audience")}
+                  className="text-xs text-amber-700 hover:text-amber-900 underline"
+                >
+                  Couldn&rsquo;t generate &mdash; try again
+                </button>
+              ) : (
+                <span />
+              )}
+              <CharCount value={audience} min={10} max={1500} />
+            </div>
           </div>
 
           <div>
-            <label
-              htmlFor="concept"
-              className="block text-sm font-semibold text-[#0B2341] mb-1"
-            >
-              Ad concept
-            </label>
+            <div className="flex items-center justify-between mb-1">
+              <label
+                htmlFor="concept"
+                className="block text-sm font-semibold text-[#0B2341]"
+              >
+                Ad concept
+              </label>
+              <RandomButton
+                label="Random concept"
+                busy={randomBusy === "concept"}
+                disabled={busy || randomBusy !== null}
+                onClick={() => requestRandomPrompt("concept")}
+              />
+            </div>
             <p className="text-xs text-gray-500 mb-2">
               What scene, mood, or moment should the creative show?
             </p>
@@ -247,12 +326,25 @@ export default function BuilderPage() {
               rows={3}
               value={concept}
               onChange={(e) => setConcept(e.target.value)}
-              disabled={busy}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-[#0B2341]"
+              disabled={busy || randomBusy === "concept"}
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-[#0B2341] disabled:bg-gray-50 disabled:text-gray-500"
               placeholder="An aspirational moment showing a candidate calmly finishing the test…"
               required
             />
-            <CharCount value={concept} min={10} max={1500} />
+            <div className="mt-1 flex items-start justify-between gap-3">
+              {randomError?.kind === "concept" ? (
+                <button
+                  type="button"
+                  onClick={() => requestRandomPrompt("concept")}
+                  className="text-xs text-amber-700 hover:text-amber-900 underline"
+                >
+                  Couldn&rsquo;t generate &mdash; try again
+                </button>
+              ) : (
+                <span />
+              )}
+              <CharCount value={concept} min={10} max={1500} />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -408,6 +500,38 @@ function CharCount({
         {len} / {max}
       </span>
     </div>
+  );
+}
+
+function RandomButton({
+  label,
+  busy,
+  disabled,
+  onClick,
+}: {
+  label: string;
+  busy: boolean;
+  disabled: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      aria-busy={busy}
+      className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0B2341]/70 hover:text-[#0B2341] disabled:opacity-40 disabled:cursor-not-allowed transition-colors px-2 py-1 rounded-md hover:bg-[#0B2341]/5"
+    >
+      {busy ? (
+        <span
+          aria-hidden
+          className="inline-block w-3 h-3 rounded-full border-2 border-[#0B2341]/40 border-t-transparent animate-spin"
+        />
+      ) : (
+        <span aria-hidden>🎲</span>
+      )}
+      <span>{busy ? "Generating…" : label}</span>
+    </button>
   );
 }
 
