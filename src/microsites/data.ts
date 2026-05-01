@@ -4906,6 +4906,481 @@ export const microsites: Microsite[] = [
       },
     ],
   },
+
+  // ───────────────────── 39. Mexico · Pharmacists → Canada ─────────────────────
+  {
+    id: 39,
+    title: "Mexico · Pharmacists → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Mexican pharmacists pursuing PEBC licensure and Canadian PR.",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN MEXICO · FOR PHARMACISTS",
+          headline: "Su carrera de farmacéutico en Canadá empieza con un examen.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Mexican pharmacists pursuing PEBC licensure rely on CLB scores accepted in Express Entry. Test centres in Mexico City, Guadalajara, and Monterrey — done in one sitting, results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "View Score Equivalency" },
+          imageAlt:
+            "Mexican pharmacist in a Mexico City pharmacy reviewing prescriptions with a colleague",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "Express Entry", subLabel: "CLB scores" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "WhyCelpipTestCards",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Designed for healthcare professionals on a tight schedule",
+          pillars: [
+            {
+              icon: "&#9201;",
+              title: "Done in one sitting",
+              desc: "All four components in 3 hours — no second test day required.",
+            },
+            {
+              icon: "&#128187;",
+              title: "Computer-delivered",
+              desc: "No live examiner. You speak into a headset at your own pace.",
+            },
+            {
+              icon: "&#128200;",
+              title: "Results in 3–4 days",
+              desc: "Official PDF score report — upload directly into your Express Entry profile.",
+            },
+            {
+              icon: "&#127973;",
+              title: "Plain, real-world English",
+              desc: "Vocabulary from everyday clinical and retail pharmacy contexts — the English you already use with patients.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-39-moment/300/300",
+          imageAlt: "Portrait of Daniela, a Mexican hospital pharmacist from Monterrey",
+          oneLineMoment:
+            "She tested in Monterrey on a Saturday and uploaded her CLB scores by Wednesday.",
+          paragraphQuote:
+            "Daniela is a hospital pharmacist in Monterrey with seven years of inpatient experience. She needed CLB 7 in each component for Express Entry. CELPIP felt familiar — the listening tasks sounded like the same conversations she has at the bedside. She registered online, tested one Saturday morning, and had her score report four days later.",
+          attribution: {
+            name: "Daniela Rivera",
+            location: "Monterrey → Calgary",
+            score: "CLB 9",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "CELPIP sittings across Mexico",
+          subheading:
+            "Weekend and weekday options at three centres — pick what fits your shift schedule.",
+          sittings: [
+            {
+              city: "Mexico City",
+              centreName: "Mexico City — Polanco Test Centre",
+              date: "Sat, May 30",
+              time: "9:00 AM",
+              seatsLeft: 5,
+              address: "Polanco, CDMX",
+            },
+            {
+              city: "Guadalajara",
+              centreName: "Guadalajara — Providencia Centre",
+              date: "Sun, May 31",
+              time: "10:00 AM",
+              seatsLeft: 4,
+              address: "Providencia, Guadalajara",
+            },
+            {
+              city: "Monterrey",
+              centreName: "Monterrey — San Pedro Centre",
+              date: "Sat, Jun 13",
+              time: "9:30 AM",
+              seatsLeft: 6,
+              address: "San Pedro Garza García",
+            },
+            {
+              city: "Mexico City",
+              centreName: "Mexico City — Santa Fe Centre",
+              date: "Sun, Jun 14",
+              time: "1:00 PM",
+              seatsLeft: 3,
+              address: "Santa Fe, CDMX",
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Mexican pharmacists ask before booking.",
+          objections: [
+            {
+              worry: "Does PEBC accept CELPIP scores directly?",
+              reassurance:
+                "PEBC sets its own language requirements for pharmacy licensure. CELPIP-General is designated by IRCC for permanent residency and delivers CLB scores used in Express Entry. For PEBC-specific language requirements, please confirm directly with the Pharmacy Examining Board of Canada.",
+              softCta: { label: "View CLB score chart" },
+            },
+            {
+              worry: "What CLB do I need for Express Entry?",
+              reassurance:
+                "Federal Skilled Worker requires a minimum of CLB 7 in each of the four components. Higher scores earn more Comprehensive Ranking System points. We are not licensed to give immigration advice — please visit IRCC for current requirements.",
+            },
+            {
+              worry: "My English is mostly conversational. Will that be enough?",
+              reassurance:
+                "CELPIP uses vocabulary and situations taken from everyday life — the kind of English you already use at work. Two free practice tests come with your CELPIP Account so you can measure where you stand before booking.",
+              softCta: { label: "Try a free practice test" },
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You have already decided. Now book.",
+          subheading:
+            "Finish your registration online in minutes. Results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 40. Brazil · Accountants → Canada ─────────────────────
+  {
+    id: 40,
+    title: "Brazil · Accountants → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Brazilian accountants and finance professionals targeting Canadian PR.",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP NO BRASIL · PARA CONTADORES",
+          headline: "Sua carreira contábil no Canadá começa com um exame de inglês.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Brazilian accountants, auditors, and finance managers use CLB scores accepted in Express Entry and Provincial Nominee Programmes. Computer-delivered, three hours, results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt:
+            "Brazilian accountant working at a São Paulo office overlooking Avenida Paulista",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "IRCC", subLabel: "Citizenship" },
+            { label: "PNP", subLabel: "Provincial nominee" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "MetricsRow",
+        props: {
+          metrics: [
+            { value: "3", label: "Cities in Brazil" },
+            { value: "3–4 days", label: "Result Turnaround" },
+            { value: "3 hrs", label: "One Sitting" },
+            { value: "CLB 9", label: "Common PR Target" },
+            { value: "100%", label: "Computer-Delivered" },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in Brazil",
+          subheading:
+            "Open sittings in São Paulo, Rio de Janeiro, and Belo Horizonte.",
+          sittings: [
+            {
+              city: "São Paulo",
+              centreName: "São Paulo — Itaim Bibi Centre",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Rio de Janeiro",
+              centreName: "Rio de Janeiro — Botafogo Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Belo Horizonte",
+              centreName: "Belo Horizonte — Savassi Centre",
+              date: "Sat, Jun 6",
+              time: "9:30 AM",
+              seatsLeft: 3,
+            },
+            {
+              city: "São Paulo",
+              centreName: "São Paulo — Pinheiros Centre",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 5,
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-40-moment/300/300",
+          imageAlt: "Portrait of Lucas, a CPA-track accountant from São Paulo",
+          oneLineMoment:
+            "He registered on a Tuesday, tested that Saturday, and uploaded his CLB scores the next week.",
+          paragraphQuote:
+            "Lucas is a senior auditor at a Big Four firm in São Paulo. He needed CLB 9 to maximise his Express Entry CRS score. CELPIP fit his calendar — register online, test in less than three hours, results in 3 to 4 business days. Two months later his Canadian PR application was complete.",
+          attribution: {
+            name: "Lucas Almeida",
+            location: "São Paulo → Toronto",
+            score: "CLB 10",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "PrepStarterPackInline",
+        props: {
+          eyebrow: "FREE",
+          headline: "Get the official CELPIP practice test, free.",
+          benefits: [
+            "Two free practice tests with your CELPIP Account",
+            "100+ hours of prep videos and webinars",
+            "Self-scoring rubrics for writing and speaking",
+            "Audio for the listening section",
+          ],
+          ctaLabel: "Send me the prep pack",
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Brazilian accountants ask before booking.",
+          objections: [
+            {
+              worry: "I have not taken a standardised test in years.",
+              reassurance:
+                "CELPIP is computer-delivered in one sitting and uses vocabulary taken from everyday life — the kind of English you already use at work. Two free practice tests come with your CELPIP Account.",
+              softCta: { label: "Try a free practice test" },
+            },
+            {
+              worry: "Will my CELPIP score be accepted by CPA Canada?",
+              reassurance:
+                "CPA Canada and provincial CPA bodies set their own English language requirements for licensure. CELPIP-General is designated by IRCC for permanent residency and delivers CLB scores used in Express Entry. Confirm provincial CPA requirements with the body in your destination province.",
+            },
+            {
+              worry: "How long are CELPIP scores valid?",
+              reassurance:
+                "CELPIP scores are valid for 2 years from the test date for most immigration purposes. For program-specific requirements, please consult a licensed immigration consultant.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "What are you waiting for?",
+          subheading:
+            "Finish your registration online in minutes and join thousands worldwide who reach their immigration goals with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 41. UAE · Medical Lab Technicians → Canada ─────────────────────
+  {
+    id: 41,
+    title: "UAE · Medical Lab Technicians → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for medical laboratory technicians in the UAE pursuing CSMLS certification and Canadian PR.",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN UAE · FOR MEDICAL LAB TECHNICIANS",
+          headline: "Your lab career in Canada starts with one English test.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Medical laboratory technologists pursuing CSMLS certification rely on CLB scores accepted in Express Entry. Test centres in Dubai and Abu Dhabi — three hours, one sitting, results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "View Score Equivalency" },
+          imageAlt:
+            "Medical laboratory technician in scrubs running tests at a hospital lab in Dubai",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "Express Entry", subLabel: "CLB scores" },
+            { label: "PNP", subLabel: "Provincial nominee" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "WhyCelpipTestCards",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Built around lab schedules and shift work",
+          pillars: [
+            {
+              icon: "&#9201;",
+              title: "Done in one sitting",
+              desc: "All four components in 3 hours — book around a single day off.",
+            },
+            {
+              icon: "&#128187;",
+              title: "Computer-delivered",
+              desc: "No live examiner for speaking. You speak into a headset at your own pace.",
+            },
+            {
+              icon: "&#128200;",
+              title: "Results in 3–4 days",
+              desc: "Official PDF score report — upload directly into your Express Entry profile.",
+            },
+            {
+              icon: "&#129514;",
+              title: "Real workplace English",
+              desc: "Vocabulary from everyday clinical and laboratory settings — the English you already use on shift.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-41-moment/300/300",
+          imageAlt: "Portrait of Reema, a medical lab technologist from Dubai",
+          oneLineMoment:
+            "She tested in Dubai on Saturday and uploaded her CLB scores by Wednesday.",
+          paragraphQuote:
+            "Reema is a medical laboratory technologist at a Dubai hospital with five years of haematology experience. She needed CLB 7 in each component to clear her Express Entry threshold. CELPIP felt natural — the listening tasks sounded like the briefings she gives at handover. She registered online, tested one Saturday morning, and had her score report four days later.",
+          attribution: {
+            name: "Reema Khan",
+            location: "Dubai → Edmonton",
+            score: "CLB 9",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "CELPIP sittings in the UAE",
+          subheading:
+            "Weekend and weekday options across Dubai and Abu Dhabi — pick the date that fits your shift roster.",
+          sittings: [
+            {
+              city: "Dubai",
+              centreName: "Dubai — Business Bay Centre",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 5,
+              address: "Business Bay, Dubai",
+            },
+            {
+              city: "Dubai",
+              centreName: "Dubai — Knowledge Park Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+              address: "Knowledge Park, Dubai",
+            },
+            {
+              city: "Abu Dhabi",
+              centreName: "Abu Dhabi — Al Maryah Island Centre",
+              date: "Sat, Jun 6",
+              time: "9:30 AM",
+              seatsLeft: 6,
+              address: "Al Maryah Island, Abu Dhabi",
+            },
+            {
+              city: "Dubai",
+              centreName: "Dubai — Deira Centre",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 3,
+              address: "Deira, Dubai",
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions medical lab technologists ask before booking.",
+          objections: [
+            {
+              worry: "Does CSMLS accept CELPIP scores directly?",
+              reassurance:
+                "CSMLS sets its own English language requirements for medical laboratory technologist certification. CELPIP-General is designated by IRCC for permanent residency and delivers CLB scores used in Express Entry. For CSMLS-specific language requirements, please confirm directly with the Canadian Society for Medical Laboratory Science.",
+              softCta: { label: "View CLB score chart" },
+            },
+            {
+              worry: "What CLB do I need for Express Entry?",
+              reassurance:
+                "Federal Skilled Worker requires a minimum of CLB 7 in each of the four components. Higher scores earn more Comprehensive Ranking System points. We are not licensed to give immigration advice — please visit IRCC for current requirements.",
+            },
+            {
+              worry: "I work shifts. Can I prepare without a long course?",
+              reassurance:
+                "CELPIP uses everyday English, and the practice resources are self-paced. Two free practice tests come with your CELPIP Account, plus 100+ hours of free prep videos you can watch between shifts.",
+              softCta: { label: "Try a free practice test" },
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You have already decided. Now book.",
+          subheading:
+            "Finish your registration online in minutes. Results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
 ];
 
 export const TOTAL_MICROSITES = microsites.length;
