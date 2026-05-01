@@ -1,0 +1,223 @@
+{
+  "sessionId": "mon4wzcr-3e5d4f",
+  "input": {
+    "audience": "Meet Priya, a 28-year-old civil engineer from Mumbai, India, currently residing in Calgary, Alberta. With aspirations to gain Canadian permanent residency through the Express Entry system, she is eager to demonstrate her English proficiency by achieving a high CELPIP score. Priya is focused on securing a stable future for herself and her family as she builds her career in Canada’s thriving engineering sector.",
+    "concept": "A close-up shot of a young woman standing on the bustling streets of Toronto, her eyes glistening with excitement as she holds her CELPIP score report. Around her, vibrant scenes of diverse cultures unfold, symbolizing the opportunities that await her, while she takes a deep breath, embodying the confidence of a new beginning in a city full of promise.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "ENGLISH PROFICIENCY MATTERS",
+    "headline": "Unlock Your Future in Canada",
+    "subhead": "Achieve your best CELPIP score and embrace new opportunities in Canada’s vibrant landscape.",
+    "primaryCta": "Get Started",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "🏗️",
+        "title": "Relevant for Engineers",
+        "desc": "CELPIP assesses your language skills in real-life situations, crucial for succeeding in Canada’s engineering sector."
+      },
+      {
+        "icon": "📊",
+        "title": "Fast Results",
+        "desc": "Receive your CELPIP results in as little as 4-5 days, empowering you to act quickly towards your goals."
+      },
+      {
+        "icon": "🌍",
+        "title": "Recognised Nationwide",
+        "desc": "CELPIP is accepted by IRCC and many employers across Canada, making it your key to permanent residency."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Priya Sharma",
+        "location": "Calgary, AB",
+        "quote": "CELPIP helped me prove my English skills. I felt prepared and confident, and now I’m one step closer to my dream.",
+        "score": "CLB 9"
+      },
+      {
+        "name": "Raj Patel",
+        "location": "Vancouver, BC",
+        "quote": "With CELPIP, I understood my strengths and areas to improve. The test reflected my everyday communication skills well.",
+        "score": "CLB 8"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CELPIP?",
+        "a": "CELPIP is an English language proficiency test designed for people who want to live and work in Canada. It focuses on listening, reading, writing, and speaking skills."
+      },
+      {
+        "q": "Who accepts CELPIP scores?",
+        "a": "CELPIP scores are accepted by Immigration, Refugees and Citizenship Canada (IRCC) and many employers across Canada for various applications."
+      },
+      {
+        "q": "How can I prepare for CELPIP?",
+        "a": "Preparation resources include official CELPIP practice tests, study guides, and online courses. Familiarising yourself with the test format will enhance your confidence."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "4-5 days",
+        "label": "Results Time"
+      },
+      {
+        "value": "100+",
+        "label": "Test Locations"
+      },
+      {
+        "value": "2,000,000+",
+        "label": "Test Takers"
+      },
+      {
+        "value": "CLB 7-10",
+        "label": "Common Scores"
+      }
+    ],
+    "adHeadline": "Achieve Your CELPIP Goals Today",
+    "adTagline": "Your journey to a bright future in Canada starts here."
+  },
+  "ads": {
+    "hero": "/builder/mon4wzcr-3e5d4f/hero.png",
+    "square": "/builder/mon4wzcr-3e5d4f/ad-1x1.png",
+    "story": "/builder/mon4wzcr-3e5d4f/ad-9x16.png",
+    "portrait": "/builder/mon4wzcr-3e5d4f/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "Meet Priya, a 28-year-old civil engineer from Mumbai, Ind…",
+    "tag": "Layout",
+    "description": "A close-up shot of a young woman standing on the bustling streets of Toronto, her eyes glistening with excitement as she holds her CELPIP score report. Around her, vibrant scenes o",
+    "heroImageSrc": "/builder/mon4wzcr-3e5d4f/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "ENGLISH PROFICIENCY MATTERS",
+          "headline": "Unlock Your Future in Canada",
+          "subhead": "Achieve your best CELPIP score and embrace new opportunities in Canada’s vibrant landscape.",
+          "primaryCta": {
+            "label": "Get Started"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "A close-up shot of a young woman standing on the bustling streets of Toronto, he"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "4-5 days",
+              "label": "Results Time"
+            },
+            {
+              "value": "100+",
+              "label": "Test Locations"
+            },
+            {
+              "value": "2,000,000+",
+              "label": "Test Takers"
+            },
+            {
+              "value": "CLB 7-10",
+              "label": "Common Scores"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Achieve your best CELPIP score and embrace new opportunities in Canada’s vibrant landscape.",
+          "features": [
+            {
+              "icon": "🏗️",
+              "title": "Relevant for Engineers",
+              "desc": "CELPIP assesses your language skills in real-life situations, crucial for succeeding in Canada’s engineering sector."
+            },
+            {
+              "icon": "📊",
+              "title": "Fast Results",
+              "desc": "Receive your CELPIP results in as little as 4-5 days, empowering you to act quickly towards your goals."
+            },
+            {
+              "icon": "🌍",
+              "title": "Recognised Nationwide",
+              "desc": "CELPIP is accepted by IRCC and many employers across Canada, making it your key to permanent residency."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Priya Sharma",
+            "location": "Calgary, AB",
+            "quote": "CELPIP helped me prove my English skills. I felt prepared and confident, and now I’m one step closer to my dream.",
+            "score": "CLB 9"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Priya Sharma",
+              "location": "Calgary, AB",
+              "quote": "CELPIP helped me prove my English skills. I felt prepared and confident, and now I’m one step closer to my dream.",
+              "score": "CLB 9"
+            },
+            {
+              "name": "Raj Patel",
+              "location": "Vancouver, BC",
+              "quote": "With CELPIP, I understood my strengths and areas to improve. The test reflected my everyday communication skills well.",
+              "score": "CLB 8"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP is an English language proficiency test designed for people who want to live and work in Canada. It focuses on listening, reading, writing, and speaking skills."
+            },
+            {
+              "q": "Who accepts CELPIP scores?",
+              "a": "CELPIP scores are accepted by Immigration, Refugees and Citizenship Canada (IRCC) and many employers across Canada for various applications."
+            },
+            {
+              "q": "How can I prepare for CELPIP?",
+              "a": "Preparation resources include official CELPIP practice tests, study guides, and online courses. Familiarising yourself with the test format will enhance your confidence."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Unlock Your Future in Canada",
+          "subheading": "Achieve your best CELPIP score and embrace new opportunities in Canada’s vibrant landscape.",
+          "primaryCta": {
+            "label": "Get Started"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 84.2,
+  "imageFallback": false
+}
