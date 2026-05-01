@@ -9,6 +9,9 @@ import { VanityMetrics } from "@/components/widgets/VanityMetrics";
 import { FormVariants } from "@/components/widgets/Forms";
 import { ResourceList } from "@/components/widgets/ResourceList";
 import { ScoreChart } from "@/components/widgets/ScoreChart";
+import { ButtonsVariants } from "@/components/widgets/Buttons";
+import { RichTextVariants } from "@/components/widgets/RichText";
+import { ImageGalleryVariants } from "@/components/widgets/ImageGallery";
 import { SiteNav } from "@/components/SiteNav";
 
 const sections = [
@@ -21,6 +24,9 @@ const sections = [
   { id: "forms", label: "Lead Forms" },
   { id: "resources", label: "Resource List" },
   { id: "score", label: "Score Chart" },
+  { id: "buttons", label: "Buttons" },
+  { id: "richtext", label: "Rich Text Block" },
+  { id: "gallery", label: "Image Gallery" },
 ];
 
 export default function WidgetsPage() {
@@ -110,6 +116,18 @@ export default function WidgetsPage() {
 
             <WidgetSection id="score" title="Score Alignment Chart" description="Interactive CLB / DHA / CEFR equivalency display.">
               <ScoreChart />
+            </WidgetSection>
+
+            <WidgetSection id="buttons" title="Buttons" description="Primary, secondary, and ghost buttons across sizes, states, and on-light / on-dark contexts.">
+              <ButtonsVariants />
+            </WidgetSection>
+
+            <WidgetSection id="richtext" title="Rich Text Block" description="Editorial article and compact documentation styles for long-form content.">
+              <RichTextVariants />
+            </WidgetSection>
+
+            <WidgetSection id="gallery" title="Image Gallery" description="Grid, lightbox, and carousel galleries for test centre photos and candidate stories.">
+              <ImageGalleryVariants />
             </WidgetSection>
           </div>
         </main>

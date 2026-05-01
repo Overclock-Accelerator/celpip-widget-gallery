@@ -1,10 +1,165 @@
 import { notFound } from "next/navigation";
-import { getMicrosite, microsites } from "@/microsites/registry";
+import { Fragment, type ReactNode } from "react";
+
+import { microsites, getMicrosite, type WidgetBlock, type RichTextBlock } from "@/microsites/data";
+
+import { HeroGradient, HeroSplit, HeroFormInHeader } from "@/components/widgets/Hero";
+import { CTABoldBanner, CTANavyAccent, CTACardWithIcon } from "@/components/widgets/CTA";
+import { FeatureGrid, FeatureNavyCards } from "@/components/widgets/FeatureHighlights";
+import {
+  TestimonialQuoteCards,
+  TestimonialSpotlight,
+  TestimonialVideo,
+} from "@/components/widgets/Testimonials";
+import { FAQAccordion, FAQTabbedByCategory } from "@/components/widgets/FAQ";
+import { MetricsRow, MetricsNavyDividers, MetricsCards } from "@/components/widgets/VanityMetrics";
+import { FormSimpleLead, FormInline, FormB2BContact } from "@/components/widgets/Forms";
+import { ResourceCardGrid, ResourceFilteredList } from "@/components/widgets/ResourceList";
+import { ScoreEquivalencyTable } from "@/components/widgets/ScoreChart";
+import { ImageGalleryGrid, ImageGalleryCarousel } from "@/components/widgets/ImageGallery";
+import { RichTextEditorial, RichTextCompact } from "@/components/widgets/RichText";
 
 // Pre-render all 10 microsite shells at build time.
 export function generateStaticParams() {
   return microsites.map((m) => ({ id: String(m.id) }));
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RichText content renderer
+// ─────────────────────────────────────────────────────────────────────────────
+//
+// Authored content is a typed array of blocks (see data.ts RichTextBlock).
+// We turn it into JSX and pass it as children to RichTextEditorial /
+// RichTextCompact, which apply their own typography styles via class
+// selectors on h1/h2/h3/p/ul/ol/blockquote.
+
+function renderRichTextBlock(block: RichTextBlock, key: number): ReactNode {
+  switch (block.type) {
+    case "lead":
+      return (
+        <p key={key} className="lead">
+          {block.text}
+        </p>
+      );
+    case "p":
+      return <p key={key}>{block.text}</p>;
+    case "h2":
+      return <h2 key={key}>{block.text}</h2>;
+    case "h3":
+      return <h3 key={key}>{block.text}</h3>;
+    case "ul":
+      return (
+        <ul key={key}>
+          {block.items.map((it, i) => (
+            <li key={i}>{it}</li>
+          ))}
+        </ul>
+      );
+    case "ol":
+      return (
+        <ol key={key}>
+          {block.items.map((it, i) => (
+            <li key={i}>{it}</li>
+          ))}
+        </ol>
+      );
+    case "blockquote":
+      return <blockquote key={key}>{block.text}</blockquote>;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Block dispatcher — single switch over the discriminated union
+// ─────────────────────────────────────────────────────────────────────────────
+
+function renderBlock(block: WidgetBlock, key: number, heroImageSrc?: string): ReactNode {
+  switch (block.kind) {
+    case "HeroGradient":
+      return <HeroGradient key={key} {...block.props} />;
+    case "HeroSplit":
+      return (
+        <HeroSplit
+          key={key}
+          {...block.props}
+          imageSrc={block.props.imageSrc ?? heroImageSrc}
+        />
+      );
+    case "HeroFormInHeader":
+      return <HeroFormInHeader key={key} {...block.props} />;
+
+    case "CTABoldBanner":
+      return <CTABoldBanner key={key} {...block.props} />;
+    case "CTANavyAccent":
+      return <CTANavyAccent key={key} {...block.props} />;
+    case "CTACardWithIcon":
+      return <CTACardWithIcon key={key} {...block.props} />;
+
+    case "FeatureGrid":
+      return <FeatureGrid key={key} {...block.props} />;
+    case "FeatureNavyCards":
+      return <FeatureNavyCards key={key} {...block.props} />;
+
+    case "TestimonialQuoteCards":
+      return <TestimonialQuoteCards key={key} {...block.props} />;
+    case "TestimonialSpotlight":
+      return <TestimonialSpotlight key={key} {...block.props} />;
+    case "TestimonialVideo":
+      return <TestimonialVideo key={key} {...block.props} />;
+
+    case "FAQAccordion":
+      return <FAQAccordion key={key} {...block.props} />;
+    case "FAQTabbedByCategory":
+      return <FAQTabbedByCategory key={key} {...block.props} />;
+
+    case "MetricsRow":
+      return <MetricsRow key={key} {...block.props} />;
+    case "MetricsNavyDividers":
+      return <MetricsNavyDividers key={key} {...block.props} />;
+    case "MetricsCards":
+      return <MetricsCards key={key} {...block.props} />;
+
+    case "FormSimpleLead":
+      return <FormSimpleLead key={key} {...block.props} />;
+    case "FormInline":
+      return <FormInline key={key} {...block.props} />;
+    case "FormB2BContact":
+      return <FormB2BContact key={key} {...block.props} />;
+
+    case "ResourceCardGrid":
+      return <ResourceCardGrid key={key} {...block.props} />;
+    case "ResourceFilteredList":
+      return <ResourceFilteredList key={key} {...block.props} />;
+
+    case "ScoreEquivalencyTable":
+      return <ScoreEquivalencyTable key={key} {...block.props} />;
+
+    case "ImageGalleryGrid":
+      return <ImageGalleryGrid key={key} {...block.props} />;
+    case "ImageGalleryCarousel":
+      return <ImageGalleryCarousel key={key} {...block.props} />;
+
+    case "RichTextEditorial":
+      return (
+        <RichTextEditorial key={key}>
+          {block.props.content.blocks.map((b, i) => (
+            <Fragment key={i}>{renderRichTextBlock(b, i)}</Fragment>
+          ))}
+        </RichTextEditorial>
+      );
+    case "RichTextCompact":
+      return (
+        <RichTextCompact key={key}>
+          {block.props.content.blocks.map((b, i) => (
+            <Fragment key={i}>{renderRichTextBlock(b, i)}</Fragment>
+          ))}
+        </RichTextCompact>
+      );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Page
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default async function MicrositePage({
   params,
@@ -20,51 +175,9 @@ export default async function MicrositePage({
 
   return (
     <article className="relative">
-      {/* Hero placeholder — to be replaced in Wave 2 */}
-      <section
-        className="relative overflow-hidden text-white"
-        style={{
-          background:
-            "linear-gradient(135deg, #0B2341 0%, #153A5C 60%, #0B2341 100%)",
-        }}
-      >
-        <div
-          aria-hidden
-          className="absolute inset-0 pointer-events-none opacity-50"
-          style={{
-            background:
-              "radial-gradient(50% 60% at 80% 0%, rgba(23,255,220,0.10) 0%, transparent 60%), radial-gradient(40% 50% at 10% 100%, rgba(0,166,81,0.16) 0%, transparent 60%)",
-          }}
-        />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
-          <p className="font-heading text-xs sm:text-sm tracking-[0.25em] uppercase text-[#17FFDC]">
-            Microsite {entry.id} of {microsites.length} &middot; {entry.tag}
-          </p>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mt-4">
-            {entry.title}
-          </h1>
-          <p className="mt-5 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
-            {entry.description}
-          </p>
-          <p className="mt-10 inline-block text-sm text-[#17FFDC] border border-[#17FFDC]/40 rounded-full px-4 py-1.5">
-            Microsite content composing soon
-          </p>
-        </div>
-      </section>
-
-      {/* Body placeholder */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-white p-10 text-center">
-          <p className="font-heading text-lg font-semibold text-[#0B2341]">
-            Wave 2 placeholder
-          </p>
-          <p className="mt-2 text-sm text-gray-600 max-w-xl mx-auto">
-            This microsite&rsquo;s body will be composed from the widget library
-            once Engineer A finishes the variant refactor and Engineer D
-            authors the per-microsite content data.
-          </p>
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+        {entry.blocks.map((block, i) => renderBlock(block, i, entry.heroImageSrc))}
+      </div>
     </article>
   );
 }
