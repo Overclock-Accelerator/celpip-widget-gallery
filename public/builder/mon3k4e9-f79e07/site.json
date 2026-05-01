@@ -1,0 +1,223 @@
+{
+  "sessionId": "mon3k4e9-f79e07",
+  "input": {
+    "audience": "Filipino healthcare workers in their late 20s preparing for Canadian PR. They've already been working as nurses in Manila, are bilingual, balancing clinical shifts with study at home.",
+    "concept": "An aspirational moment showing a candidate calmly finishing the test on her laptop with morning light, conveying control and progress.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "FOR HEALTHCARE PROFESSIONALS",
+    "headline": "Elevate Your Career in Canada",
+    "subhead": "Achieve your Canadian dream with CELPIP, the trusted English test for skilled healthcare workers seeking permanent residency.",
+    "primaryCta": "Start Your Preparation",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "📚",
+        "title": "Tailored for Professionals",
+        "desc": "CELPIP focuses on real-life English skills, perfect for healthcare workers aiming to excel in Canada."
+      },
+      {
+        "icon": "⏱️",
+        "title": "Flexible Testing Options",
+        "desc": "Choose from various test dates and locations, fitting your busy schedule as a working nurse."
+      },
+      {
+        "icon": "🗣️",
+        "title": "Supportive Learning Resources",
+        "desc": "Access helpful study materials and practice tests to build your confidence before the exam."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Maria Reyes",
+        "location": "Manila",
+        "quote": "Preparing for CELPIP while working was challenging, but I felt ready and supported. I scored CLB 8 and got my PR!",
+        "score": "CLB 8"
+      },
+      {
+        "name": "Juan Dela Cruz",
+        "location": "Manila",
+        "quote": "CELPIP helped me improve my English skills for my nursing career. I finished the test feeling confident and calm.",
+        "score": "CLB 9"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CELPIP?",
+        "a": "CELPIP is an English language proficiency test that assesses your reading, writing, listening, and speaking skills. It's recognised by IRCC for Canadian immigration."
+      },
+      {
+        "q": "How can I prepare for CELPIP?",
+        "a": "You can prepare by using official study materials, taking practice tests, and attending preparation courses designed for healthcare professionals."
+      },
+      {
+        "q": "What scores are needed for PR?",
+        "a": "For skilled immigration to Canada, a CLB score of 7 or higher is often required. Check the IRCC website for specific requirements."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "4-5 days",
+        "label": "Results Time"
+      },
+      {
+        "value": "100+",
+        "label": "Test Centres"
+      },
+      {
+        "value": "3 hrs",
+        "label": "Test Duration"
+      },
+      {
+        "value": "CLB 7-10",
+        "label": "Common Scores"
+      }
+    ],
+    "adHeadline": "Achieve Your Canadian Dream",
+    "adTagline": "CELPIP prepares you for your future in Canada."
+  },
+  "ads": {
+    "hero": "/builder/mon3k4e9-f79e07/hero.png",
+    "square": "/builder/mon3k4e9-f79e07/ad-1x1.png",
+    "story": "/builder/mon3k4e9-f79e07/ad-9x16.png",
+    "portrait": "/builder/mon3k4e9-f79e07/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "Filipino healthcare workers in their late 20s preparing f…",
+    "tag": "Layout",
+    "description": "An aspirational moment showing a candidate calmly finishing the test on her laptop with morning light, conveying control and progress.",
+    "heroImageSrc": "/builder/mon3k4e9-f79e07/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "FOR HEALTHCARE PROFESSIONALS",
+          "headline": "Elevate Your Career in Canada",
+          "subhead": "Achieve your Canadian dream with CELPIP, the trusted English test for skilled healthcare workers seeking permanent residency.",
+          "primaryCta": {
+            "label": "Start Your Preparation"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "An aspirational moment showing a candidate calmly finishing the test on her lapt"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "4-5 days",
+              "label": "Results Time"
+            },
+            {
+              "value": "100+",
+              "label": "Test Centres"
+            },
+            {
+              "value": "3 hrs",
+              "label": "Test Duration"
+            },
+            {
+              "value": "CLB 7-10",
+              "label": "Common Scores"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Achieve your Canadian dream with CELPIP, the trusted English test for skilled healthcare workers seeking permanent residency.",
+          "features": [
+            {
+              "icon": "📚",
+              "title": "Tailored for Professionals",
+              "desc": "CELPIP focuses on real-life English skills, perfect for healthcare workers aiming to excel in Canada."
+            },
+            {
+              "icon": "⏱️",
+              "title": "Flexible Testing Options",
+              "desc": "Choose from various test dates and locations, fitting your busy schedule as a working nurse."
+            },
+            {
+              "icon": "🗣️",
+              "title": "Supportive Learning Resources",
+              "desc": "Access helpful study materials and practice tests to build your confidence before the exam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Maria Reyes",
+            "location": "Manila",
+            "quote": "Preparing for CELPIP while working was challenging, but I felt ready and supported. I scored CLB 8 and got my PR!",
+            "score": "CLB 8"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Maria Reyes",
+              "location": "Manila",
+              "quote": "Preparing for CELPIP while working was challenging, but I felt ready and supported. I scored CLB 8 and got my PR!",
+              "score": "CLB 8"
+            },
+            {
+              "name": "Juan Dela Cruz",
+              "location": "Manila",
+              "quote": "CELPIP helped me improve my English skills for my nursing career. I finished the test feeling confident and calm.",
+              "score": "CLB 9"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is CELPIP?",
+              "a": "CELPIP is an English language proficiency test that assesses your reading, writing, listening, and speaking skills. It's recognised by IRCC for Canadian immigration."
+            },
+            {
+              "q": "How can I prepare for CELPIP?",
+              "a": "You can prepare by using official study materials, taking practice tests, and attending preparation courses designed for healthcare professionals."
+            },
+            {
+              "q": "What scores are needed for PR?",
+              "a": "For skilled immigration to Canada, a CLB score of 7 or higher is often required. Check the IRCC website for specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Elevate Your Career in Canada",
+          "subheading": "Achieve your Canadian dream with CELPIP, the trusted English test for skilled healthcare workers seeking permanent residency.",
+          "primaryCta": {
+            "label": "Start Your Preparation"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 74.3,
+  "imageFallback": false
+}
