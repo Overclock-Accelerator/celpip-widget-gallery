@@ -42,9 +42,9 @@ export default function ChooserHome() {
               accent="green"
             />
             <ChooserCard
-              href="/builder"
+              href="/campaigns"
               eyebrow="AI page builder"
-              title="Builder"
+              title="Campaigns"
               description="Describe an audience and concept — get ad creatives plus a full microsite."
               accent="purple"
             />

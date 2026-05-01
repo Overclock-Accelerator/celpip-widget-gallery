@@ -197,8 +197,14 @@ export function HeroFormInHeader({
         <div className="space-y-3">
           {fields.map((f, i) =>
             f.type === "select" ? (
-              <select key={i} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-400 text-sm">
-                <option>{f.placeholder}</option>
+              <select
+                key={i}
+                className="w-full h-11 border border-gray-300 rounded-lg px-4 text-gray-400 text-sm bg-white"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  {f.placeholder}
+                </option>
                 {f.options?.map((opt) => (
                   <option key={opt}>{opt}</option>
                 ))}
@@ -207,7 +213,7 @@ export function HeroFormInHeader({
               <input
                 key={i}
                 type={f.type}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-800 text-sm"
+                className="w-full h-11 border border-gray-300 rounded-lg px-4 text-gray-800 text-sm"
                 placeholder={f.placeholder}
               />
             ),
@@ -387,9 +393,12 @@ export function HeroSplitForm({
             f.type === "select" ? (
               <select
                 key={i}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-400 text-sm"
+                className="w-full h-11 border border-gray-300 rounded-lg px-4 text-gray-400 text-sm bg-white"
+                defaultValue=""
               >
-                <option>{f.placeholder}</option>
+                <option value="" disabled>
+                  {f.placeholder}
+                </option>
                 {f.options?.map((opt) => (
                   <option key={opt}>{opt}</option>
                 ))}
@@ -398,7 +407,7 @@ export function HeroSplitForm({
               <input
                 key={i}
                 type={f.type}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-800 text-sm"
+                className="w-full h-11 border border-gray-300 rounded-lg px-4 text-gray-800 text-sm"
                 placeholder={f.placeholder}
               />
             ),
