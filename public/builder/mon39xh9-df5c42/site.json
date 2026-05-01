@@ -1,0 +1,223 @@
+{
+  "sessionId": "mon39xh9-df5c42",
+  "input": {
+    "audience": "Filipino healthcare workers in their late 20s preparing for Canadian PR. They have already been working as nurses in Manila, are bilingual, balancing clinical shifts with study at home.",
+    "concept": "An aspirational moment showing a candidate calmly finishing the test on her laptop with morning light, conveying control and progress.",
+    "country": "Canada",
+    "tone": "Inspiring"
+  },
+  "copy": {
+    "eyebrow": "YOUR CANADIAN DREAM",
+    "headline": "Achieve Your CELPIP Goals for Canada",
+    "subhead": "Prepare for the CELPIP test and demonstrate your English skills for a successful future in Canada. You've got this, and we've got you.",
+    "primaryCta": "Start Preparing",
+    "secondaryCta": "Learn More",
+    "features": [
+      {
+        "icon": "🇨🇦",
+        "title": "Focused on Canada",
+        "desc": "CELPIP is specifically designed for those planning to live and work in Canada, ensuring your skills meet local standards."
+      },
+      {
+        "icon": "📅",
+        "title": "Flexible Scheduling",
+        "desc": "Choose a test date that fits your busy schedule. Balance your studies with your clinical shifts."
+      },
+      {
+        "icon": "📝",
+        "title": "Real-Life Scenarios",
+        "desc": "CELPIP uses everyday situations to test your English, making preparation relevant and practical for your career."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Maria Santos",
+        "location": "Manila",
+        "quote": "I felt confident taking CELPIP. The test format was clear, and I scored CLB 8!",
+        "score": "CLB 8"
+      },
+      {
+        "name": "John Reyes",
+        "location": "Manila",
+        "quote": "The practice materials helped me study efficiently around my shifts. I achieved CLB 9!",
+        "score": "CLB 9"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the CELPIP test?",
+        "a": "CELPIP is a Canadian English language proficiency test that assesses your listening, reading, writing, and speaking skills."
+      },
+      {
+        "q": "How can I prepare for CELPIP?",
+        "a": "You can prepare through study guides, practice tests, and online resources tailored to the CELPIP format."
+      },
+      {
+        "q": "What scores do I need for PR?",
+        "a": "Requirements vary. Generally, a CLB score of 7 or higher is recommended for skilled migration."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "3 hrs",
+        "label": "Test Duration"
+      },
+      {
+        "value": "4 test components",
+        "label": "Skills Assessed"
+      },
+      {
+        "value": "100+",
+        "label": "Test Locations"
+      },
+      {
+        "value": "90%",
+        "label": "Satisfaction Rate"
+      }
+    ],
+    "adHeadline": "Your Future in Canada Awaits",
+    "adTagline": "Prepare for CELPIP and take the next step confidently."
+  },
+  "ads": {
+    "hero": "/builder/mon39xh9-df5c42/hero.png",
+    "square": "/builder/mon39xh9-df5c42/ad-1x1.png",
+    "story": "/builder/mon39xh9-df5c42/ad-9x16.png",
+    "portrait": "/builder/mon39xh9-df5c42/ad-4x5.png"
+  },
+  "microsite": {
+    "id": 0,
+    "title": "Filipino healthcare workers in their late 20s preparing f…",
+    "tag": "Layout",
+    "description": "An aspirational moment showing a candidate calmly finishing the test on her laptop with morning light, conveying control and progress.",
+    "heroImageSrc": "/builder/mon39xh9-df5c42/hero.png",
+    "blocks": [
+      {
+        "kind": "HeroSplit",
+        "props": {
+          "eyebrow": "YOUR CANADIAN DREAM",
+          "headline": "Achieve Your CELPIP Goals for Canada",
+          "subhead": "Prepare for the CELPIP test and demonstrate your English skills for a successful future in Canada. You've got this, and we've got you.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          },
+          "imageAlt": "An aspirational moment showing a candidate calmly finishing the test on her lapt"
+        }
+      },
+      {
+        "kind": "MetricsRow",
+        "props": {
+          "metrics": [
+            {
+              "value": "3 hrs",
+              "label": "Test Duration"
+            },
+            {
+              "value": "4 test components",
+              "label": "Skills Assessed"
+            },
+            {
+              "value": "100+",
+              "label": "Test Locations"
+            },
+            {
+              "value": "90%",
+              "label": "Satisfaction Rate"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FeatureGrid",
+        "props": {
+          "heading": "Why CELPIP works for this audience",
+          "subheading": "Prepare for the CELPIP test and demonstrate your English skills for a successful future in Canada. You've got this, and we've got you.",
+          "features": [
+            {
+              "icon": "🇨🇦",
+              "title": "Focused on Canada",
+              "desc": "CELPIP is specifically designed for those planning to live and work in Canada, ensuring your skills meet local standards."
+            },
+            {
+              "icon": "📅",
+              "title": "Flexible Scheduling",
+              "desc": "Choose a test date that fits your busy schedule. Balance your studies with your clinical shifts."
+            },
+            {
+              "icon": "📝",
+              "title": "Real-Life Scenarios",
+              "desc": "CELPIP uses everyday situations to test your English, making preparation relevant and practical for your career."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "TestimonialSpotlight",
+        "props": {
+          "testimonial": {
+            "name": "Maria Santos",
+            "location": "Manila",
+            "quote": "I felt confident taking CELPIP. The test format was clear, and I scored CLB 8!",
+            "score": "CLB 8"
+          }
+        }
+      },
+      {
+        "kind": "TestimonialQuoteCards",
+        "props": {
+          "testimonials": [
+            {
+              "name": "Maria Santos",
+              "location": "Manila",
+              "quote": "I felt confident taking CELPIP. The test format was clear, and I scored CLB 8!",
+              "score": "CLB 8"
+            },
+            {
+              "name": "John Reyes",
+              "location": "Manila",
+              "quote": "The practice materials helped me study efficiently around my shifts. I achieved CLB 9!",
+              "score": "CLB 9"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "FAQAccordion",
+        "props": {
+          "heading": "Common questions",
+          "faqs": [
+            {
+              "q": "What is the CELPIP test?",
+              "a": "CELPIP is a Canadian English language proficiency test that assesses your listening, reading, writing, and speaking skills."
+            },
+            {
+              "q": "How can I prepare for CELPIP?",
+              "a": "You can prepare through study guides, practice tests, and online resources tailored to the CELPIP format."
+            },
+            {
+              "q": "What scores do I need for PR?",
+              "a": "Requirements vary. Generally, a CLB score of 7 or higher is recommended for skilled migration."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "CTABoldBanner",
+        "props": {
+          "heading": "Achieve Your CELPIP Goals for Canada",
+          "subheading": "Prepare for the CELPIP test and demonstrate your English skills for a successful future in Canada. You've got this, and we've got you.",
+          "primaryCta": {
+            "label": "Start Preparing"
+          },
+          "secondaryCta": {
+            "label": "Learn More"
+          }
+        }
+      }
+    ]
+  },
+  "elapsedSeconds": 76.7,
+  "imageFallback": false
+}

@@ -233,6 +233,37 @@ Full celpip.ca rebuild on Next.js + Sanity + Azure · dynamic API modules pullin
 - [ ] Whether to split Testimonials videos out of `Testimonials.tsx` into its own file for clean Appendix A alignment.
 - [ ] When (Phase 2?) to migrate to the 2025 brand palette — and whether to wire the existing tokens JSON into Tailwind v4 `@theme` at that time.
 - [ ] Whether testimonial portraits get Nano Banana treatment in the next pass or stay stylized initials.
+- [ ] **`/widgets` mobile overflow** — the gallery is desktop-only at 390px (QATester flagged). Microsite pages collapse fine. Fix in next polish pass.
+- [ ] **Replace gpt-image-1 with true Nano Banana** when `REPLICATE_API_TOKEN` or `GOOGLE_API_KEY` is added to `~/.claude/.env`.
+
+## 16. Iteration 1 (post-demo prep)
+
+**Trigger**: Ahmed reviewed initial 10 microsites; flagged copy doesn't capture CELPIP positioning, and "widget concept is overly restrictive — need content blocks that sell value."
+
+**In-flight changes**:
+1. **Keep all 10 existing microsites as-is** — they show structural variation (the "ooh-ahh" volume).
+2. **Add 10 NEW microsites** (#11-#20) authored from celpip.ca scrape and grounded in actual CELPIP positioning, voice, and value-selling copy.
+3. **Add 8 conversion-stage content-block widgets** (NOT positioning — these microsites are for leads who've already chosen CELPIP and need a final push to register/pay/show up):
+   - `TrustStrip` (recognized-by horizontal row, fast trust signal)
+   - `MomentSpotlight` (single user moment with photo, social proof close)
+   - `BookingPanel` (front-and-center sittings + "Book this date" CTA)
+   - `NextStepsRoadmap` (Book → Prepare → Test → Results, 3-4 numbered steps)
+   - `UrgencyBar` (slim "Next sitting in [city]: X seats left" banner)
+   - `PrepStarterPack` (free practice test + study guide as lead magnet)
+   - `ObjectionHandlerFAQ` ("What if I'm not ready?" with empathetic answers + soft CTAs)
+   - `ReadinessQuiz` (interactive 3-question quiz → personalized "ready / almost / prep first" CTA)
+4. **Pause AI ad-builder demo** (third surface). Resume after copy iteration lands.
+
+**Audience for new microsites**: leads who **already chose CELPIP**. Past awareness/interest. Goal = convert to paid registration + showed up on test day. Wrong category for these microsites: vs-IELTS comparison, "what is CELPIP", brand origin story, score chart deep-dives.
+
+**Source of truth for new copy**: `research/celpip-positioning.md` (in-flight scrape via Tavily + Firecrawl — pending). When it lands, filter for celpip.ca's *conversion-stage* pages (booking flow, prep resources, "ready to test?") not homepage positioning.
+
+**Build order**:
+1. Engineer G builds 5 new content-block widgets (parallel, in flight)
+2. Research agent finishes celpip.ca scrape (parallel, in flight)
+3. Author microsites #11-20 with real positioning + new content blocks
+4. Generate any new HeroSplit imagery via gpt-image-1
+5. QA pass before second demo iteration
 
 ## 15. Active build session
 

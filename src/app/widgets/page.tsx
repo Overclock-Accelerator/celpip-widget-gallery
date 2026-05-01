@@ -12,6 +12,11 @@ import { ScoreChart } from "@/components/widgets/ScoreChart";
 import { ButtonsVariants } from "@/components/widgets/Buttons";
 import { RichTextVariants } from "@/components/widgets/RichText";
 import { ImageGalleryVariants } from "@/components/widgets/ImageGallery";
+import { ValuePropVariants } from "@/components/widgets/ValueProp";
+import { BrandStoryVariants } from "@/components/widgets/BrandStory";
+import { ComparisonNarrativeVariants } from "@/components/widgets/ComparisonNarrative";
+import { TrustStripVariants } from "@/components/widgets/TrustStrip";
+import { MomentSpotlightVariants } from "@/components/widgets/MomentSpotlight";
 import { SiteNav } from "@/components/SiteNav";
 
 const sections = [
@@ -27,6 +32,11 @@ const sections = [
   { id: "buttons", label: "Buttons" },
   { id: "richtext", label: "Rich Text Block" },
   { id: "gallery", label: "Image Gallery" },
+  { id: "valueprop", label: "Value Prop" },
+  { id: "brandstory", label: "Brand Story" },
+  { id: "comparison", label: "Comparison Narrative" },
+  { id: "truststrip", label: "Trust Strip" },
+  { id: "moment", label: "Moment Spotlight" },
 ];
 
 export default function WidgetsPage() {
@@ -128,6 +138,26 @@ export default function WidgetsPage() {
 
             <WidgetSection id="gallery" title="Image Gallery" description="Grid, lightbox, and carousel galleries for test centre photos and candidate stories.">
               <ImageGalleryVariants />
+            </WidgetSection>
+
+            <WidgetSection id="valueprop" title="Value Prop" description="Editorial positioning sections that sell what CELPIP IS in one big idea.">
+              <ValuePropVariants />
+            </WidgetSection>
+
+            <WidgetSection id="brandstory" title="Brand Story" description="Narrative origin and credibility — UBC research roots, IRCC and DHA recognition, two decades of measurement.">
+              <BrandStoryVariants />
+            </WidgetSection>
+
+            <WidgetSection id="comparison" title="Comparison Narrative" description="Editorial vs-competitor story — CELPIP versus IELTS and PTE, in narrative form.">
+              <ComparisonNarrativeVariants />
+            </WidgetSection>
+
+            <WidgetSection id="truststrip" title="Trust Strip" description="Recognized-by row of monochrome credibility marks: IRCC, DHA, UBC, Paragon, professional bodies, test centres.">
+              <TrustStripVariants />
+            </WidgetSection>
+
+            <WidgetSection id="moment" title="Moment Spotlight" description="Single-user editorial testimonial — humanizes the pitch with one specific journey.">
+              <MomentSpotlightVariants />
             </WidgetSection>
           </div>
         </main>

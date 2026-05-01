@@ -477,6 +477,7 @@ export const microsites: Microsite[] = [
     title: "Australia",
     tag: "Regional",
     description: "DHA-focused, skilled trades persona.",
+    heroImageSrc: "/heroes/3.png",
     blocks: [
       {
         kind: "HeroSplit",
@@ -661,6 +662,7 @@ export const microsites: Microsite[] = [
     title: "Standard Home",
     tag: "Layout",
     description: "Balanced feature-rich landing page.",
+    heroImageSrc: "/heroes/5.png",
     blocks: [
       {
         kind: "HeroSplit",
@@ -998,6 +1000,7 @@ export const microsites: Microsite[] = [
     title: "B2B / Institutional",
     tag: "Layout",
     description: "For universities and immigration agents.",
+    heroImageSrc: "/heroes/8.png",
     blocks: [
       {
         kind: "HeroSplit",
@@ -1078,6 +1081,7 @@ export const microsites: Microsite[] = [
     title: "Prep-Focused",
     tag: "Layout",
     description: "Test preparation and study materials.",
+    heroImageSrc: "/heroes/9.png",
     blocks: [
       {
         kind: "HeroSplit",

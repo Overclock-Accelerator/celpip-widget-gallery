@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/widgets", label: "Widgets" },
   { href: "/microsites", label: "Microsites" },
+  { href: "/builder", label: "Builder" },
 ];
 
 export function SiteNav() {
@@ -14,6 +15,7 @@ export function SiteNav() {
   const isActive = (href: string) => {
     if (href === "/widgets") return pathname === "/widgets" || pathname.startsWith("/widgets/");
     if (href === "/microsites") return pathname === "/microsites" || pathname.startsWith("/microsites/");
+    if (href === "/builder") return pathname === "/builder" || pathname.startsWith("/builder/");
     return pathname === href;
   };
 
