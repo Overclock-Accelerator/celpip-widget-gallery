@@ -29,6 +29,7 @@ import type {
   BuilderInput,
   BuilderResult,
   BuilderStreamEvent,
+  CountryTarget,
   ToneLeaning,
 } from "./types";
 
@@ -254,18 +255,100 @@ function buildImagePrompt(
     hero: "Cinematic wide editorial framing for a website hero, 16:9 composition.",
     "1x1": "Square framing balanced for an Instagram or Meta feed ad, central subject.",
     "9x16":
-      "Tall vertical framing for Instagram Reels or TikTok story ads, head-and-shoulders subject in the upper third with breathing room above and below for safe zones.",
+      "Tall vertical framing for Instagram Reels or TikTok story ads, subject in the upper two-thirds with breathing room above and below for safe zones.",
     "4x5":
       "Portrait framing for a Facebook or Instagram feed ad, subject occupies most of the vertical space without crowding the edges.",
   };
 
+  // Country-anchored scene libraries. People are always the focus —
+  // either at work in their career, among friends visiting recognisable
+  // landmarks, or set against the cityscape of their destination.
+  const scenes: Record<CountryTarget, {
+    careers: string[];
+    landmarks: string[];
+    cityscapes: string[];
+  }> = {
+    Canada: {
+      careers: [
+        "a nurse in scrubs reviewing a chart with a colleague on a hospital ward",
+        "a software engineer at a standing desk in a bright Toronto open-plan office",
+        "a construction site engineer in a hard hat reviewing plans on a Vancouver job site",
+        "a teacher leading a small group of students in a sunlit Canadian classroom",
+      ],
+      landmarks: [
+        "a small group of friends laughing together in front of the CN Tower at golden hour",
+        "two friends taking a selfie on the steps of Parliament Hill in Ottawa",
+        "a couple walking past Stanley Park totem poles in Vancouver",
+        "friends sharing coffee on a patio in Old Montreal with cobblestone streets",
+      ],
+      cityscapes: [
+        "the downtown Toronto skyline at dusk with a lone figure walking toward it",
+        "Vancouver waterfront with mountains behind, a person in foreground carrying a backpack",
+        "snowy Montreal rowhouse street with warm window light and a person walking",
+        "Calgary skyline at sunrise with a commuter in the foreground",
+      ],
+    },
+    Australia: {
+      careers: [
+        "a registered nurse in a Sydney hospital corridor consulting with a colleague",
+        "an engineer in hi-vis on a Melbourne construction site reading drawings",
+        "a barista crafting coffee in a sunlit Melbourne laneway café",
+        "a young accountant at a desk in a Sydney CBD office with harbour views",
+      ],
+      landmarks: [
+        "friends posing for a photo in front of the Sydney Opera House at sunset",
+        "a couple walking across the Sydney Harbour Bridge with the city behind",
+        "friends laughing together at a Bondi Beach lookout with surfers in the distance",
+        "two friends exploring the laneway street art of Hosier Lane in Melbourne",
+      ],
+      cityscapes: [
+        "Sydney harbour skyline at golden hour with a single figure on a viewpoint",
+        "Melbourne tram-lined city street at dusk with a commuter walking",
+        "Brisbane river skyline at dawn with a jogger in the foreground",
+        "Perth city skyline across the Swan River with a person looking out",
+      ],
+    },
+    Both: {
+      careers: [
+        "a healthcare professional in scrubs in a modern hospital corridor",
+        "a software engineer collaborating with a teammate at a bright office whiteboard",
+        "a construction site engineer in hi-vis reviewing plans on site",
+        "a young professional in business casual at a sunlit co-working space",
+      ],
+      landmarks: [
+        "friends laughing together in front of an iconic harbour skyline at sunset",
+        "a couple walking through a historic downtown plaza at golden hour",
+        "two friends taking a selfie on a famous waterfront promenade",
+        "a small group exploring a cobblestone old-town district",
+      ],
+      cityscapes: [
+        "a sweeping modern city skyline at dusk with a single figure walking toward it",
+        "a waterfront skyline with mountains behind and a person carrying a backpack",
+        "a downtown street at golden hour with warm light and a lone commuter",
+        "a city park overlook with skyline behind and a person looking out",
+      ],
+    },
+  };
+
+  // Deterministic scene-per-framing rotation so the four creatives
+  // form a coherent set: hero = cityscape, 1x1 = career, 9x16 =
+  // landmarks (friends), 4x5 = career portrait.
+  const country: CountryTarget = (input.country as CountryTarget) ?? "Both";
+  const lib = scenes[country] ?? scenes.Both;
+  const pickFor: Record<typeof framing, string> = {
+    hero: lib.cityscapes[0],
+    "1x1": lib.careers[1],
+    "9x16": lib.landmarks[0],
+    "4x5": lib.careers[0],
+  };
+
   return [
-    `Photorealistic editorial photograph of: ${input.concept.trim()}`,
-    `Subject reflects this audience: ${input.audience.trim()}`,
-    `Mood: calm, focused, supportive, ${input.tone.toLowerCase()}.`,
+    `Photorealistic editorial photograph featuring real people: ${pickFor[framing]}.`,
+    `Mood: calm, focused, hopeful, ${input.tone.toLowerCase()}.`,
     `Lighting: soft natural daylight, warm midtones, no harsh shadows.`,
     framingNote[framing],
-    "Photorealistic editorial photograph. No text, no logos, no watermarks, no UI elements, no superimposed graphics.",
+    "Subjects must look candid and aspirational, mid-action, never posed like stock photography.",
+    "Absolutely no text, letters, words, signage, UI overlays, logos, watermarks, or superimposed graphics anywhere in the image.",
   ].join(" ");
 }
 
