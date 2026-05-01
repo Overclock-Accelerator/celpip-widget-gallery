@@ -12,11 +12,14 @@ import { ScoreChart } from "@/components/widgets/ScoreChart";
 import { ButtonsVariants } from "@/components/widgets/Buttons";
 import { RichTextVariants } from "@/components/widgets/RichText";
 import { ImageGalleryVariants } from "@/components/widgets/ImageGallery";
-import { ValuePropVariants } from "@/components/widgets/ValueProp";
-import { BrandStoryVariants } from "@/components/widgets/BrandStory";
-import { ComparisonNarrativeVariants } from "@/components/widgets/ComparisonNarrative";
 import { TrustStripVariants } from "@/components/widgets/TrustStrip";
 import { MomentSpotlightVariants } from "@/components/widgets/MomentSpotlight";
+import { BookingPanelVariants } from "@/components/widgets/BookingPanel";
+import { NextStepsRoadmapVariants } from "@/components/widgets/NextStepsRoadmap";
+import { UrgencyBarVariants } from "@/components/widgets/UrgencyBar";
+import { PrepStarterPackVariants } from "@/components/widgets/PrepStarterPack";
+import { ObjectionHandlerFAQVariants } from "@/components/widgets/ObjectionHandlerFAQ";
+import { ReadinessQuizVariants } from "@/components/widgets/ReadinessQuiz";
 import { SiteNav } from "@/components/SiteNav";
 
 const sections = [
@@ -32,11 +35,14 @@ const sections = [
   { id: "buttons", label: "Buttons" },
   { id: "richtext", label: "Rich Text Block" },
   { id: "gallery", label: "Image Gallery" },
-  { id: "valueprop", label: "Value Prop" },
-  { id: "brandstory", label: "Brand Story" },
-  { id: "comparison", label: "Comparison Narrative" },
   { id: "truststrip", label: "Trust Strip" },
   { id: "moment", label: "Moment Spotlight" },
+  { id: "booking", label: "Booking Panel" },
+  { id: "nextsteps", label: "Next Steps Roadmap" },
+  { id: "urgency", label: "Urgency Bar" },
+  { id: "prep", label: "Prep Starter Pack" },
+  { id: "objections", label: "Objection Handler FAQ" },
+  { id: "readiness", label: "Readiness Quiz" },
 ];
 
 export default function WidgetsPage() {
@@ -140,24 +146,36 @@ export default function WidgetsPage() {
               <ImageGalleryVariants />
             </WidgetSection>
 
-            <WidgetSection id="valueprop" title="Value Prop" description="Editorial positioning sections that sell what CELPIP IS in one big idea.">
-              <ValuePropVariants />
-            </WidgetSection>
-
-            <WidgetSection id="brandstory" title="Brand Story" description="Narrative origin and credibility — UBC research roots, IRCC and DHA recognition, two decades of measurement.">
-              <BrandStoryVariants />
-            </WidgetSection>
-
-            <WidgetSection id="comparison" title="Comparison Narrative" description="Editorial vs-competitor story — CELPIP versus IELTS and PTE, in narrative form.">
-              <ComparisonNarrativeVariants />
-            </WidgetSection>
-
             <WidgetSection id="truststrip" title="Trust Strip" description="Recognized-by row of monochrome credibility marks: IRCC, DHA, UBC, Paragon, professional bodies, test centres.">
               <TrustStripVariants />
             </WidgetSection>
 
             <WidgetSection id="moment" title="Moment Spotlight" description="Single-user editorial testimonial — humanizes the pitch with one specific journey.">
               <MomentSpotlightVariants />
+            </WidgetSection>
+
+            <WidgetSection id="booking" title="Booking Panel" description="Imminent test sittings with city, date, time, seats remaining, price, and a strong 'Book this date' CTA per row.">
+              <BookingPanelVariants />
+            </WidgetSection>
+
+            <WidgetSection id="nextsteps" title="Next Steps Roadmap" description="Visual 4-step path — Book → Prepare → Test → Results — that reduces ambiguity and makes the path concrete.">
+              <NextStepsRoadmapVariants />
+            </WidgetSection>
+
+            <WidgetSection id="urgency" title="Urgency Bar" description="Slim banner with imminent-action microcopy: next sitting, seats left, reserve CTA.">
+              <UrgencyBarVariants />
+            </WidgetSection>
+
+            <WidgetSection id="prep" title="Prep Starter Pack" description="Lead magnet — free practice test plus study guide, with email capture to lower commitment friction.">
+              <PrepStarterPackVariants />
+            </WidgetSection>
+
+            <WidgetSection id="objections" title="Objection Handler FAQ" description="Last-mile objections framed as anxieties, with empathetic reassurance and soft CTAs in each answer.">
+              <ObjectionHandlerFAQVariants />
+            </WidgetSection>
+
+            <WidgetSection id="readiness" title="Readiness Quiz" description="3-question interactive check — submit yields a personalized 'Ready / Almost / Use prep pack' result with the right CTA.">
+              <ReadinessQuizVariants />
             </WidgetSection>
           </div>
         </main>
