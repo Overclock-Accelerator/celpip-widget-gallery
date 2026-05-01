@@ -25,6 +25,14 @@ import type { FormProps } from "@/components/widgets/Forms";
 import type { Resource } from "@/components/widgets/ResourceList";
 import type { ScoreRow } from "@/components/widgets/ScoreChart";
 import type { GalleryImage } from "@/components/widgets/ImageGallery";
+import type { TrustStripProps } from "@/components/widgets/TrustStrip";
+import type { MomentSpotlightProps } from "@/components/widgets/MomentSpotlight";
+import type { BookingPanelProps } from "@/components/widgets/BookingPanel";
+import type { NextStepsRoadmapProps } from "@/components/widgets/NextStepsRoadmap";
+import type { UrgencyBarProps } from "@/components/widgets/UrgencyBar";
+import type { PrepStarterPackProps } from "@/components/widgets/PrepStarterPack";
+import type { ObjectionHandlerFAQProps } from "@/components/widgets/ObjectionHandlerFAQ";
+import type { ReadinessQuizProps } from "@/components/widgets/ReadinessQuiz";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // RichText block shape
