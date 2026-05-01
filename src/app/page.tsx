@@ -26,7 +26,7 @@ export default function ChooserHome() {
           </p>
 
           {/* Cards */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             <ChooserCard
               href="/widgets"
               eyebrow="Component library"
@@ -36,10 +36,17 @@ export default function ChooserHome() {
             />
             <ChooserCard
               href="/microsites"
-              eyebrow="10 sample microsites"
+              eyebrow="20 sample microsites"
               title="Microsite Concepts"
-              description="Walk through 10 sample microsites built from the widgets."
+              description="Walk through 20 sample microsites built from the widgets."
               accent="green"
+            />
+            <ChooserCard
+              href="/builder"
+              eyebrow="AI page builder"
+              title="Builder"
+              description="Describe an audience and concept — get ad creatives plus a full microsite."
+              accent="purple"
             />
           </div>
         </div>
@@ -63,10 +70,15 @@ function ChooserCard({
   eyebrow: string;
   title: string;
   description: string;
-  accent: "teal" | "green";
+  accent: "teal" | "green" | "purple";
 }) {
-  const accentColor = accent === "teal" ? "#17FFDC" : "#00A651";
-  const accentBorder = accent === "teal" ? "hover:border-[#17FFDC]" : "hover:border-[#00A651]";
+  const accentColor = accent === "teal" ? "#17FFDC" : accent === "green" ? "#00A651" : "#A78BFA";
+  const accentBorder =
+    accent === "teal"
+      ? "hover:border-[#17FFDC]"
+      : accent === "green"
+        ? "hover:border-[#00A651]"
+        : "hover:border-[#A78BFA]";
   return (
     <Link
       href={href}
