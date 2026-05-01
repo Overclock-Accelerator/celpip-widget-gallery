@@ -12,9 +12,12 @@ import { useEffect, useState } from "react";
 
 /* ---------- helpers ---------- */
 
-function useCountdown(targetDate: Date) {
+function useCountdown(offsetMs: number) {
+  // Pin the target on mount only. Computing it inline in render with
+  // Date.now() trips React Compiler's purity guard and pings HMR loops.
+  const [target] = useState(() => Date.now() + offsetMs);
   const calc = () => {
-    const diff = Math.max(0, targetDate.getTime() - Date.now());
+    const diff = Math.max(0, target - Date.now());
     return {
       days: Math.floor(diff / 86_400_000),
       hours: Math.floor((diff % 86_400_000) / 3_600_000),
@@ -27,7 +30,7 @@ function useCountdown(targetDate: Date) {
     const id = setInterval(() => setT(calc), 1000);
     return () => clearInterval(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [target]);
   return t;
 }
 
@@ -58,9 +61,8 @@ function BookButton({ size = "lg" }: { size?: "sm" | "lg" }) {
 /* ---------- main component ---------- */
 
 export default function BookThisWeekend() {
-  const countdown = useCountdown(
-    new Date(Date.now() + 2 * 86_400_000 + 14 * 3_600_000)
-  );
+  // 2 days + 14 hours from mount.
+  const countdown = useCountdown(2 * 86_400_000 + 14 * 3_600_000);
 
   const [booked, setBooked] = useState(847);
   useEffect(() => {
