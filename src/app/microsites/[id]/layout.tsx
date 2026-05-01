@@ -31,19 +31,23 @@ export default function MicrositeShellLayout({
   // Press "h" (or click the eye button) to toggle. When hidden, the SiteNav
   // and the prev/next shell bar both disappear so the microsite renders edge
   // to edge — useful for screen-share demos and screenshots.
+  //
+  // The `hydrated` gate prevents the persist effect from clobbering the stored
+  // value with the initial `false` before the rehydrate effect has had a
+  // chance to read localStorage. Without it, navigating between microsites
+  // (which can re-run effects with the initial state) flips the flag back on.
   const [hidden, setHidden] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     if (typeof window === "undefined") return;
-    // Hydration-safe localStorage rehydrate. The lint rule warns on setState
-    // inside an effect; this is the standard pattern for reading client-only
-    // storage post-hydration without an SSR/CSR mismatch.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setHidden(window.localStorage.getItem(STORAGE_KEY) === "1");
+    setHydrated(true);
   }, []);
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || !hydrated) return;
     window.localStorage.setItem(STORAGE_KEY, hidden ? "1" : "0");
-  }, [hidden]);
+  }, [hidden, hydrated]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
