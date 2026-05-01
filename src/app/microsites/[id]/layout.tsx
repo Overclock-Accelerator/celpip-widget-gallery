@@ -45,6 +45,14 @@ export default function MicrositeShellLayout({
     return () => window.removeEventListener("keydown", onKey);
   }, [prevId, nextId, router]);
 
+  // Scroll to top whenever the user navigates between microsites — keyboard
+  // arrows, Prev/Next clicks, or direct URL change. Without this, Next 16
+  // can land on a long microsite mid-page when the previous one was scrolled.
+  useEffect(() => {
+    if (typeof window === "undefined" || idNum == null) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [idNum]);
+
   return (
     <>
       <SiteNav />

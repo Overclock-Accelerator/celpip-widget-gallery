@@ -13,7 +13,6 @@
  */
 
 import { microsites as fullMicrosites, getMicrosite as getMicrositeFull } from "./data";
-import type { Microsite } from "./data";
 
 export type MicrositeEntry = {
   id: number;
