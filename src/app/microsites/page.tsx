@@ -18,11 +18,11 @@ export default function MicrositesIndexPage() {
               Microsite Concepts
             </p>
             <h1 className="font-heading text-3xl sm:text-4xl font-bold text-[#0B2341] mt-2">
-              10 sample microsites
+              {microsites.length} sample microsites
             </h1>
             <p className="text-gray-600 mt-3 max-w-2xl text-base sm:text-lg">
-              Each microsite is composed from the CELPIP widget library. Click a card
-              to walk through. Use Prev / Next or arrow keys to step between them.
+              Widget-composed layouts, conversion-stage regional pages, and custom
+              landing experiences. Click a card to walk through.
             </p>
           </div>
 
@@ -37,7 +37,15 @@ export default function MicrositesIndexPage() {
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#0B2341] text-[#17FFDC] font-heading font-bold text-sm">
                       {m.id}
                     </span>
-                    <span className="text-xs font-medium uppercase tracking-wider text-[#00A651] bg-[#00A651]/10 px-2 py-0.5 rounded">
+                    <span
+                      className={`text-xs font-medium uppercase tracking-wider px-2 py-0.5 rounded ${
+                        m.tag === "Custom"
+                          ? "text-[#A78BFA] bg-[#A78BFA]/10"
+                          : m.tag === "Regional"
+                            ? "text-[#00A651] bg-[#00A651]/10"
+                            : "text-[#0B2341] bg-[#0B2341]/10"
+                      }`}
+                    >
                       {m.tag}
                     </span>
                   </div>

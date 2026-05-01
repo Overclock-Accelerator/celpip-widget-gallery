@@ -36,9 +36,9 @@ export default function ChooserHome() {
             />
             <ChooserCard
               href="/microsites"
-              eyebrow="20 sample microsites"
+              eyebrow="35 sample microsites"
               title="Microsite Concepts"
-              description="Walk through 20 sample microsites built from the widgets."
+              description="Walk through 35 sample microsites — widget layouts, regional conversions, and custom landing pages."
               accent="green"
             />
             <ChooserCard

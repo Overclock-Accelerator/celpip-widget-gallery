@@ -1,11 +1,27 @@
 import { notFound } from "next/navigation";
+import type { ComponentType } from "react";
 
 import { microsites, getMicrosite } from "@/microsites/data";
 import { renderBlock } from "@/microsites/render";
 import { MicrositeNavbar } from "@/components/MicrositeNavbar";
 import { MicrositeFooter } from "@/components/MicrositeFooter";
 
-// Pre-render all microsite shells at build time (10 layout/regional + 10 conversion-stage = 20).
+import BookThisWeekend from "@/components/custom-microsites/BookThisWeekend";
+import ThreeMinuteDecision from "@/components/custom-microsites/ThreeMinuteDecision";
+import AmIReady from "@/components/custom-microsites/AmIReady";
+import YourScoreYourFuture from "@/components/custom-microsites/YourScoreYourFuture";
+import TestimonialWall from "@/components/custom-microsites/TestimonialWall";
+
+/** Static mapping of customPage key -> React component. */
+const CUSTOM_PAGES: Record<string, ComponentType> = {
+  BookThisWeekend,
+  ThreeMinuteDecision,
+  AmIReady,
+  YourScoreYourFuture,
+  TestimonialWall,
+};
+
+// Pre-render all microsite shells at build time.
 export function generateStaticParams() {
   return microsites.map((m) => ({ id: String(m.id) }));
 }
@@ -21,6 +37,18 @@ export default async function MicrositePage({
 
   const entry = getMicrosite(idNum);
   if (!entry) notFound();
+
+  // Custom microsites render a bespoke component instead of widget blocks.
+  if (entry.customPage && CUSTOM_PAGES[entry.customPage]) {
+    const CustomPage = CUSTOM_PAGES[entry.customPage];
+    return (
+      <>
+        <MicrositeNavbar />
+        <CustomPage />
+        <MicrositeFooter />
+      </>
+    );
+  }
 
   return (
     <>

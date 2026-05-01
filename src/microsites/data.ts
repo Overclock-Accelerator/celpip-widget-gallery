@@ -111,7 +111,7 @@ export type WidgetBlock =
   | { kind: "WhyCelpipTestCards"; props: WhyCelpipProps }
   | { kind: "WhyCelpipMomentum"; props: WhyCelpipProps };
 
-export type MicrositeTag = "Regional" | "Layout";
+export type MicrositeTag = "Regional" | "Layout" | "Custom";
 
 export type Microsite = {
   id: number;
@@ -121,6 +121,8 @@ export type Microsite = {
   /** Optional path or URL for HeroSplit / HeroGradient / HeroFormInHeader imagery. */
   heroImageSrc?: string;
   blocks: WidgetBlock[];
+  /** When set, [id]/page.tsx renders a custom component instead of blocks. */
+  customPage?: string;
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -2995,6 +2997,1471 @@ export const microsites: Microsite[] = [
         },
       },
     ],
+  },
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // WAVE 3 — Conversion-stage microsites #21–30
+  // ═════════════════════════════════════════════════════════════════════════
+
+  // ───────────────────── 21. India · Teachers → Canada ─────────────────────
+  {
+    id: 21,
+    title: "India · Teachers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian teachers pursuing Express Entry or provincial nomination to teach in Canada.",
+    heroImageSrc: "/heroes/21.png",
+    blocks: [
+      {
+        kind: "HeroGradient",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR TEACHERS",
+          headline: "Your classroom in Canada",
+          headlineAccent: "starts with one test.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered in one sitting, results in 3 to 4 business days. Nine test centres across India.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+        },
+      },
+      {
+        kind: "UrgencyBar",
+        props: {
+          city: "New Delhi",
+          date: "Sat May 23",
+          seatsLeft: 4,
+          ctaLabel: "Reserve your seat",
+        },
+      },
+      {
+        kind: "MetricsRow",
+        props: {
+          metrics: [
+            { value: "9", label: "Test Centres in India" },
+            { value: "3–4 days", label: "Results Online" },
+            { value: "3 hrs", label: "One Sitting" },
+            { value: "CLB 7+", label: "Common Teaching Target" },
+            { value: "100%", label: "Computer-Delivered" },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-21-moment/1200/1400",
+          imageAlt:
+            "Deepa reviewing her CELPIP score report at her desk at home in Pune",
+          oneLineMoment:
+            "From a Pune classroom to a teaching position in Alberta — tested on a Saturday.",
+          paragraphQuote:
+            "I have been teaching secondary maths for eight years. Preparing for an academic-style English test felt daunting alongside my marking schedule. CELPIP was different — the questions felt like everyday conversations, the kind of English I already use with colleagues. I booked a Saturday sitting in Pune, finished before lunch, and had my CLB scores by Wednesday.",
+          attribution: {
+            name: "Deepa Krishnan",
+            location: "Pune → Edmonton",
+            score: "CLB 9",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in India",
+          subheading:
+            "Open sittings across 9 centres — pick the date that fits your teaching schedule.",
+          sittings: [
+            {
+              city: "New Delhi",
+              centreName: "New Delhi — Prometric Testing",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Pune",
+              centreName: "Pune — Prometric Testing",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 7,
+            },
+            {
+              city: "Hyderabad",
+              centreName: "Hyderabad — Prometric Testing",
+              date: "Sat, Jun 6",
+              time: "9:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Bengaluru",
+              centreName: "Bengaluru — Prometric Testing",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 3,
+            },
+          ],
+        },
+      },
+      {
+        kind: "FAQAccordion",
+        props: {
+          heading: "Common questions from Indian teachers",
+          faqs: [
+            {
+              q: "Which CLB score do I need to teach in Canada?",
+              a: "CLB requirements vary by province and territory. Most provincial teacher certification bodies require CLB 7 or higher. Please check with your target province's certification authority for specific requirements — we are not licensed to give immigration advice.",
+            },
+            {
+              q: "Is CELPIP accepted for provincial teacher certification?",
+              a: "CELPIP-General is designated by IRCC for permanent residency and citizenship. For teacher certification specifically, acceptance varies by province. Check with the relevant provincial body.",
+            },
+            {
+              q: "How long are CELPIP scores valid?",
+              a: "CELPIP scores are valid for 2 years from the test date. Your official PDF score report is available online in 3 to 4 business days.",
+            },
+            {
+              q: "Can I prepare around my teaching schedule?",
+              a: "Yes. Two free practice tests come with your CELPIP Account, plus 100+ hours of free prep videos and weekly webinars. All self-paced — study evenings and weekends.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "You have already decided. Now book.",
+          subheading:
+            "Finish your registration online in minutes. Saturday and Sunday sittings available across India.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 22. India · Pharmacists → Canada ─────────────────────
+  {
+    id: 22,
+    title: "India · Pharmacists → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian pharmacists pursuing licensure and PR in Canada.",
+    heroImageSrc: "/heroes/22.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR PHARMACISTS",
+          headline: "Your pharmacy licence in Canada starts with one English test.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. The Pharmacy Examining Board of Canada (PEBC) sets language requirements for licensure — CELPIP delivers CLB scores accepted for Express Entry. Test in 9 centres across India.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "View Score Equivalency" },
+          imageAlt: "Indian pharmacist reviewing CELPIP preparation materials on a tablet",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "Express Entry", subLabel: "CLB scores" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "WhyCelpipTestCards",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Built for healthcare professionals with demanding schedules",
+          pillars: [
+            {
+              icon: "&#9201;",
+              title: "Done in one sitting",
+              desc: "All four components in 3 hours or less — no coming back for a second day.",
+            },
+            {
+              icon: "&#128187;",
+              title: "Computer-delivered",
+              desc: "No live examiner for speaking. You speak into a headset at your own pace.",
+            },
+            {
+              icon: "&#128200;",
+              title: "Results in 3–4 days",
+              desc: "Official PDF score report online — upload to your Express Entry profile immediately.",
+            },
+            {
+              icon: "&#127973;",
+              title: "Real-world English",
+              desc: "Questions use everyday vocabulary — the kind of English you already use with patients and colleagues.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-22-moment/300/300",
+          imageAlt: "Portrait of Arjun, an Indian pharmacist from Chennai",
+          oneLineMoment:
+            "He tested in Chennai on Saturday and uploaded his CLB scores by Thursday.",
+          paragraphQuote:
+            "Arjun is a hospital pharmacist in Chennai with six years of experience. He needed CLB 7 for Express Entry. CELPIP felt natural — the listening tasks sounded like the conversations he has at work every day. He registered online, tested one Saturday morning, and had his scores four days later.",
+          attribution: {
+            name: "Arjun Venkatesh",
+            location: "Chennai → Toronto",
+            score: "CLB 9",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Available CELPIP sittings in India",
+          subheading:
+            "Pick the date and centre that works for you — weekend and weekday options available.",
+          sittings: [
+            {
+              city: "Chennai",
+              centreName: "Chennai — Prometric Testing",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 6,
+              address: "T. Nagar, Chennai",
+            },
+            {
+              city: "Mumbai",
+              centreName: "Mumbai — Prometric Testing",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+              address: "Andheri East, Mumbai",
+            },
+            {
+              city: "New Delhi",
+              centreName: "New Delhi — Prometric Testing",
+              date: "Sat, Jun 6",
+              time: "9:30 AM",
+              seatsLeft: 5,
+              address: "Connaught Place, New Delhi",
+            },
+            {
+              city: "Chandigarh",
+              centreName: "Chandigarh — Prometric Testing",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 3,
+              address: "Sector 17, Chandigarh",
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Indian pharmacists ask before booking.",
+          objections: [
+            {
+              worry: "Does PEBC accept CELPIP scores directly?",
+              reassurance:
+                "PEBC sets its own language requirements for pharmacy licensure. CELPIP-General is designated by IRCC for permanent residency and delivers CLB scores used in Express Entry. For PEBC-specific language requirements, please check directly with the Pharmacy Examining Board of Canada.",
+              softCta: { label: "View CLB score chart" },
+            },
+            {
+              worry: "What CLB score do I need for Express Entry?",
+              reassurance:
+                "Express Entry minimum is CLB 7 in each component for the Federal Skilled Worker programme. Higher scores earn more Comprehensive Ranking System points. We are not licensed to give immigration advice — please visit IRCC for current requirements.",
+            },
+            {
+              worry: "I have not taken a standardised test in years.",
+              reassurance:
+                "CELPIP uses easy-to-understand English and vocabulary taken from everyday situations — the kind of English you already use at work. Two free practice tests come with your CELPIP Account so you know exactly what to expect.",
+              softCta: { label: "Try a free practice test" },
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You have already decided. Now book.",
+          subheading:
+            "Finish your registration online in minutes. Results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 23. Philippines · Hospitality Workers → Canada ─────────────────────
+  {
+    id: 23,
+    title: "Philippines · Hospitality Workers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Filipino hospitality professionals pursuing work permits and PR in Canada.",
+    heroImageSrc: "/heroes/23.png",
+    blocks: [
+      {
+        kind: "HeroFormInHeader",
+        props: {
+          badge: "MANILA · CEBU · DAVAO",
+          headline: "CELPIP for Hospitality Professionals — Book Your Test in the Philippines",
+          subhead:
+            "Hotels, restaurants, resorts — your English skills are already strong. CELPIP tests the everyday communication you use on the job. Computer-delivered in one sitting, results in 2 to 4 days.",
+          bullets: [
+            "Test centres in Manila, Cebu, and Davao",
+            "Saturday and weekday sittings available",
+            "Results online in 2–4 business days",
+          ],
+          formHeading: "Get test dates near you",
+          formCtaLabel: "Send Me Dates",
+          formDisclaimer: "No spam — ever. We respect your privacy.",
+          fields: [
+            { type: "text", placeholder: "Full Name" },
+            { type: "email", placeholder: "Email Address" },
+            {
+              type: "select",
+              placeholder: "Nearest city",
+              options: ["Manila", "Cebu", "Davao"],
+            },
+          ],
+        },
+      },
+      {
+        kind: "MetricsCards",
+        props: {
+          metrics: [
+            { value: "3", label: "Cities in the Philippines" },
+            { value: "2–4 days", label: "Results Online" },
+            { value: "3 hrs", label: "One Sitting" },
+            { value: "CLB 5+", label: "Common Hospitality Target" },
+          ],
+        },
+      },
+      {
+        kind: "TestimonialQuoteCards",
+        props: {
+          testimonials: [
+            {
+              name: "Maria Santos",
+              location: "Manila, Philippines",
+              quote:
+                "I worked front desk at a resort in Boracay for five years. The CELPIP speaking section felt like talking to a guest — no pressure from a live examiner. Booked on Monday, tested Saturday, scores by Wednesday.",
+              score: "CLB 8",
+            },
+            {
+              name: "Carlo Reyes",
+              location: "Cebu, Philippines",
+              quote:
+                "I managed a restaurant kitchen and needed CLB 5 for my work permit. CELPIP was straightforward — everyday English, not textbook language. I finished the whole test before lunch.",
+              score: "CLB 7",
+            },
+            {
+              name: "Jasmine Dela Cruz",
+              location: "Davao, Philippines",
+              quote:
+                "My hotel manager role meant I spoke English all day. CELPIP tested exactly the kind of conversations I already have. Registered online, tested in Davao, uploaded my score to Express Entry the same week.",
+              score: "CLB 9",
+            },
+          ],
+        },
+      },
+      {
+        kind: "PrepStarterPackInline",
+        props: {
+          eyebrow: "FREE",
+          headline: "Get the official CELPIP practice test, free.",
+          benefits: [
+            "Two free practice tests with your CELPIP Account",
+            "100+ hours of prep videos and webinars",
+            "Self-scoring rubrics for writing and speaking",
+            "Audio samples for the listening section",
+          ],
+          ctaLabel: "Send me the prep pack",
+        },
+      },
+      {
+        kind: "CTACardWithIcon",
+        props: {
+          heading: "Ready to book your CELPIP test?",
+          subheading: "Manila, Cebu, and Davao — Saturday and weekday sittings available.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 24. Philippines · Teachers → Canada ─────────────────────
+  {
+    id: 24,
+    title: "Philippines · Teachers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Filipino teachers pursuing teaching positions and PR in Canada.",
+    heroImageSrc: "/heroes/24.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN PHILIPPINES · FOR TEACHERS",
+          headline: "Teach in Canada — one test, one sitting, done.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Filipino teachers already communicate in English every day — CELPIP tests exactly that. Computer-delivered, results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Filipino teacher preparing for CELPIP at home with study materials",
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "Express Entry", subLabel: "CLB scores" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "UBC", subLabel: "Test origin" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "NextStepsVertical",
+        props: {
+          heading: "Your path from here to a Canadian classroom",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc: "Pick a date — Manila, Cebu, or Davao. Register online in minutes.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Prepare with free materials",
+              desc: "Two free practice tests, 100+ hours of free videos, weekly webinars — all self-paced.",
+              cta: { label: "Get prep pack" },
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc: "All four components in under 3 hours. No live examiner — speak into a headset.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Results in 2–4 days",
+              desc: "Official PDF score report online. Upload to Express Entry or send to your provincial teacher certification body.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-24-moment/1200/1400",
+          imageAlt:
+            "Grace at a coffee shop reviewing her CELPIP score report on her phone",
+          oneLineMoment:
+            "From a Manila classroom to a teaching contract in Manitoba — scored on the first attempt.",
+          paragraphQuote:
+            "I have been teaching primary school in Manila for twelve years. English is my language of instruction, but I was nervous about a formal test. CELPIP felt different — the listening tasks were conversations, not lectures. The writing prompts were practical situations. I tested on a Saturday and had my CLB 9 by Tuesday. My Express Entry profile was updated that same week.",
+          attribution: {
+            name: "Grace Villanueva",
+            location: "Manila → Winnipeg",
+            score: "CLB 9",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in the Philippines",
+          subheading:
+            "Open sittings in Manila, Cebu, and Davao — weekend and weekday options.",
+          sittings: [
+            {
+              city: "Manila",
+              centreName: "Manila — Makati Test Centre",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Cebu",
+              centreName: "Cebu City Test Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 7,
+            },
+            {
+              city: "Davao",
+              centreName: "Davao City Test Centre",
+              date: "Sat, Jun 6",
+              time: "9:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Quezon City Centre",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 6,
+            },
+          ],
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Filipino teachers ask before booking.",
+          objections: [
+            {
+              worry: "Will my Filipino English accent affect my score?",
+              reassurance:
+                "CELPIP accepts all accents, including Filipino English. The test measures communication ability, not accent. Your years of teaching in English are an advantage.",
+            },
+            {
+              worry: "What CLB score do Canadian schools require?",
+              reassurance:
+                "Requirements vary by province and school board. Most provincial teacher certification bodies require CLB 7 or higher. Please check with your target province for specific requirements — we are not licensed to give immigration advice.",
+              softCta: { label: "View CLB score chart" },
+            },
+            {
+              worry: "Can I prepare around my teaching workload?",
+              reassurance:
+                "Yes. All CELPIP prep is free and self-paced — two practice tests, 100+ hours of videos, and weekly webinars you can watch on replay. Many teachers prepare in the evenings over two to three weeks.",
+              softCta: { label: "See free prep resources" },
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "Your English is already strong. Prove it.",
+          subheading:
+            "Finish your registration online in minutes. Join thousands of Filipino professionals who test with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 25. Nigeria · Teachers → Canada ─────────────────────
+  {
+    id: 25,
+    title: "Nigeria · Teachers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Nigerian teachers pursuing Express Entry and teaching positions in Canada.",
+    heroImageSrc: "/heroes/25.png",
+    blocks: [
+      {
+        kind: "HeroGradient",
+        props: {
+          eyebrow: "CELPIP IN NIGERIA · FOR TEACHERS",
+          headline: "From Nigerian classrooms",
+          headlineAccent: "to Canadian schools.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered in one sitting with results in 2 to 4 business days. Test centres in Lagos and Abuja.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+        },
+      },
+      {
+        kind: "TrustStrip",
+        props: {
+          heading: "Recognized by",
+          items: [
+            { label: "IRCC", subLabel: "Permanent residency" },
+            { label: "Express Entry", subLabel: "CLB scores" },
+            { label: "PGWP", subLabel: "Post-grad work permit" },
+            { label: "200+", subLabel: "Centres worldwide" },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-25-moment/300/300",
+          imageAlt: "Portrait of Adaeze, a Nigerian teacher from Lagos",
+          oneLineMoment:
+            "She registered online in minutes and tested in Lagos on a Saturday morning.",
+          paragraphQuote:
+            "Adaeze has taught secondary English literature in Lagos for nine years. She needed CLB 7 for Express Entry. CELPIP felt like a natural extension of the English she uses every day in her classroom — no obscure vocabulary, no trick questions. She tested at the Lekki centre on a Saturday and had her scores by the following Wednesday.",
+          attribution: {
+            name: "Adaeze Okafor",
+            location: "Lagos → Calgary",
+            score: "CLB 9",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "WhyCelpipPillars",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Why Nigerian teachers choose CELPIP",
+          pillars: [
+            {
+              icon: "&#9201;",
+              title: "Fast and accessible",
+              desc: "Self-paced test completed in one sitting in 3 hours or less with results in 2 to 4 days.",
+            },
+            {
+              icon: "&#128218;",
+              title: "Guided test prep",
+              desc: "Free practice tests, webinars, study guides, and self-paced courses — all included.",
+            },
+            {
+              icon: "&#127758;",
+              title: "Real-world English",
+              desc: "Focused on practical communication for school, career, and life — not academic essays.",
+            },
+            {
+              icon: "&#9989;",
+              title: "Officially recognized",
+              desc: "Designated by IRCC for Express Entry, PR, and citizenship applications.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in Nigeria",
+          subheading:
+            "Open sittings in Lagos and Abuja — register online in minutes.",
+          sittings: [
+            {
+              city: "Lagos",
+              centreName: "Lagos — Lekki Test Centre",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Abuja",
+              centreName: "Abuja — Wuse Test Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 8,
+            },
+            {
+              city: "Lagos",
+              centreName: "Lagos — Victoria Island Centre",
+              date: "Sat, Jun 6",
+              time: "9:00 AM",
+              seatsLeft: 3,
+            },
+            {
+              city: "Abuja",
+              centreName: "Abuja — Central Business Centre",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 6,
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You teach in English every day. Prove it officially.",
+          subheading:
+            "Finish your registration online in minutes. Results in 2 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 26. Nigeria · Trades (Electricians/Plumbers) → Canada ─────────────────────
+  {
+    id: 26,
+    title: "Nigeria · Trades → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Nigerian tradespeople (electricians, plumbers) pursuing skilled worker PR in Canada.",
+    heroImageSrc: "/heroes/26.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN NIGERIA · FOR SKILLED TRADES",
+          headline: "Your trade skills are in demand in Canada. Get your CLB scores.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency, including the Federal Skilled Trades programme. Computer-delivered in one sitting, results in 2 to 4 days. Test centres in Lagos and Abuja.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "See CLB Requirements" },
+          imageAlt: "Nigerian electrician reviewing CELPIP study materials on a tablet",
+        },
+      },
+      {
+        kind: "MetricsNavyDividers",
+        props: {
+          metrics: [
+            { value: "2", label: "Cities in Nigeria" },
+            { value: "2–4 days", label: "Results Online" },
+            { value: "3 hrs", label: "One Sitting" },
+            { value: "CLB 5+", label: "Skilled Trades Target" },
+          ],
+        },
+      },
+      {
+        kind: "NextStepsHorizontal",
+        props: {
+          heading: "Your path from Lagos or Abuja to a Canadian trade licence",
+          steps: [
+            {
+              number: 1,
+              icon: "&#128197;",
+              title: "Book your CELPIP test",
+              desc: "Pick a date — Lagos or Abuja. Register online in minutes.",
+              cta: { label: "Find a Test Date" },
+            },
+            {
+              number: 2,
+              icon: "&#128218;",
+              title: "Practice with free materials",
+              desc: "Two free practice tests, 100+ hours of prep videos — all free and self-paced.",
+              cta: { label: "Get prep pack" },
+            },
+            {
+              number: 3,
+              icon: "&#128187;",
+              title: "Test in one sitting",
+              desc: "All four components in 3 hours or less. No live examiner — speak into a headset.",
+            },
+            {
+              number: 4,
+              icon: "&#9989;",
+              title: "Submit to Express Entry",
+              desc: "Official PDF score report in 2 to 4 days — upload to your profile.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-26-moment/1200/1400",
+          imageAlt:
+            "Chukwuemeka checking his CELPIP score on a phone at a job site in Lagos",
+          oneLineMoment:
+            "From wiring buildings in Lagos to a Red Seal apprenticeship in Ontario.",
+          paragraphQuote:
+            "I have been an electrician in Lagos for eleven years. I was worried about taking a formal English test — my English is practical, not academic. CELPIP tested exactly the kind of communication I use on site every day: instructions, safety procedures, workplace conversations. I booked an early Saturday sitting at the Lekki centre, finished before noon, and had my CLB 7 by midweek.",
+          attribution: {
+            name: "Chukwuemeka Obi",
+            location: "Lagos → Hamilton",
+            score: "CLB 7",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "ObjectionHandlerFAQ",
+        props: {
+          heading: "Worried? Read this first.",
+          subheading:
+            "The real questions Nigerian tradespeople ask before booking.",
+          objections: [
+            {
+              worry: "I did not go to university — will the test be too academic?",
+              reassurance:
+                "Not at all. CELPIP uses easy-to-understand English and vocabulary taken from everyday situations — workplace conversations, notices, voicemails. It is designed for real-world communication, not academic writing.",
+              softCta: { label: "Try a free practice test" },
+            },
+            {
+              worry: "What CLB score do I need for the Federal Skilled Trades programme?",
+              reassurance:
+                "The Federal Skilled Trades programme requires CLB 5 for speaking and listening, and CLB 4 for reading and writing. Higher scores earn more CRS points. We are not licensed to give immigration advice — please visit IRCC for current requirements.",
+            },
+            {
+              worry: "Can I take the test on a weekend?",
+              reassurance:
+                "Yes. Saturday sittings are available in both Lagos and Abuja. Register online and pick the date that works around your schedule.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "PrepStarterPackHero",
+        props: {
+          eyebrow: "FREE",
+          headline: "Get the official CELPIP practice test, free.",
+          benefits: [
+            "Two free practice tests with your CELPIP Account",
+            "100+ hours of prep videos and webinars",
+            "Self-scoring rubrics for writing and speaking",
+            "Audio samples for the listening section",
+          ],
+          ctaLabel: "Send me the prep pack",
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "Canada needs your skills. Book your test.",
+          subheading:
+            "Finish your registration online in minutes. Saturday sittings in Lagos and Abuja.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 27. Australia · IT Project Managers → Canada ─────────────────────
+  {
+    id: 27,
+    title: "Australia · IT Project Managers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Australian IT project managers pursuing Express Entry PR in Canada.",
+    heroImageSrc: "/heroes/27.png",
+    blocks: [
+      {
+        kind: "HeroGradient",
+        props: {
+          eyebrow: "CELPIP IN AUSTRALIA · FOR IT PROJECT MANAGERS",
+          headline: "Your PM career in Canada",
+          headlineAccent: "starts with one sitting.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Computer-delivered in one sitting, results in 2 to 4 business days. Test centres in Sydney, Melbourne, Brisbane, and Perth.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "View Test Centres" },
+        },
+      },
+      {
+        kind: "UrgencyBar",
+        props: {
+          city: "Sydney",
+          date: "Sat May 23",
+          seatsLeft: 3,
+          ctaLabel: "Reserve your seat",
+        },
+      },
+      {
+        kind: "TestimonialSpotlight",
+        props: {
+          testimonial: {
+            name: "James Thornton",
+            location: "Melbourne, Australia",
+            quote:
+              "I manage a team of fifteen developers in Melbourne. When I decided to move to Toronto for a PM role, I needed CLB scores fast. CELPIP was perfect — the test felt like a normal work day. Reading technical correspondence, listening to a meeting scenario, writing a professional email. I tested in Melbourne on Saturday and had my scores by Wednesday. My Express Entry profile was live the same week.",
+            score: "CLB 10",
+          },
+        },
+      },
+      {
+        kind: "FeatureNavyCards",
+        props: {
+          heading: "Why Australian IT professionals choose CELPIP",
+          features: [
+            {
+              icon: "&#128187;",
+              title: "Computer-delivered, end-to-end",
+              desc: "All four components on the same workstation. No live speaking examiner — you speak into a headset.",
+            },
+            {
+              icon: "&#9201;",
+              title: "Three hours or less",
+              desc: "Done in one sitting. No coming back for a second appointment.",
+            },
+            {
+              icon: "&#128200;",
+              title: "Results in 2–4 days",
+              desc: "Official PDF score report online — upload to Express Entry immediately.",
+            },
+            {
+              icon: "&#127758;",
+              title: "Real-world English",
+              desc: "Workplace scenarios, professional emails, everyday conversations — not academic essays.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in Australia",
+          subheading:
+            "Open sittings in Sydney, Melbourne, Brisbane, and Perth.",
+          sittings: [
+            {
+              city: "Sydney",
+              centreName: "Sydney — CBD Test Centre",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 3,
+            },
+            {
+              city: "Melbourne",
+              centreName: "Melbourne — Southbank Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Brisbane",
+              centreName: "Brisbane — Fortitude Valley Centre",
+              date: "Sat, Jun 6",
+              time: "9:30 AM",
+              seatsLeft: 5,
+            },
+            {
+              city: "Perth",
+              centreName: "Perth — Northbridge Centre",
+              date: "Sun, Jun 7",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTACardWithIcon",
+        props: {
+          heading: "You manage projects for a living. Manage this one.",
+          subheading: "Register online in minutes. Results in 2 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 28. India · Social Workers → Canada ─────────────────────
+  {
+    id: 28,
+    title: "India · Social Workers → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Indian social workers pursuing licensure and PR in Canada.",
+    heroImageSrc: "/heroes/28.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN INDIA · FOR SOCIAL WORKERS",
+          headline: "Your social work career in Canada starts here.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Social work regulatory bodies across Canada set their own language requirements — CELPIP delivers the CLB scores you need for Express Entry. Nine test centres across India.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Indian social worker reviewing CELPIP materials at a community centre",
+        },
+      },
+      {
+        kind: "MetricsRow",
+        props: {
+          metrics: [
+            { value: "9", label: "Test Centres in India" },
+            { value: "3–4 days", label: "Results Online" },
+            { value: "3 hrs", label: "One Sitting" },
+            { value: "CLB 7+", label: "Common Social Work Target" },
+            { value: "100%", label: "Computer-Delivered" },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightInline",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-28-moment/300/300",
+          imageAlt: "Portrait of Kavitha, a social worker from Bengaluru",
+          oneLineMoment:
+            "She tested in Bengaluru on Saturday and was invited to apply within three weeks.",
+          paragraphQuote:
+            "Kavitha has worked with vulnerable communities in Bengaluru for seven years. She needed CLB 7 for Express Entry. CELPIP tested the kind of English she uses every day — empathetic conversations, clear professional writing, active listening. She tested on a Saturday, had her scores by Wednesday, and submitted her Express Entry profile that evening.",
+          attribution: {
+            name: "Kavitha Ramesh",
+            location: "Bengaluru → Ottawa",
+            score: "CLB 8",
+            date: "March 2026",
+          },
+        },
+      },
+      {
+        kind: "ReadinessQuiz",
+        props: {
+          heading: "Are you ready to book?",
+          subheading:
+            "A 30-second check. We will tell you what to do next based on your answers.",
+          questions: [
+            {
+              id: "english-comfort",
+              question: "How comfortable are you communicating in English at work?",
+              options: [
+                { label: "Very comfortable — I counsel clients in English daily.", score: 3 },
+                { label: "Mostly comfortable — written reports are fine, speaking takes focus.", score: 2 },
+                { label: "Getting there — I switch between languages.", score: 1 },
+              ],
+            },
+            {
+              id: "computer-test",
+              question: "How do you feel about a 3-hour computer-based test?",
+              options: [
+                { label: "No problem — I use a computer every day.", score: 3 },
+                { label: "Mostly fine — I would like to try the interface first.", score: 2 },
+                { label: "A bit nervous — I prefer paper.", score: 1 },
+              ],
+            },
+            {
+              id: "timeline",
+              question: "How urgent is your timeline?",
+              options: [
+                { label: "I need scores in the next 4 weeks.", score: 3 },
+                { label: "I have 1–3 months.", score: 2 },
+                { label: "3+ months — exploring options.", score: 1 },
+              ],
+            },
+          ],
+          results: [
+            {
+              thresholdMin: 7,
+              title: "You are ready. Find a test date.",
+              body:
+                "Based on your answers, you are well-positioned to book now. Social workers who communicate in English daily tend to do very well.",
+              ctaLabel: "Find a Test Date",
+            },
+            {
+              thresholdMin: 4,
+              title: "Almost there. Try a free practice test first.",
+              body:
+                "A free official practice test will show you exactly what to expect — no surprises on test day.",
+              ctaLabel: "Try a free practice test",
+            },
+            {
+              thresholdMin: 0,
+              title: "Start with the prep pack.",
+              body:
+                "100+ hours of free prep materials. Two to three weeks of focused study and you will be ready.",
+              ctaLabel: "Send me the prep pack",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Available CELPIP sittings in India",
+          subheading:
+            "Pick the date and centre that works for you.",
+          sittings: [
+            {
+              city: "Bengaluru",
+              centreName: "Bengaluru — Prometric Testing",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 7,
+              address: "Koramangala, Bengaluru",
+            },
+            {
+              city: "Mumbai",
+              centreName: "Mumbai — Prometric Testing",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+              address: "Andheri East, Mumbai",
+            },
+            {
+              city: "New Delhi",
+              centreName: "New Delhi — Prometric Testing",
+              date: "Sat, Jun 6",
+              time: "9:30 AM",
+              seatsLeft: 5,
+              address: "Connaught Place, New Delhi",
+            },
+            {
+              city: "Hyderabad",
+              centreName: "Hyderabad — Prometric Testing",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 3,
+              address: "Gachibowli, Hyderabad",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You help people every day. Let us help you take the next step.",
+          subheading:
+            "Finish your registration online in minutes. Results in 3 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 29. Philippines · Trades (Welders/Pipefitters) → Canada ─────────────────────
+  {
+    id: 29,
+    title: "Philippines · Trades (Welders/Pipefitters) → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Filipino welders and pipefitters pursuing skilled worker PR in Canada.",
+    heroImageSrc: "/heroes/29.png",
+    blocks: [
+      {
+        kind: "HeroFormInHeader",
+        props: {
+          badge: "MANILA · CEBU · DAVAO",
+          headline: "CELPIP for Welders and Pipefitters — Your Skills Are in Demand",
+          subhead:
+            "Canada's construction sector needs skilled tradespeople. CELPIP-General is designated by IRCC for the Federal Skilled Trades programme. Test the everyday English you already use on site.",
+          bullets: [
+            "CLB 5 speaking/listening, CLB 4 reading/writing for Skilled Trades",
+            "Computer-delivered in one sitting — 3 hours or less",
+            "Results in 2 to 4 business days",
+          ],
+          formHeading: "Get the next available test dates",
+          formCtaLabel: "Send Me Dates",
+          formDisclaimer: "No spam. We respect your privacy.",
+          fields: [
+            { type: "text", placeholder: "Full Name" },
+            { type: "email", placeholder: "Email Address" },
+            {
+              type: "select",
+              placeholder: "Nearest city",
+              options: ["Manila", "Cebu", "Davao"],
+            },
+          ],
+        },
+      },
+      {
+        kind: "WhyCelpipMomentum",
+        props: {
+          eyebrow: "WHY CELPIP",
+          heading: "Built for working tradespeople",
+          pillars: [
+            {
+              icon: "&#128295;",
+              title: "Practical English, not academic",
+              desc: "Questions use everyday workplace vocabulary — safety signs, instructions, conversations with supervisors.",
+            },
+            {
+              icon: "&#9201;",
+              title: "Done in one sitting",
+              desc: "All four components in 3 hours or less. No coming back for a second day.",
+            },
+            {
+              icon: "&#128187;",
+              title: "No live examiner",
+              desc: "Speak into a headset at your own pace. No pressure from face-to-face interaction.",
+            },
+            {
+              icon: "&#128200;",
+              title: "Fast results",
+              desc: "Official PDF score report online in 2 to 4 business days.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "MomentSpotlightLargePhoto",
+        props: {
+          imageSrc: "https://picsum.photos/seed/celpip-29-moment/1200/1400",
+          imageAlt:
+            "Renato reviewing his CELPIP score report on his phone after a shift",
+          oneLineMoment:
+            "From a Cebu shipyard to a pipefitting apprenticeship in Alberta — one test, one sitting.",
+          paragraphQuote:
+            "I have been welding and pipefitting in the Cebu shipyard for fourteen years. I was nervous about an English test — my English is the English of the job site, not the classroom. CELPIP tested exactly that. The listening section sounded like instructions from a foreman. The reading section had workplace notices and safety memos. I passed with CLB 7 on my first try.",
+          attribution: {
+            name: "Renato Magpantay",
+            location: "Cebu → Fort McMurray",
+            score: "CLB 7",
+            date: "April 2026",
+          },
+        },
+      },
+      {
+        kind: "ScoreEquivalencyTable",
+        props: {
+          heading: "What CLB level do you need?",
+          subheading: "How CELPIP scores map to CLB levels and immigration programmes",
+          rows: fullScoreRows,
+        },
+      },
+      {
+        kind: "BookingPanelInline",
+        props: {
+          heading: "Book your CELPIP test in the Philippines",
+          subheading:
+            "Saturday and weekday sittings in Manila, Cebu, and Davao.",
+          sittings: [
+            {
+              city: "Cebu",
+              centreName: "Cebu City Test Centre",
+              date: "Sat, May 23",
+              time: "9:00 AM",
+              seatsLeft: 6,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Makati Test Centre",
+              date: "Sun, May 24",
+              time: "10:00 AM",
+              seatsLeft: 4,
+            },
+            {
+              city: "Davao",
+              centreName: "Davao City Test Centre",
+              date: "Sat, Jun 6",
+              time: "9:00 AM",
+              seatsLeft: 7,
+            },
+            {
+              city: "Manila",
+              centreName: "Manila — Quezon City Centre",
+              date: "Sun, Jun 7",
+              time: "1:00 PM",
+              seatsLeft: 3,
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTABoldBanner",
+        props: {
+          heading: "Canada needs your skills. Book your test today.",
+          subheading:
+            "Register online in minutes. Results in 2 to 4 business days.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ───────────────────── 30. Australia · Hospitality/Tourism → Canada ─────────────────────
+  {
+    id: 30,
+    title: "Australia · Hospitality/Tourism → Canada",
+    tag: "Regional",
+    description:
+      "Conversion-stage microsite for Australian hospitality and tourism professionals pursuing PR in Canada.",
+    heroImageSrc: "/heroes/30.png",
+    blocks: [
+      {
+        kind: "HeroSplit",
+        props: {
+          eyebrow: "CELPIP IN AUSTRALIA · FOR HOSPITALITY & TOURISM",
+          headline: "From Australian resorts to Canadian hospitality — one test, done.",
+          subhead:
+            "CELPIP-General is officially designated by IRCC for permanent residency. Your guest-facing English is exactly what CELPIP tests. Computer-delivered in one sitting, results in 2 to 4 days.",
+          primaryCta: { label: "Find a Test Date" },
+          secondaryCta: { label: "Free Practice Test" },
+          imageAlt: "Australian hospitality professional reviewing CELPIP prep materials",
+        },
+      },
+      {
+        kind: "UrgencyBar",
+        props: {
+          city: "Melbourne",
+          date: "Sat Jun 6",
+          seatsLeft: 5,
+          ctaLabel: "Reserve your seat",
+        },
+      },
+      {
+        kind: "TestimonialQuoteCards",
+        props: {
+          testimonials: [
+            {
+              name: "Sophie Nguyen",
+              location: "Sydney, Australia",
+              quote:
+                "I managed a boutique hotel in Surry Hills for six years. CELPIP felt like a day at work — reading guest correspondence, listening to a colleague explain a process, writing a professional response. Tested on Saturday, scores by Tuesday.",
+              score: "CLB 9",
+            },
+            {
+              name: "Daniel McCarthy",
+              location: "Melbourne, Australia",
+              quote:
+                "Working in tourism means I speak English all day with people from everywhere. CELPIP tested that exact skill — real-world communication. No obscure vocabulary. I hit CLB 10 on my first try.",
+              score: "CLB 10",
+            },
+            {
+              name: "Priya Bhandari",
+              location: "Brisbane, Australia",
+              quote:
+                "I was a restaurant manager in Fortitude Valley. Between lunch and dinner services, finding time for an English test seemed impossible. CELPIP is one sitting, three hours, done. My scores were online before my next roster.",
+              score: "CLB 8",
+            },
+          ],
+        },
+      },
+      {
+        kind: "FeatureGrid",
+        props: {
+          heading: "Why hospitality professionals choose CELPIP",
+          subheading:
+            "Designed for people who communicate in English every day at work.",
+          features: [
+            {
+              icon: "&#127973;",
+              title: "Guest-facing English",
+              desc: "The test uses everyday scenarios — workplace conversations, professional emails, community notices.",
+            },
+            {
+              icon: "&#9201;",
+              title: "One sitting, three hours",
+              desc: "All four components done in a single appointment. No second visit.",
+            },
+            {
+              icon: "&#128187;",
+              title: "Computer-delivered",
+              desc: "No live speaking examiner. Speak into a headset at your own pace.",
+            },
+            {
+              icon: "&#128200;",
+              title: "Results in 2–4 days",
+              desc: "Official PDF score report available online — upload to Express Entry immediately.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "BookingPanelStacked",
+        props: {
+          heading: "Available CELPIP sittings in Australia",
+          subheading:
+            "Sydney, Melbourne, Brisbane, and Perth — weekday and Saturday options.",
+          sittings: [
+            {
+              city: "Melbourne",
+              centreName: "Melbourne — Southbank Centre",
+              date: "Sat, Jun 6",
+              time: "9:00 AM",
+              seatsLeft: 5,
+              address: "Southbank, Melbourne VIC",
+            },
+            {
+              city: "Sydney",
+              centreName: "Sydney — CBD Test Centre",
+              date: "Sun, Jun 7",
+              time: "10:00 AM",
+              seatsLeft: 4,
+              address: "George Street, Sydney NSW",
+            },
+            {
+              city: "Brisbane",
+              centreName: "Brisbane — Fortitude Valley Centre",
+              date: "Sat, Jun 13",
+              time: "9:30 AM",
+              seatsLeft: 7,
+              address: "Fortitude Valley, Brisbane QLD",
+            },
+            {
+              city: "Perth",
+              centreName: "Perth — Northbridge Centre",
+              date: "Sun, Jun 14",
+              time: "10:00 AM",
+              seatsLeft: 3,
+              address: "Northbridge, Perth WA",
+            },
+          ],
+        },
+      },
+      {
+        kind: "FAQAccordion",
+        props: {
+          heading: "Common questions from Australian hospitality professionals",
+          faqs: [
+            {
+              q: "Is CELPIP accepted by IRCC for Canadian PR?",
+              a: "Yes. CELPIP-General is officially designated by Immigration, Refugees and Citizenship Canada for permanent residency, citizenship, and Express Entry applications.",
+            },
+            {
+              q: "What CLB score do I need for Express Entry?",
+              a: "The Federal Skilled Worker programme requires CLB 7 in each component. Higher scores earn significantly more CRS points. We are not licensed to give immigration advice — please visit IRCC for current requirements.",
+            },
+            {
+              q: "Can I take the test in Australia even though I am applying to Canada?",
+              a: "Yes. CELPIP has test centres in Sydney, Melbourne, Brisbane, and Perth. Your official PDF score report is delivered online and accepted by IRCC regardless of where you test.",
+            },
+            {
+              q: "How long are CELPIP scores valid?",
+              a: "CELPIP scores are valid for 2 years from the test date. Your PDF score report is available online in 2 to 4 business days.",
+            },
+          ],
+        },
+      },
+      {
+        kind: "CTANavyAccent",
+        props: {
+          heading: "You already speak the language. Make it official.",
+          subheading:
+            "Finish your registration online in minutes. Join thousands worldwide who test with CELPIP.",
+          primaryCta: { label: "Find a Test Date" },
+        },
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CUSTOM MICROSITES (#31-35) — bespoke JSX pages, no widget blocks
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  {
+    id: 31,
+    title: "Book This Weekend",
+    tag: "Custom" as MicrositeTag,
+    description:
+      "Urgency-driven booking page with countdown timer and scarcity signals.",
+    blocks: [],
+    customPage: "BookThisWeekend",
+  },
+  {
+    id: 32,
+    title: "3-Minute Decision",
+    tag: "Custom" as MicrositeTag,
+    description:
+      "Ultra-minimal single-scroll page: what you need, what you get, book now.",
+    blocks: [],
+    customPage: "ThreeMinuteDecision",
+  },
+  {
+    id: 33,
+    title: "Am I Ready?",
+    tag: "Custom" as MicrositeTag,
+    description:
+      "Interactive 4-question self-assessment quiz with tiered results and tailored CTAs.",
+    blocks: [],
+    customPage: "AmIReady",
+  },
+  {
+    id: 34,
+    title: "Your Score, Your Future",
+    tag: "Custom" as MicrositeTag,
+    description:
+      "Outcome visualisation showing career paths unlocked at CLB 7, 9, and 10+.",
+    blocks: [],
+    customPage: "YourScoreYourFuture",
+  },
+  {
+    id: 35,
+    title: "Testimonial Wall",
+    tag: "Custom" as MicrositeTag,
+    description:
+      "Social proof grid of 14 candidate testimonials with profession filter pills.",
+    blocks: [],
+    customPage: "TestimonialWall",
   },
 ];
 
