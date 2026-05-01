@@ -153,7 +153,7 @@ export default function BuilderPage() {
         case "done":
           // Mark everything complete and navigate.
           setCompletedSteps(new Set(STEP_ORDER));
-          router.push(`/builder/result/${ev.result.sessionId}`);
+          router.push(`/campaigns/result/${ev.result.sessionId}`);
           break;
       }
     },

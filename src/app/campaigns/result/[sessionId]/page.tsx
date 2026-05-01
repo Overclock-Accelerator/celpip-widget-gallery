@@ -55,7 +55,7 @@ export default async function BuilderResultPage({
             Your campaign kit is ready.
           </h1>
           <Link
-            href="/builder"
+            href="/campaigns"
             className="text-sm font-semibold text-[#0B2341] hover:text-[#00A651]"
           >
             &larr; Generate another
@@ -228,7 +228,7 @@ export default async function BuilderResultPage({
           </p>
         </div>
         <Link
-          href={`/builder/site/${sessionId}`}
+          href={`/campaigns/site/${sessionId}`}
           className="bg-[#00A651] hover:bg-[#00C764] text-white font-semibold px-6 py-3 rounded-lg transition-colors whitespace-nowrap"
         >
           Open microsite &rarr;

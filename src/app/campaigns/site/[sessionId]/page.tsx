@@ -57,7 +57,7 @@ export default async function BuilderSitePage({
             Created for: {audienceExcerpt}
           </p>
           <Link
-            href={`/builder/result/${sessionId}`}
+            href={`/campaigns/result/${sessionId}`}
             className="text-xs font-semibold text-[#17FFDC] hover:text-white whitespace-nowrap"
           >
             &larr; Back to result
