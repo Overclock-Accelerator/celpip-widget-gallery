@@ -275,11 +275,11 @@ export default function BuilderPage() {
       {/* Form */}
       <form
         onSubmit={submit}
-        className="rounded-2xl bg-white border border-gray-200/80 p-6 sm:p-8 shadow-lg shadow-gray-200/50"
+        className="rounded-2xl bg-white border border-gray-200/80 p-6 sm:p-10 shadow-lg shadow-gray-200/50"
       >
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-8">
           <div>
-            <div className="flex items-center justify-between mb-1">
+            <div className="flex items-center justify-between mb-1.5">
               <label
                 htmlFor="audience"
                 className="block text-sm font-semibold text-[#0B2341]"
@@ -293,16 +293,16 @@ export default function BuilderPage() {
                 onClick={() => requestRandomPrompt("audience")}
               />
             </div>
-            <p className="text-xs text-gray-500 mb-2">
+            <p className="text-sm text-gray-500 mb-3">
               Who is this for? Background, life stage, what they&rsquo;re juggling.
             </p>
             <textarea
               id="audience"
-              rows={4}
+              rows={5}
               value={audience}
               onChange={(e) => setAudience(e.target.value)}
               disabled={busy || randomBusy === "audience"}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-[#0B2341] disabled:bg-gray-50 disabled:text-gray-500"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base text-gray-800 leading-relaxed placeholder:text-gray-400 focus:outline-none focus:border-[#0B2341] focus:ring-4 focus:ring-[#0B2341]/10 hover:border-gray-400 transition-colors disabled:bg-gray-50 disabled:text-gray-500 resize-y"
               placeholder="Filipino healthcare workers in their late 20s preparing for Canadian PR…"
               required
             />
@@ -323,7 +323,7 @@ export default function BuilderPage() {
           </div>
 
           <div>
-            <div className="flex items-center justify-between mb-1">
+            <div className="flex items-center justify-between mb-1.5">
               <label
                 htmlFor="concept"
                 className="block text-sm font-semibold text-[#0B2341]"
@@ -337,16 +337,16 @@ export default function BuilderPage() {
                 onClick={() => requestRandomPrompt("concept")}
               />
             </div>
-            <p className="text-xs text-gray-500 mb-2">
+            <p className="text-sm text-gray-500 mb-3">
               What scene, mood, or moment should the creative show?
             </p>
             <textarea
               id="concept"
-              rows={3}
+              rows={4}
               value={concept}
               onChange={(e) => setConcept(e.target.value)}
               disabled={busy || randomBusy === "concept"}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-[#0B2341] disabled:bg-gray-50 disabled:text-gray-500"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-base text-gray-800 leading-relaxed placeholder:text-gray-400 focus:outline-none focus:border-[#0B2341] focus:ring-4 focus:ring-[#0B2341]/10 hover:border-gray-400 transition-colors disabled:bg-gray-50 disabled:text-gray-500 resize-y"
               placeholder="An aspirational moment showing a candidate calmly finishing the test…"
               required
             />
@@ -370,44 +370,42 @@ export default function BuilderPage() {
             <div>
               <label
                 htmlFor="country"
-                className="block text-sm font-semibold text-[#0B2341] mb-1"
+                className="block text-sm font-semibold text-[#0B2341] mb-2"
               >
                 Country target
               </label>
-              <select
+              <SelectWithChevron
                 id="country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value as CountryTarget)}
                 disabled={busy}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm text-gray-800 bg-white"
               >
                 {COUNTRIES.map((c) => (
                   <option key={c} value={c}>
                     {c}
                   </option>
                 ))}
-              </select>
+              </SelectWithChevron>
             </div>
             <div>
               <label
                 htmlFor="tone"
-                className="block text-sm font-semibold text-[#0B2341] mb-1"
+                className="block text-sm font-semibold text-[#0B2341] mb-2"
               >
                 Tone leaning
               </label>
-              <select
+              <SelectWithChevron
                 id="tone"
                 value={tone}
                 onChange={(e) => setTone(e.target.value as ToneLeaning)}
                 disabled={busy}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm text-gray-800 bg-white"
               >
                 {TONES.map((t) => (
                   <option key={t} value={t}>
                     {t}
                   </option>
                 ))}
-              </select>
+              </SelectWithChevron>
             </div>
           </div>
         </div>
@@ -524,6 +522,42 @@ function CharCount({
     <div className="mt-1 text-xs text-right">
       <span className={ok ? "text-gray-400" : "text-amber-700"}>
         {len} / {max}
+      </span>
+    </div>
+  );
+}
+
+function SelectWithChevron({
+  id,
+  value,
+  onChange,
+  disabled,
+  children,
+}: {
+  id: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  disabled: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="relative">
+      <select
+        id={id}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+        className="w-full appearance-none border border-gray-300 rounded-xl px-4 py-3 pr-11 text-base text-gray-800 bg-white hover:border-gray-400 focus:outline-none focus:border-[#0B2341] focus:ring-4 focus:ring-[#0B2341]/10 transition-colors disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed cursor-pointer"
+      >
+        {children}
+      </select>
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-[#0B2341]/60"
+      >
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.25} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
       </span>
     </div>
   );
